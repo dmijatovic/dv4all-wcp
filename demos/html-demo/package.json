@@ -1,0 +1,30 @@
+{
+  "name": "html-demo",
+  "version": "1.0.0",
+  "description": "simple basic html demo of web components",
+  "keywords": [
+    "spinner",
+    "loader",
+    "web",
+    "component"
+  ],
+  "author": "Dusan Mijatovic <d.mijatovic@dv4all.nl> (PC2016)",
+  "homepage": "https://github.com/dmijatovic/nuxt-next-lerna#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
+  },
+  "scripts": {
+    "start": "serve ./loader",
+    "loader": "serve ./loader",
+    "button": "serve ./button"
+  },
+  "dependencies": {
+    "@dv4all/components": "0.0.1",
+    "@dv4all/loaders": "0.0.1"
+  },
+  "devDependencies": {
+    "serve": "^11.3.0"
+  }
+}

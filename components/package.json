@@ -1,0 +1,45 @@
+{
+  "name": "@dv4all/components",
+  "version": "0.0.1",
+  "description": "shared components dv4all",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "dev:html": "rollup -c -w",
+    "dev:next": "rollup -c -w",
+    "dev:nuxt": "rollup -c -w",
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "prebuild:components": "rimraf lib",
+    "build:components": "rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "keywords": [
+    "shared",
+    "web components"
+  ],
+  "author": "Dusan Mijatovic",
+  "license": "MIT",
+  "main": "lib/dv4wcp.esm.js",
+  "browser": "lib/dv4wcp.umd.js",
+  "module": "lib/dv4wcp.esm.js",
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.1.0",
+    "rimraf": "^3.0.1",
+    "rollup": "1.30.1",
+    "rollup-plugin-babel": "4.3.3"
+  },
+  "dependencies": {
+    "@dv4all/wcp-utils": "0.0.1"
+  }
+}

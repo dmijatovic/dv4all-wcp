@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 100%;
+}
+
+body{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin:0;
+  padding:0;
+}
+
+h1{
+  margin:0;
+  padding: 1rem 0rem;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-decoration: unset;
+}
+
+a:active {
+  color: unset;
+}
+
+/* a:visited {
+  color: inherit;
+} */
+
+

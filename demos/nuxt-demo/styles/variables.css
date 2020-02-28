@@ -1,0 +1,10 @@
+
+:root{
+  --color-primary: blue;
+  --color-warning: red;
+  --color-accent: green;
+  --color-grey: #ccc;
+  /* --ball-triangle-color: red;
+  --ball-triangle-size: 4rem; */
+  --loader-message-font: Arial;
+}

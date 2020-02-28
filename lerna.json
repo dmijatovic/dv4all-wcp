@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "npmClient": "npm",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    }
+  },
+  "packages": [
+    "components",
+    "loaders",
+    "demos/**",
+    "utils/**"
+  ]
+}

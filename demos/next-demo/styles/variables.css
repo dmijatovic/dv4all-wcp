@@ -1,0 +1,20 @@
+
+:root{
+  --color-primary: #287C71;
+  --color-warning: #F45328;
+  --color-alternate: #4F4169;
+  --color-accent: #E2CE4D;
+  --color-grey:#ccc;
+  --color-dark: #17241E;
+  --color-light: #efefef;
+
+  --font-family:'Roboto', sans-serif;
+  --font-size-sm:0.825rem;
+  --font-size-md:1rem;
+  --font-size-lg:1.25rem;
+  --font-size-xl:1.5rem;
+
+  --font-weight-lt: 300;
+  --font-weight-md: 400;
+  --font-weight-hv: 700;
+}
