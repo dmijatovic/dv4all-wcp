@@ -2,5 +2,5 @@
  * Import custom web component scripts
  */
 
-import './ball-triangle/index.js'
-import './donut/index.js'
+export {default as Dv4LoaderBallTriangle} from './ball-triangle/index.js'
+export {default as Dv4LoaderDonut} from './donut/index.js'

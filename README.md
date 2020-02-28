@@ -1,12 +1,17 @@
-# Web components DEMO monorepo
+# Web components monorepo - DEMO
 
 This monorepo is created to test web components setup with lerna, nuxt, next and plain JS. I am developing ideas about project organization and structure. What folder structure is handy? How monorepo approach works? Where LERNA is helpful?
 
 The components, loaders and utility functions use same namespace `@dv4all`. The following location and projects are considered as npm libraries:
 
-- components: @dv4all/components, represents collection of shared components. I am considering spliting this into 2 packages when collection starts including more complex component. I will start with basic elements (atoms): button, input, checkbox etc. If I split later I will call basic module `@dv4all/elements`.
-- loaders: @dv4all/loaders, holds various loader components
-- utils: @dv4all/wcp-utils, this folder holds 2 libraries. Note! the second is just for purpose of testing. I am expecting to have mutiple utility libraries splitted by functionality. Currently I see 2: wcp-utils (web component utility functions) and fs-util (file system utility functions)
+- `components` (@dv4all/components): represents collection of shared components. I am considering spliting this into 2 packages when collection starts including more complex component. I will start with basic elements (atoms): button, input, checkbox etc. If I split later I will call basic module `@dv4all/elements`.
+- `loaders` (@dv4all/loaders): holds various loader components
+- `utils`: this folder holds 2 libraries. Note! the second is just for the purpose of testing. I expect to have mutiple utility libraries and split them by functionality. Currently I see 2:
+  - wcp-utils (@dv4all/wcp-utils): web component utility functions
+  - fs-util (@dv4all/fs-utils): file system utility functions
+
+Bundling web components to NPM is not common task. I have experienced some problems when creating bundles with rollup. I need to read more about it.
+I just found this [article that might be helpful](https://justinfagnani.com/2019/11/01/how-to-publish-web-components-to-npm/).
 
 ## Development
 
@@ -25,6 +30,49 @@ lerna run dev:nuxt --parallel
 # build components
 lerna run build:components
 
+```
+
+## Important props in package.json
+
+```json
+// set package type to module
+"type":"module",
+// set main to es6 module
+"main": "lib/dv4wcp.js",
+// set module also to es6 module file
+"module": "lib/dv4wcp.js",
+
+```
+
+## Important rollup settings
+
+You do need to import plugins for commonjs and node resolvers. The main export should point to ES6 module (type:esm). In the example bellow this is first output defined.
+
+```javascript
+// import babel from 'rollup-plugin-babel'
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+
+export default {
+  input: "src/index.js",
+  output: [
+    {
+      file: "lib/dv4wcp.js",
+      format: "esm"
+    },
+    {
+      name: "Dv4WCP",
+      file: "lib/dv4wcp.umd.js",
+      format: "umd"
+    },
+    {
+      name: "Dv4WCP",
+      file: "lib/dv4wcp.cjs.js",
+      format: "iife"
+    }
+  ],
+  plugins: [resolve(), commonjs()]
+};
 ```
 
 ## LERNA commands
@@ -49,8 +97,11 @@ lerna bootstrap --hoist
 lerna add axios typescript ts-node
 
 # add  "@rollup/plugin-node-resolve" to ALL @dv4all packages as devDependency
-## see https://github.com/lerna/lerna/tree/master/commands/add
+# see https://github.com/lerna/lerna/tree/master/commands/add
+# NOTE! there is NO remove command in LERNA at the moment
+# see https://github.com/lerna/lerna/issues/1886
 lerna add @rollup/plugin-node-resolve --scope=@dv4all/* --dev
+lerna add @rollup/plugin-commonjs --scope=@dv4all/* --dev
 
 ```
 

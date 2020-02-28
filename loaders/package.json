@@ -1,6 +1,9 @@
 {
   "name": "@dv4all/loaders",
   "version": "0.0.1",
+  "type":"module",
+  "main": "lib/dv4loaders.js",
+  "module": "lib/dv4loaders.js",
   "description": "loader/spinner as web component",
   "keywords": [
     "spinner",
@@ -11,9 +14,6 @@
   "author": "Dusan Mijatovic <d.mijatovic@dv4all.nl> (PC2016)",
   "homepage": "https://github.com/dmijatovic/nuxt-next-lerna#readme",
   "license": "MIT",
-  "main": "lib/dv4loaders.esm.js",
-  "browser": "lib/dv4loaders.umd.js",
-  "module": "lib/dv4loaders.esm.js",
   "sideEffects": false,
   "directories": {
     "lib": "lib",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "eslint": "^6.1.0",
     "rimraf": "^3.0.1",

@@ -1,7 +1,9 @@
 {
   "name": "@dv4all/components",
   "version": "0.0.1",
-  "description": "shared components dv4all",
+  "type":"module",
+  "main": "lib/dv4wcp.js",
+  "module": "lib/dv4wcp.js",
   "scripts": {
     "dev": "rollup -c -w",
     "dev:html": "rollup -c -w",
@@ -17,11 +19,9 @@
     "shared",
     "web components"
   ],
+  "description": "shared components dv4all",
   "author": "Dusan Mijatovic",
   "license": "MIT",
-  "main": "lib/dv4wcp.esm.js",
-  "browser": "lib/dv4wcp.umd.js",
-  "module": "lib/dv4wcp.esm.js",
   "sideEffects": false,
   "directories": {
     "lib": "lib"
@@ -33,6 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "eslint": "^6.1.0",
     "rimraf": "^3.0.1",

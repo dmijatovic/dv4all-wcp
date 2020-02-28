@@ -1,6 +1,10 @@
 {
   "name": "@dv4all/fs-utils",
   "version": "0.0.1",
+  "type":"module",
+  "main": "lib/dv4fs.utils.js",
+  "browser": "lib/dv4fs.utils.cjs.js",
+  "module": "lib/dv4fs.utils.js",
   "description": "file system utility functions",
   "keywords": [
     "functions"
@@ -8,9 +12,6 @@
   "author": "Dusan Mijatovic",
   "homepage": "",
   "license": "MIT",
-  "main": "lib/dv4fs.utils.cjs.js",
-  "browser": "lib/dv4fs.utils.umd.js",
-  "module": "lib/dv4fs.utils.esm.js",
   "sideEffects": false,
   "directories": {
     "lib": "lib",
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "eslint": "^6.1.0",
     "rimraf": "^3.0.1",

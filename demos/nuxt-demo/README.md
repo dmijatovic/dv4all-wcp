@@ -1,6 +1,6 @@
 # nuxt-test
 
-Nuxt test in monorepo for web components. The loaders
+Nuxt test of web components in this monorepo.
 
 ## Build Setup
 

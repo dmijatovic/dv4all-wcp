@@ -1,13 +1,16 @@
 // import babel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default {
   input: 'src/index.js',
   output: [{
-    file: 'lib/dv4loaders.esm.js',
+    file: 'lib/dv4loaders.js',
     format: 'esm'
   },{
     name: 'Dv4Loaders',
-    file: 'lib/dv4loaders.umd.js',
-    format: 'umd'
+    file: 'lib/dv4loaders.cjs.js',
+    format: 'iife'
   }],
+  plugins: [resolve(), commonjs()]
 }

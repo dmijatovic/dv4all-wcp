@@ -1,5 +1,5 @@
 //SHARED lib
-import {newCustomElement} from '@dv4all/wcp-utils/lib/dv4wcp.utils.esm'
+import {newCustomElement} from '@dv4all/wcp-utils'
 
 
 //html template
@@ -11,6 +11,8 @@ const props={
   renderHtml: htmlOverlay
 }
 
-const Overlay = newCustomElement(props)
+const Dv4Overlay = newCustomElement(props)
 
-customElements.define('dv4-overlay', Overlay)
+customElements.define('dv4-overlay', Dv4Overlay)
+
+export default Dv4Overlay
