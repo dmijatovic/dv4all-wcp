@@ -6,8 +6,9 @@ import htmlLoaderBody from './htmlLoaderBody'
 
 //create open shadow DOM
 const props={
-  shadowMode:'open',
-  renderHtml: htmlLoaderBody
+  shadowMode: 'open',
+  renderHtml: htmlLoaderBody,
+  observedAttr: []
 }
 
 const Dv4LoaderBody = newCustomElement(props)

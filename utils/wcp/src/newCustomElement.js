@@ -67,6 +67,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Listen for changes in these attributes
      */
     static get observedAttributes(){
+      // console.log("observedAttributes...", observedAttr)
       return observedAttr
     }
     /**

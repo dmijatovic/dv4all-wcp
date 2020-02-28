@@ -1,6 +1,13 @@
 {
   "name": "root",
-  "private": true,
+	"private": true,
+	"scripts":{
+		"dev:html":"lerna run dev:html --parallel",
+		"dev:next":"lerna run dev:next --parallel",
+		"dev:nuxt":"lerna run dev:nuxt --parallel",
+		"dev:components":"lerna run dev --scope=@dv4all/* --parallel",
+		"build:components":"lerna run build:components"
+	},
   "devDependencies": {
     "lerna": "^3.19.0"
   }

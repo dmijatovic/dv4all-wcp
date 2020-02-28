@@ -4,7 +4,7 @@ const htmlDonut = props =>(`
     /* BASIC STYLES FOR ALL LOADERS */
 
     :host{
-      display: block;
+      display: flex;
     }
     :host([hide]),
     :host([hide=true]){

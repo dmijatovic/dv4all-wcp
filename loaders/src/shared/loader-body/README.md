@@ -2,10 +2,12 @@
 
 This component is shared in all loader components. It is used to display text message and/or loader body elements. It is centered in the middle of the screen.
 
-This component has 2 names slots (defined in htmlLoaderBody.js)
+This component has 2 named slots (defined in htmlLoaderBody.js)
 
 - loader-body: place to capture the body
 - loader-text: place for loading text. It uses parent slot.
+
+`SHARED COMPONENTS need to be exported in index file, preferably before loaders.`
 
 ## Usage
 

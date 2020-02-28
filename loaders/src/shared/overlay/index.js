@@ -7,8 +7,10 @@ import htmlOverlay from './htmlOverlay'
 
 //create open shadow DOM
 const props={
-  shadowMode:'open',
-  renderHtml: htmlOverlay
+  shadowMode: 'open',
+  renderHtml: htmlOverlay,
+  //pass attributes to observe
+  observedAttr: []
 }
 
 const Dv4Overlay = newCustomElement(props)

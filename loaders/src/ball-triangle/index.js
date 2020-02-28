@@ -1,9 +1,10 @@
 //SHARED lib
 import {newCustomElement} from '@dv4all/wcp-utils'
 
-//SHARED components
-import '../shared/overlay/index.js'
-import '../shared/loader-body/index.js'
+//NOTE!
+//SHARED customElements dv4-overlay and dv4-loader-body
+//NEED to be exported in index.js
+
 //html template
 import htmlBallTriangle from './htmlBallTriangle'
 
@@ -12,7 +13,9 @@ const props = {
   //create open shadow DOM
   shadowMode:'open',
   //render function
-  renderHtml: htmlBallTriangle
+  renderHtml: htmlBallTriangle,
+  //pass attributes to observe
+  observedAttr: ['overlay','hide']
 }
 
 //create new customElement

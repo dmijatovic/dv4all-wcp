@@ -26,6 +26,9 @@
   },
   "scripts": {
     "dev": "rollup -c -w",
+    "dev:html": "rollup -c -w",
+    "dev:next": "rollup -c -w",
+    "dev:nuxt": "rollup -c -w",
     "prebuild": "rimraf lib",
     "prebuild:components": "rimraf lib",
     "build": "rollup -c",
