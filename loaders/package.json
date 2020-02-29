@@ -4,6 +4,7 @@
   "type": "module",
   "main": "lib/dv4loaders.js",
   "module": "lib/dv4loaders.js",
+  "browser": "lib/dv4loaders.cjs.js",
   "description": "loader/spinner as web component",
   "keywords": [
     "spinner",

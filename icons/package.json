@@ -4,6 +4,7 @@
   "type":"module",
   "main": "lib/dv4icons.js",
   "module": "lib/dv4icons.js",
+  "browser": "lib/dv4icons.cjs.js",
   "description": "svg icons as web components",
   "keywords": [
     "svg",

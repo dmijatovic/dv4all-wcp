@@ -4,6 +4,7 @@
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
+  "browser": "lib/dv4wcp.cjs.js",
   "scripts": {
     "dev": "rollup -c -w",
     "dev:html": "rollup -c -w",

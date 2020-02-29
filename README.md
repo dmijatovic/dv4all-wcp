@@ -48,6 +48,9 @@ in SECOND bash window
 "main": "lib/dv4wcp.js",
 // set module also to es6 module file
 "module": "lib/dv4wcp.js",
+// set browser to commonjs (iife) file
+// i used this file in plain HTML demo
+"browser":"lib/dv4wcp.cjs.js",
 
 ```
 
@@ -127,6 +130,7 @@ In section command-bootstrap add hoist:true param. Now you can run bootstrap com
   "packages": [
     "components",
     "loaders",
+    "icons",
     "next-demo",
     "nuxt-demo",
     "web-demo",
@@ -147,6 +151,7 @@ This repo is used to test lerna but also other various stuff. For example we tes
 
 - components: location for shared web components
 - loaders: loaders as web components lib, using rollup as bundler.
+- icons: SVG icons as web component lib @dv4all/icons
 - demos:
   - html-demo: plain html,css and js
   - next-test: tesing use of web components with next and React
