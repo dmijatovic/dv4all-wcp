@@ -1,3 +1,8 @@
 @import 'styles/variables.css';
 @import 'styles/nav.css';
 @import 'styles/layout.css';
+
+
+.btn-show-loader{
+  padding: 0.5rem 1rem;
+}

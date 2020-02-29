@@ -15,9 +15,10 @@ body{
   padding:0;
   display: grid;
   grid-template-rows: minmax(min-content,4rem) 1fr minmax(min-content,4rem);
-  min-height:100vh;
+  min-height:100vh;  
 }
 
+dv4-page-header,
 header{
   padding: var(--page-padding, 1rem 2rem);
   color: var(--header-tx-color,#fff);
@@ -27,9 +28,10 @@ header{
 main{
   padding: var(--page-padding, 1rem 2rem);
   color: var(--main-tx-color,#333);
-  background-color: var(--main-bg-color,#fff);
+  background-color: var(--main-bg-color,#fff);  
 }
 
+dv4-page-footer,
 footer{
   padding: var(--page-padding, 1rem 2rem);
   color: var(--footer-tx-color,#fff);
@@ -38,4 +40,5 @@ footer{
 
 section, p{
   padding: 0.5rem 0rem;
+  line-height: 1.75rem;
 }

@@ -3,29 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <title>Icons - web components</title>
   <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
+  <script src="node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
+  <script src="node_modules/@dv4all/components/lib/dv4wcp.cjs.js"></script>
+  <script src="styles/layout.js"></script>
   <link rel="stylesheet" href="icons.css">
 </head>
 <body>
 
-<header>
-  <h1>This is plain HTML web components demo</h1>
-  <nav>
-    <a href="index.html" class="link">Home</a>
-    <a href="icons.html" class="link active">Icons</a>
-    <a href="loaders.html" class="link">Loaders</a>
-    <a href="components.html" class="link">Components</a>
-  </nav>
-</header>
+<dv4-page-header role="heading" aria-level="1"></dv4-page-header>
 
 <main>
   <dv4-icon-cancel-circle class="dv4-icon" title="My new title"/>
 </main>
 
-<footer>
-  <h2>This is my footer</h2>
-</footer>
+<dv4-page-footer></dv4-page-footer>
 
 </body>
 </html>

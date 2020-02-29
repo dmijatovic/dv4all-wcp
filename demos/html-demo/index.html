@@ -3,24 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <title>HTML web components demo</title>
-  <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
+  <script src="styles/layout.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<header>
-  <h1>This is plain HTML web components demo</h1>
-  <nav>
-    <a href="index.html" class="link active">Home</a>
-    <a href="icons.html" class="link">Icons</a>
-    <a href="loaders.html" class="link">Loaders</a>
-    <a href="components.html" class="link">Components</a>
-  </nav>
-</header>
+<dv4-page-header role="heading" aria-level="1"></dv4-page-header>
 
 <main>
-  <p>Welcome to plain HTML and CSS web components demo. In this demo project
+  <p>Welcome to plain HTML, CSS and JS web components demo! In this demo project
     we test how web components can be used in the plain HTML/CSS project.
   </p>
   <p>These are the steps needed to use web component:</p>
@@ -31,9 +24,7 @@
   </ul>
 </main>
 
-<footer>
-  <h2>This is my footer</h2>
-</footer>
+<dv4-page-footer></dv4-page-footer>
 
 </body>
 </html>

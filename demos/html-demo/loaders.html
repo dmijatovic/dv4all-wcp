@@ -3,33 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
   <title>Loaders - web components</title>
   <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
+  <script src="node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
+  <script src="node_modules/@dv4all/components/lib/dv4wcp.cjs.js"></script>
+  <script src="styles/layout.js"></script>
   <link rel="stylesheet" href="loaders.css">
 </head>
 <body>
 
-<header>
-  <h1>This is plain HTML web components demo</h1>
-  <nav>
-    <a href="index.html" class="link">Home</a>
-    <a href="icons.html" class="link">Icons</a>
-    <a href="loaders.html" class="link active">Loaders</a>
-    <a href="components.html" class="link">Components</a>
-  </nav>
-</header>
+<!--SHARED HEADER -->
+<dv4-page-header role="heading" aria-level="1"></dv4-page-header>
 
 <main>
-  <h2>Web components LOADERS demo @dv4all/loaders</h2>
+  <h2>Demo @dv4all/loaders web components</h2>
   <section>
-    Here comes the demonstration?!?
+    This page demos CSS loaders as web components. All CSS loaders are collected from
+    open source web examples. For each loader in the repo there is README file where
+    usage is explained. In the readme file I link to the CSS loader source.
+  </section>
+  <section>
+    Click on the button to show specific loader type. Click on the loader to close it.
+    By the way, the buttons are also custom web components :-).
+  </section>
+  <section>
+    <dv4-button class="btn-show-loader"
+      role="button"
+      data-loader-type="dv4-loader-ball-triangle">
+        Ball triangle
+    </dv4-button>
+    <dv4-button class="btn-show-loader"
+      role="button"
+      data-loader-type="dv4-loader-donut">
+        Donut loader
+    </dv4-button>
+  </section>
+  <section id="loader-area">
+    Here we inject loader syntax
+    <!-- EXAMPLE CUSTOM LOADER COMPONENT
+      <dv4-loader-ball-triangle hide overlay>
+        Loading...
+      </dv4-loader-ball-triangle>
+    -->
   </section>
 </main>
 
+<!--SHARED FOOTER -->
+<dv4-page-footer></dv4-page-footer>
 
-<footer>
-  <h2>This is my footer</h2>
-</footer>
-
+<!-- LOAD SCRIPT TO SHOW/HIDE LOADERS -->
+<script src="loaders.js"></script>
 </body>
 </html>
