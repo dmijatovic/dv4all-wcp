@@ -8,6 +8,7 @@
   },
   "packages": [
     "components",
+    "icons",
     "loaders",
     "demos/**",
     "utils/**"

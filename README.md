@@ -22,15 +22,22 @@ I just found this [article that might be helpful](https://justinfagnani.com/2019
 # install
 lerna bootstrap
 
-# npm run dev:html
-lerna run dev:html --parallel
-lerna run dev:next --parallel
-lerna run dev:nuxt --parallel
-
 # build components
 lerna run build:components
 
+# run any of the demo options
+
 ```
+
+I prefer to run components build and watch in one bash window and demo side (next,nuxt,html) in another window. There are scripts created in the root package.json file to support this way of working.
+
+in FIRST bash window
+`npm run dev:components`
+
+in SECOND bash window
+`npm run dev:html`
+`npm run dev:next`
+`npm run dev:nuxt`
 
 ## Important props in package.json
 

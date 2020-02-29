@@ -1,7 +1,7 @@
 <template>
   <PageContent>
     <template #page-title>
-      Hey there! This is page title
+      Hey there!
     </template>
     <template #page-body>
       <p>And here we add some content</p>

@@ -1,7 +1,7 @@
 <template>
   <article class="app-content">
     <header class="app-header">
-      <h1>This is app title</h1>
+      <h1>Web components demo</h1>
       <nav class="app-header-nav">
         <nuxt-link
           v-for="route in links"
@@ -17,7 +17,7 @@
       <nuxt />
     </main>
     <footer class="app-footer">
-      my footer
+      Nuxt default template footer
     </footer>
   </article>
 </template>

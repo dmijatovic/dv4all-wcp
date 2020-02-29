@@ -1,7 +1,7 @@
 {
   "name": "@dv4all/loaders",
   "version": "0.0.1",
-  "type":"module",
+  "type": "module",
   "main": "lib/dv4loaders.js",
   "module": "lib/dv4loaders.js",
   "description": "loader/spinner as web component",
@@ -51,6 +51,7 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
+    "@dv4all/icons": "^0.0.1",
     "@dv4all/wcp-utils": "0.0.1"
   }
 }

@@ -1,0 +1,56 @@
+{
+  "name": "@dv4all/icons",
+  "version": "0.0.1",
+  "type":"module",
+  "main": "lib/dv4icons.js",
+  "module": "lib/dv4icons.js",
+  "description": "svg icons as web components",
+  "keywords": [
+    "svg",
+    "icons",
+    "web",
+    "component"
+  ],
+  "author": "Dusan Mijatovic <d.mijatovic@dv4all.nl> (PC2016)",
+  "homepage": "https://github.com/dmijatovic/nuxt-next-lerna#readme",
+  "license": "MIT",
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
+  },
+  "scripts": {
+    "dev": "rollup -c -w",
+    "dev:html": "rollup -c -w",
+    "dev:next": "rollup -c -w",
+    "dev:nuxt": "rollup -c -w",
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "prebuild:components": "rimraf lib",
+    "build:components": "rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/dmijatovic/nuxt-next-lerna/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "eslint": "^6.1.0",
+    "rimraf": "^3.0.1",
+    "rollup": "1.30.1",
+    "rollup-plugin-babel": "4.3.3"
+  },
+  "dependencies": {
+    "@dv4all/wcp-utils": "0.0.1"
+  }
+}
