@@ -5,13 +5,13 @@ This monorepo is created to test web components setup with lerna, nuxt, next and
 The components, loaders and utility functions use same namespace `@dv4all`. The following location and projects are considered as npm libraries:
 
 - `components` (@dv4all/components): represents collection of shared components. I am considering spliting this into 2 packages when collection starts including more complex component. I will start with basic elements (atoms): button, input, checkbox etc. If I split later I will call basic module `@dv4all/elements`.
+- `icons` (@dv4all/icons): SVG icons as custom web elements (web components)
 - `loaders` (@dv4all/loaders): holds various loader components
 - `utils`: this folder holds 2 libraries. Note! the second is just for the purpose of testing. I expect to have mutiple utility libraries and split them by functionality. Currently I see 2:
   - wcp-utils (@dv4all/wcp-utils): web component utility functions
   - fs-util (@dv4all/fs-utils): file system utility functions
 
-Bundling web components to NPM is not common task. I have experienced some problems when creating bundles with rollup. I need to read more about it.
-I just found this [article that might be helpful](https://justinfagnani.com/2019/11/01/how-to-publish-web-components-to-npm/).
+Bundling web components to NPM is not a common task. I have experienced some problems when creating bundles with rollup. [After reading this article](https://justinfagnani.com/2019/11/01/how-to-publish-web-components-to-npm/) I was able to solve number of warnings received from rollup.
 
 ## Development
 
@@ -54,6 +54,7 @@ in SECOND bash window
 ## Important rollup settings
 
 You do need to import plugins for commonjs and node resolvers. The main export should point to ES6 module (type:esm). In the example bellow this is first output defined.
+In plain HTML demo I needed to use commonjs bundel (second option).
 
 ```javascript
 // import babel from 'rollup-plugin-babel'
@@ -66,11 +67,6 @@ export default {
     {
       file: "lib/dv4wcp.js",
       format: "esm"
-    },
-    {
-      name: "Dv4WCP",
-      file: "lib/dv4wcp.umd.js",
-      format: "umd"
     },
     {
       name: "Dv4WCP",
