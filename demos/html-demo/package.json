@@ -16,9 +16,8 @@
     "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
   },
   "scripts": {
-    "start": "serve ./loader",
-    "loader": "serve ./loader",
-    "button": "serve ./button"
+    "start": "serve",
+    "dev": "serve"
   },
   "dependencies": {
     "@dv4all/components": "0.0.1",

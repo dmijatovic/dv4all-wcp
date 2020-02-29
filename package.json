@@ -2,9 +2,9 @@
   "name": "root",
 	"private": true,
 	"scripts":{
-		"dev:html":"lerna run dev:html --parallel",
-		"dev:next":"lerna run dev:next --parallel",
-		"dev:nuxt":"lerna run dev:next --parallel",
+		"dev:html":"bash start-demo-app.sh html-demo",
+		"dev:next":"bash start-demo-app.sh next-demo",
+		"dev:nuxt":"bash start-demo-app.sh nuxt-demo",
 		"dev:components":"lerna run dev --scope=@dv4all/* --parallel",
 		"build:components":"lerna run build:components"
 	},

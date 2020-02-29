@@ -11,7 +11,13 @@ export default class MyApp extends App {
   componentDidMount(){
     console.log("MyApp.didMount...")
     import('@dv4all/loaders').then(d=>{
-      console.log("imported dv4...", d)
+      console.log("imported dv4loaders...", d)
+    })
+    import('@dv4all/icons').then(d=>{
+      console.log("imported dv4icons...", d)
+    })
+    import('@dv4all/components').then(d=>{
+      console.log("imported dv4components...", d)
     })
   }
   render() {
@@ -27,7 +33,7 @@ export default class MyApp extends App {
             article{
               flex:1;
               display: grid;
-              grid-template-rows: 3rem 1fr 3rem;
+              grid-template-rows: 4rem 1fr 4rem;
             }
           `}
         </style>

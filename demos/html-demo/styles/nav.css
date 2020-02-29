@@ -1,0 +1,20 @@
+
+nav{
+  padding: 1rem 0rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+a.link{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color:var(--color-primary,red);
+}
+
+a.link.active{
+  color:var(--color-gold,green);;
+}
