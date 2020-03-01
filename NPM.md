@@ -51,7 +51,7 @@ All packages from this monorepo which are published to NPM are scoped as @dv4all
 
 ### Manual publishing to NPM
 
-This is common manual approach.
+This is [common manual approach](https://www.youtube.com/watch?v=1BCY90aqGe4&t=618s).
 
 ```bash
 # first time on machine you need to adduser/login
@@ -60,6 +60,15 @@ npm adduser
 # increase version number
 # it will also create tag
 npm version patch
+
+# commit and push tags to origin
+git add .
+git commit -m "chore: patch release"
+git push --tags
+
+# publish version with next tag
+# default is latest
+npm publish --tag next --access public
 
 ```
 
