@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/wcp-utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "lib/dv4wcp.utils.js",
   "module": "lib/dv4wcp.utils.js",

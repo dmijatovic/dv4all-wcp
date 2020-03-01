@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
@@ -15,7 +15,7 @@
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "pub":"npm publish --access public"
+    "pub": "npm publish --access public"
   },
   "keywords": [
     "shared",
@@ -47,7 +47,7 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.0.1",
-    "@dv4all/wcp-utils": "0.0.1"
+    "@dv4all/icons": "^0.0.2",
+    "@dv4all/wcp-utils": "^0.0.2"
   }
 }
