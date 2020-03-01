@@ -1,34 +1,23 @@
-# Web components
+# Web components TEST
 
-This lib contains some basic web components like buttons, inputs etc.
+`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`
 
-It exports all components into dv4wc module. In addition there is export per component eg. dv4btn for button.
+This lib contains basic web components like buttons, inputs etc. It exports all components into dv4wc module. It depens on two other libraries from @dv4all scope.
+
+**This module is part of monorepo dv4all-wcp-lerna.**
 
 ## Usage
 
 ```javascript
-import "@dv4all/components";
+import "@dv4all/web-components";
 // TODO: DEMONSTRATE API
 ```
 
-## Rollup setup
+## Lessons learned about web components and NPM publishing
 
-Made partially by [this video](https://www.youtube.com/watch?v=K1RE9FspKxw)
+The rest of readme contains my remarks about setting process and specific 'quirks' during use of web components with plain html, nuxtjs and nextjs projects (which are also part of this monorepo).
 
-## Importing ESM modules directly
-
-It seems that I need to import esm module directly. Why is that? If I just specify lib it seems to be importing umd files which do not work properly?!?
-
-### Example direct ESM module import
-
-```javascript
-// needs to directly point to esm module?!?
-import { newCustomElement } from "@dv4all/wcp-utils/lib/dv4wcp.utils.esm";
-// THIS WILL NOT WORK!?!?
-import { newCustomElement } from "@dv4all/wcp-utils";
-```
-
-## Important props in package.json
+### Important props in package.json
 
 ```json
 // set package type to module
@@ -37,10 +26,13 @@ import { newCustomElement } from "@dv4all/wcp-utils";
 "main": "lib/dv4wcp.js",
 // set module also to es6 module file
 "module": "lib/dv4wcp.js",
-
+// for browser I used cjs (iife) format
+"browser":"lib/dv4wcp.csj.js"
 ```
 
-## Important rollup settings
+### Rollup setup
+
+The rollup setup is partially based on [this video](https://www.youtube.com/watch?v=K1RE9FspKxw)
 
 You do need to import plugins for commonjs and node resolvers. The main export should point to ES6 module (type:esm). In the example bellow this is first output defined.
 
@@ -69,4 +61,16 @@ export default {
   ],
   plugins: [resolve(), commonjs()]
 };
+```
+
+### Publishing moule to NPM
+
+This package is scoped under @dv4all.
+
+```bash
+# first time on machine you need to adduser/login
+npm adduser
+
+# you need to be logged in first
+npm run publish
 ```

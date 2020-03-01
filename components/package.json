@@ -1,6 +1,6 @@
 {
-  "name": "@dv4all/components",
-  "version": "0.0.1",
+  "name": "@dv4all/web-components",
+  "version": "0.0.2",
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
@@ -14,13 +14,14 @@
     "build": "rollup -c",
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "publish":"npm publish --access public"
   },
   "keywords": [
     "shared",
     "web components"
   ],
-  "description": "shared components dv4all",
+  "description": "shared web components dv4all",
   "author": "Dusan Mijatovic",
   "license": "MIT",
   "sideEffects": false,
@@ -29,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
