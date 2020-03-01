@@ -6,7 +6,8 @@
 		"dev:next":"bash start-demo-app.sh next-demo",
 		"dev:nuxt":"bash start-demo-app.sh nuxt-demo",
 		"dev:components":"lerna run dev --scope=@dv4all/* --parallel",
-		"build:components":"lerna run build:components"
+		"build:components":"lerna run build:components",
+		"release":"lerna version"
 	},
   "devDependencies": {
     "lerna": "^3.19.0"

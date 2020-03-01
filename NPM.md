@@ -62,3 +62,5 @@ npm adduser
 npm version patch
 
 ```
+
+### [Lerna publish](https://github.com/lerna/lerna/tree/master/commands/publish#readme)

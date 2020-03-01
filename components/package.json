@@ -15,7 +15,8 @@
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "pub": "npm publish --access public"
+    "prerelease":"npm run build",
+    "release": "npm publish --access public"
   },
   "keywords": [
     "shared",
