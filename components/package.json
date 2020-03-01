@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
@@ -15,7 +15,7 @@
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "prerelease":"npm run build",
+    "prerelease": "npm run build",
     "release": "npm publish --access public"
   },
   "keywords": [
