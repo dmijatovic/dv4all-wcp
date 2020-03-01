@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/icons",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "type": "module",
   "main": "lib/dv4icons.js",
   "module": "lib/dv4icons.js",
