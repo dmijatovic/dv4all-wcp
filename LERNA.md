@@ -44,6 +44,8 @@ lerna create <package-name>
 
 In section command-bootstrap add hoist:true param. Now you can run bootstrap command without parameter --hoist as it is part of configuration.
 
+lerna.json
+
 ```json
 {
   "packages": [
@@ -60,7 +62,7 @@ In section command-bootstrap add hoist:true param. Now you can run bootstrap com
       "hoist": true
     }
   },
-  "version": "0.0.1"
+  "version": "independent"
 }
 ```
 
@@ -71,3 +73,9 @@ lerna version 1.0.1 # explicit
 lerna version patch # semver keyword
 lerna version       # select from prompt(s)
 ```
+
+### Independent versioning
+
+Basic info comes from [this article](https://samhogy.co.uk/2018/08/lerna-independent-mode-with-semver.html)
+
+So we use semver but each package has their own version number. I think this is more flexible approach in most situations. There might be situation that 'tight' version coupling is required. For that set in version in lerna.json to a number.
