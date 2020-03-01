@@ -1,6 +1,10 @@
 # Next test web components
 
+**`THIS MODULE IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`**
+
 This is simple test of plain web components with next.
+
+**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
 
 ## Page template
 

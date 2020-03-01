@@ -1,6 +1,10 @@
-# nuxt-test
+# nuxt-demo web components
+
+**`THIS MODULE IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`**
 
 Nuxt test of web components in this monorepo.
+
+**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
 
 ## Build Setup
 
@@ -51,4 +55,4 @@ Wrap your client side ONLY components with `client-only` markup
 </client-only>
 ```
 
-When nuxt is in spa mode wrapping custom elements in client-only markup is not requered.
+When nuxt is in spa mode wrapping custom elements in client-only markup is not requiered.

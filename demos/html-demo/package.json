@@ -8,12 +8,12 @@
     "web",
     "component"
   ],
-  "author": "Dusan Mijatovic <d.mijatovic@dv4all.nl> (PC2016)",
-  "homepage": "https://github.com/dmijatovic/nuxt-next-lerna#readme",
+  "author": "Dusan Mijatovic",
+  "homepage": "https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/html-demo",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
   },
   "scripts": {
     "start": "serve",

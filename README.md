@@ -1,8 +1,10 @@
 # Web components monorepo - DEMO
 
-This monorepo is created to test web components setup with lerna, nuxt, next and plain JS. I am developing ideas about project organization and structure. What folder structure is handy? How monorepo approach works? Where LERNA is helpful?
+`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`
 
-The components, loaders and utility functions use same namespace `@dv4all`. The following location and projects are considered as npm libraries:
+The monorepo is created to test web components setup with lerna, nuxt, next and plain HTML5. I am developing ideas about project organization and structure. What folder structure is optimal for max. flexibility and efficiency? How monorepo approach works? When LERNA is helpful?
+
+The components, loaders and utility functions use the same namespace `@dv4all`. The following location and projects are considered as npm libraries:
 
 - `components` (@dv4all/components): represents collection of shared components. I am considering spliting this into 2 packages when collection starts including more complex component. I will start with basic elements (atoms): button, input, checkbox etc. If I split later I will call basic module `@dv4all/elements`.
 - `icons` (@dv4all/icons): SVG icons as custom web elements (web components)
@@ -11,7 +13,95 @@ The components, loaders and utility functions use same namespace `@dv4all`. The 
   - wcp-utils (@dv4all/wcp-utils): web component utility functions
   - fs-util (@dv4all/fs-utils): file system utility functions
 
-Bundling web components to NPM is not a common task. I have experienced some problems when creating bundles with rollup. [After reading this article](https://justinfagnani.com/2019/11/01/how-to-publish-web-components-to-npm/) I was able to solve number of warnings received from rollup.
+Bundling web components to NPM is challenging task. I have experienced some problems when creating bundles with rollup. [After reading this article](https://justinfagnani.com/2019/11/01/how-to-publish-web-components-to-npm/) I was able to solve number of warnings received from rollup.
+
+## Demos
+
+One of the goals is to test use of web components as NPM packages with plain HTML-CSS-JS project but also with React and Vue. For this purpose in the demos folder we have 3 projects. Important discovery concerning web components is that SSR solutions (Next & Nuxt) do require specific approach with web components, namely the web components rendering need to be avoided on the server side because Node does not have support for customElements.
+
+- `html-demo`: plain HTML,CSS and JS application of web component libs from this monorepo. Just import commonjs version javascript file.
+- `next-demo`: using custom web components with React. NexyJS is selected because it offers more options like SSR and static sites using React components. This was important choise because universal app do not support customElements on server side. Specific approach is required for web components to work with SSR. Demo imports modules dynmically in the app template on `ComponentDidMount` lifecycle method.
+- `nuxt-demo`: using custom web components from this monorepo with Vue. Nuxt is selected in similair fastion as Next because it enables various approached like SSR and static website besides SPA. Demo implements web components as plugins with SSR disabled.
+
+### HTML5 implementation
+
+Import cjs version of the library () file in the header of html file. For example of the implementation see demos/html-demo/icons.html for example.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png" />
+    <title>Icons - web components</title>
+    <!--IMPORT @dv4all PACKAGES to registed customElements -->
+    <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
+    <script src="node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
+    <script src="node_modules/@dv4all/components/lib/dv4wcp.cjs.js"></script>
+    <!-- END IMOPRT CUSTOM COMPONENTS-->
+    <script src="styles/layout.js"></script>
+    <link rel="stylesheet" href="icons.css" />
+  </head>
+  <body>
+    <!--EXAMPLE ICON CUSTOM WEB COMPONENT -->
+    <dv4-icon-cancel-circle class="dv4-icon" title="My new title" />
+  </body>
+</html>
+```
+
+### NextJS implementation
+
+NextJS supports SSR. On the server side customElements are not supported. Therefore you need to ensure that this library is loaded only at the client side. I achieve this in the demo by dynamically importing web components in the app template in React component life cycle method ComponentDidMount. See demos/next-demo/pages/\_app.js file for exact implementation.
+
+```javascript
+export default class MyApp extends App {
+  // IMPORT web components on CLIENT SIDE
+  // othewise NextJS will try to render it
+  // on the server and it will faile with error
+  // about customElements.define ... undefined
+  componentDidMount() {
+    console.log("MyApp.didMount...");
+    import("@dv4all/loaders").then(d => {
+      console.log("imported dv4loaders...", d);
+    });
+    import("@dv4all/icons").then(d => {
+      console.log("imported dv4icons...", d);
+    });
+    import("@dv4all/components").then(d => {
+      console.log("imported dv4components...", d);
+    });
+  }
+  // ... OTHER CODE ...
+}
+```
+
+### NuxtJS implementation
+
+In the NuxtJS I added web components as plugins and set SSR flag to false. This was sufficient. Nuxt has also a component `<client-only>...</client-only>` that can be used to wrap markup that should only be rendered on the client side.
+
+`extract from nuxt.config.js`
+
+```javascript
+  // .... OTHER CODE
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    // '@/plugins/dv4-loaders-wc.js'
+    { src: '@/plugins/dv4-loaders-wc.js', ssr: false },
+    { src: '@/plugins/dv4-components.js', ssr: false },
+    { src: '@/plugins/dv4-icons.js', ssr: false }
+  ],
+  // .... OTHER CODE
+```
+
+Content dv4-loaders-wc.js is simple import of @dv4all/loaders npm package
+
+```javascript
+// import NPM package
+import "@dv4all/loaders";
+```
 
 ## Development
 
@@ -21,10 +111,8 @@ Bundling web components to NPM is not a common task. I have experienced some pro
 ```bash
 # install
 lerna bootstrap
-
 # build components
 lerna run build:components
-
 # run any of the demo options
 
 ```
@@ -145,17 +233,22 @@ In section command-bootstrap add hoist:true param. Now you can run bootstrap com
 }
 ```
 
-## Packages
+## Publishing NPM packages
 
-This repo is used to test lerna but also other various stuff. For example we test web components (customElements) creation and application in next (React) and nuxt (Vue)
+This repo is used to test web components (customElements) creation and application in next (React), nuxt (Vue) and plain HTML5 projects. This section will address lernings related to publishing packages to NPM. Besides manual approach nowadays there are tools to automate publishing. These tools are able to bump a version, generate CHANGES.LOG, tag release and publish the package. Let's first look at bare manual approach and later we will [test some tools that are widely used](https://www.npmtrends.com/release-it-vs-semantic-release-vs-standard-version-vs-np-vs-conventional-changelog)
 
-- components: location for shared web components
-- loaders: loaders as web components lib, using rollup as bundler.
-- icons: SVG icons as web component lib @dv4all/icons
-- demos:
-  - html-demo: plain html,css and js
-  - next-test: tesing use of web components with next and React
-  - nuxt-test: testing use of web components with nuxt and Vue
-- utils:
-  - fs: shared utils library, using rollup as bundler.
-  - wcp: shared web components utilities between loader and components library
+All packages from this monorepo which are published to NPM are scoped as @dv4all/
+
+### Manual publishing to NPM
+
+This is common manual approach.
+
+```bash
+# first time on machine you need to adduser/login
+npm adduser
+
+# increase version number
+# it will also create tag
+npm version patch
+
+```

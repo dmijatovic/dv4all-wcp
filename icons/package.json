@@ -5,28 +5,6 @@
   "main": "lib/dv4icons.js",
   "module": "lib/dv4icons.js",
   "browser": "lib/dv4icons.cjs.js",
-  "description": "svg icons as web components",
-  "keywords": [
-    "svg",
-    "icons",
-    "web",
-    "component"
-  ],
-  "author": "Dusan Mijatovic <d.mijatovic@dv4all.nl> (PC2016)",
-  "homepage": "https://github.com/dmijatovic/nuxt-next-lerna#readme",
-  "license": "MIT",
-  "sideEffects": false,
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
-  },
   "scripts": {
     "dev": "rollup -c -w",
     "dev:html": "rollup -c -w",
@@ -38,8 +16,30 @@
     "build:components": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
+  "keywords": [
+    "svg",
+    "icons",
+    "web",
+    "component"
+  ],
+  "description": "svg icons as web components",
+  "author": "Dusan Mijatovic",
+  "license": "MIT",
+  "homepage": "https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/icons",
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
+  },
   "bugs": {
-    "url": "https://github.com/dmijatovic/nuxt-next-lerna/issues"
+    "url": "https://github.com/dmijatovic/dv4all-wcp-lerna/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

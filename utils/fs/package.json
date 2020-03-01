@@ -3,14 +3,21 @@
   "version": "0.0.1",
   "type": "module",
   "main": "lib/dv4fs.utils.js",
-  "browser": "lib/dv4fs.utils.cjs.js",
   "module": "lib/dv4fs.utils.js",
-  "description": "file system utility functions",
+  "browser": "lib/dv4fs.utils.cjs.js",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "prebuild": "rimraf lib",
+    "build": "rollup -c",
+    "build:components": "rollup -c",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
   "keywords": [
     "functions"
   ],
+  "description": "file system utility functions",
   "author": "Dusan Mijatovic",
-  "homepage": "",
+  "homepage": "https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/utils",
   "license": "MIT",
   "sideEffects": false,
   "directories": {
@@ -22,17 +29,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmijatovic/nuxt-next-lerna.git"
-  },
-  "scripts": {
-    "dev": "rollup -c -w",
-    "prebuild": "rimraf lib",
-    "build": "rollup -c",
-    "build:components": "rollup -c",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
   },
   "bugs": {
-    "url": "https://github.com/dmijatovic/nuxt-next-lerna/issues"
+    "url": "https://github.com/dmijatovic/dv4all-wcp-lerna/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",

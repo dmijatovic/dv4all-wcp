@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
@@ -15,7 +15,7 @@
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "publish":"npm publish --access public"
+    "pub":"npm publish --access public"
   },
   "keywords": [
     "shared",
@@ -24,6 +24,7 @@
   "description": "shared web components dv4all",
   "author": "Dusan Mijatovic",
   "license": "MIT",
+  "homepage": "https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/components",
   "sideEffects": false,
   "directories": {
     "lib": "lib"
@@ -31,6 +32,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmijatovic/dv4all-wcp-lerna/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
