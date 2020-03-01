@@ -4,6 +4,9 @@
   "command": {
     "bootstrap": {
       "hoist": true
+    },
+    "version": {
+      "message": "chore(release): publish %s"
     }
   },
   "packages": [
