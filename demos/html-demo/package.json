@@ -25,6 +25,7 @@
     "@dv4all/web-components": "^0.1.0"
   },
   "devDependencies": {
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "jest": "^25.1.0"
   }
 }

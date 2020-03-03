@@ -17,7 +17,7 @@
   "dependencies": {
     "@dv4all/icons": "^0.1.0",
     "@dv4all/loaders": "^0.1.0",
-    "@dv4all/web-components": "^0.1.0",
+    "@dv4all/web-components": "^0.1.0",    
     "next": "9.2.1",
     "react": "16.12.0",
     "react-dom": "16.12.0"
