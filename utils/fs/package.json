@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/fs-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "main": "lib/dv4fs.utils.js",
   "module": "lib/dv4fs.utils.js",
@@ -40,9 +40,9 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "eslint": "^6.1.0",
+    "jest": "^25.1.0",
     "rimraf": "^3.0.1",
     "rollup": "1.30.1",
-    "rollup-plugin-babel": "4.3.3",
-    "jest": "^25.1.0"
+    "rollup-plugin-babel": "4.3.3"
   }
 }
