@@ -1,6 +1,6 @@
 {
   "name": "nuxt-demo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "nuxt web components demo",
   "author": "Dusan Mijatovic (xps2018)",
   "main": ".nuxt/server.js",
@@ -16,7 +16,7 @@
   "dependencies": {
     "@dv4all/icons": "^0.1.1",
     "@dv4all/loaders": "^0.1.1",
-    "@dv4all/web-components": "^0.1.1",
+    "@dv4all/web-components": "^0.1.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

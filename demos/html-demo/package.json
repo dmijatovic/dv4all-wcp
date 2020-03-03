@@ -1,6 +1,6 @@
 {
   "name": "html-demo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple basic html demo of web components",
   "keywords": [
     "spinner",
@@ -22,7 +22,7 @@
   "dependencies": {
     "@dv4all/icons": "^0.1.1",
     "@dv4all/loaders": "^0.1.1",
-    "@dv4all/web-components": "^0.1.1"
+    "@dv4all/web-components": "^0.1.2"
   },
   "devDependencies": {
     "jest": "^25.1.0",
