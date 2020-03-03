@@ -29,5 +29,6 @@
     "eslint-plugin-nuxt": ">=0.4.2",
     "jest": "^24.1.0",
     "vue-jest": "^4.0.0-0"
-  }
+  },
+  "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
 }
