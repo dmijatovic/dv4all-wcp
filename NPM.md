@@ -84,6 +84,10 @@ npm publish --tag next --access public
 # check package info web-components
 npm info @dv4all/web-components
 
+# publish using lerna script
+# this will run npm publish in all modules
+lerna run release
+
 ```
 
 ### [Lerna publish](https://github.com/lerna/lerna/tree/master/commands/publish#readme)
