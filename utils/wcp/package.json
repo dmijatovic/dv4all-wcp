@@ -14,7 +14,10 @@
     "prebuild:components": "rimraf lib",
     "build": "rollup -c",
     "build:components": "rollup -c",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "jest",
+    "tdd":"jest --watch",
+    "prerelease": "npm run build",
+    "release": "npm publish --access public"
   },
   "keywords": [
     "functions"
@@ -47,6 +50,7 @@
     "rimraf": "^3.0.1",
     "rollup": "1.30.1",
     "rollup-plugin-babel": "4.3.3",
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "babel-jest": "25.1.0"
   }
 }

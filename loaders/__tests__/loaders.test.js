@@ -1,7 +1,6 @@
-'use strict'
 
-const loaders = require('..')
-
-describe('loaders', () => {
-  it('needs tests')
+describe('Basic test setup',()=>{
+  it ('True should be true :-)',()=>{
+    expect(true).toBe(true)
+  })
 })

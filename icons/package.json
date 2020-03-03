@@ -14,8 +14,9 @@
     "build": "rollup -c",
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "pub": "npm publish --access public"
+    "test": "jest",
+    "prerelease": "npm run build",
+    "release": "npm publish --access public"
   },
   "keywords": [
     "svg",
