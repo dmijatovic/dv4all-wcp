@@ -69,15 +69,28 @@ lerna.json
 ## [Versioning with LERNA](https://github.com/lerna/lerna/tree/master/commands/version#readme)
 
 ```bash
-lerna version 1.0.1 # explicit
-lerna version patch # semver keyword
-lerna version       # select from prompt(s)
-
-lerna version --conventional-commits --yes
+# explicit
+lerna version 1.0.1
+# semver keyword
+lerna version patch
+# select from prompt(s)
+lerna version
+# add conventional-commit
+# see more here https://conventionalcommits.org
+lerna version --conventional-commits
 ```
 
 ### Independent versioning
 
 Basic info comes from [this article](https://samhogy.co.uk/2018/08/lerna-independent-mode-with-semver.html)
 
-So we use semver but each package has their own version number. I think this is more flexible approach in most situations. There might be situation that 'tight' version coupling is required. For that set in version in lerna.json to a number.
+So we use semver but each package has their own version number. I think this is more flexible approach in most situations. There might be situation that 'tight' version coupling is required. For that set the version number in the version prop of lerna.json.
+
+## [Check changes](https://github.com/lerna/lerna/tree/master/commands/changed)
+
+This will detect new commits that are not published and will show list of packages that have changes.
+
+```bash
+# check what is changed
+lerna changed
+```

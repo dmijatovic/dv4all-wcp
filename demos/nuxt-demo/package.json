@@ -16,7 +16,6 @@
   "dependencies": {
     "@dv4all/icons": "^0.1.0",
     "@dv4all/loaders": "^0.0.3",
-    "@dv4all/wcp-utils": "^0.0.2",
     "@dv4all/web-components": "^0.0.1",
     "nuxt": "^2.0.0"
   },
