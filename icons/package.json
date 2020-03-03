@@ -53,6 +53,6 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/wcp-utils": "^0.0.2"
+    "@dv4all/wcp-utils": "^0.1.0"
   }
 }
