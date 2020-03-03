@@ -74,7 +74,7 @@ git tag @dv4all/web-components@0.1.0
 git tag -l
 # if wrong remove tag
 git tag -d <tagname>
-
+# push all to github
 git push --tags
 
 # publish version with next tag
