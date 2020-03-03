@@ -16,6 +16,9 @@ lerna create <packagename>
 lerna list
 
 # bootstrap - hoisting node_modules at the top
+# NOTE! if there are errors with package versions
+# references you might need to delete node_modules
+# from all packages
 lerna bootstrap --hoist
 
 # add axios and typescript as dependency TO ALL packages

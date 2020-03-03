@@ -36,8 +36,8 @@ export default {
   plugins: [
     // '@/plugins/dv4-loaders-wc.js'
     { src: '@/plugins/dv4-loaders-wc.js', ssr: false },
-    { src: '@/plugins/dv4-components.js', ssr: false },
-    { src: '@/plugins/dv4-icons.js', ssr: false }
+    { src: '@/plugins/dv4-icons.js', ssr: false },
+    { src: '@/plugins/dv4-wcp.js', ssr: false }
   ],
   /*
   ** Nuxt.js dev-modules

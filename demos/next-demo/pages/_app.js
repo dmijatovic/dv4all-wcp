@@ -16,8 +16,8 @@ export default class MyApp extends App {
     import('@dv4all/icons').then(d=>{
       console.log("imported dv4icons...", d)
     })
-    import('@dv4all/components').then(d=>{
-      console.log("imported dv4components...", d)
+    import('@dv4all/web-components').then(d=>{
+      console.log("imported dv4webcomponents...", d)
     })
   }
   render() {

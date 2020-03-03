@@ -21,8 +21,8 @@
   },
   "dependencies": {
     "@dv4all/icons": "^0.1.0",
-    "@dv4all/loaders": "^0.0.3",
-    "@dv4all/web-components": "^0.0.1"
+    "@dv4all/loaders": "^0.1.0",
+    "@dv4all/web-components": "^0.1.0"
   },
   "devDependencies": {
     "serve": "^11.3.0"

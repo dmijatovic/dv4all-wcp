@@ -2,4 +2,4 @@
 * Import customElements (web components)
 */
 
-import '@dv4all/components'
+import '@dv4all/web-components'

@@ -13,15 +13,17 @@ const loader = () => {
 
   const render = ()=>{
     if (state.show){
-      return (
-      <dv4-loader-gooey
+      return (<dv4-loader-ball-triangle
         backdrop
         onClick={toggleState}
       >
         { state.message }
-      </dv4-loader-gooey>)
+      </dv4-loader-ball-triangle>)
     } else {
-      return <dv4-button onClick={toggleState}>Show loader</dv4-button>
+      return <dv4-button
+        class="btn-show-loader"
+        role="button"
+        onClick={toggleState}>Show loader</dv4-button>
     }
   }
 

@@ -58,17 +58,31 @@ This is [common manual approach](https://www.youtube.com/watch?v=1BCY90aqGe4&t=6
 npm adduser
 
 # increase version number
-# it will also create tag
-npm version patch
+# for the package you releasing
+# in package.json
+# MANUALLY or use https://docs.npmjs.com/cli/version
+npm version major | minor | patch
 
 # commit and push tags to origin
 git add .
 git commit -m "chore: patch release"
+
+# add tag to package relase
+# for example
+git tag @dv4all/web-components@0.1.0
+#list tags
+git tag -l
+# if wrong remove tag
+git tag -d <tagname>
+
 git push --tags
 
 # publish version with next tag
 # default is latest
 npm publish --tag next --access public
+
+# check package info web-components
+npm info @dv4all/web-components
 
 ```
 
