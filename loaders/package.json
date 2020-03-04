@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/loaders",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "lib/dv4loaders.js",
   "module": "lib/dv4loaders.js",
@@ -55,7 +55,7 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.1.1",
-    "@dv4all/wcp-utils": "^0.1.1"
+    "@dv4all/icons": "^0.1.2",
+    "@dv4all/wcp-utils": "^0.1.2"
   }
 }

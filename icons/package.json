@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/icons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "lib/dv4icons.js",
   "module": "lib/dv4icons.js",
@@ -55,6 +55,6 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/wcp-utils": "^0.1.1"
+    "@dv4all/wcp-utils": "^0.1.2"
   }
 }
