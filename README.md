@@ -1,6 +1,6 @@
 # Web components monorepo - DEMO
 
-`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`
+`THIS MONOREPO IS USED TO TEST USE OF WEB COMPONENTS, LERNA AND HOW PUBLISHING TO NPM WORKS.`
 
 The monorepo is created to test web components setup with lerna, nuxt, next and plain HTML5. I am developing ideas about project organization and structure. What folder structure is optimal for max. flexibility and efficiency? How monorepo approach works? When LERNA is helpful?
 
