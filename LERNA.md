@@ -101,3 +101,22 @@ Lerna publish supports automaticall creation of CHANGELOG.md if you use [commits
 # you need to provide public access
 lerna publish --access public
 ```
+
+### Publishing scoped packages
+
+To publish scoped packages as open source you need to [add definition in package.json](https://github.com/lerna/lerna/tree/master/commands/publish#per-package-configuration)
+
+```json
+// ... OTHER
+"publishConfig": {
+    "access": "public"
+},
+// ... OTHER
+
+```
+
+When publishing scoped packages, the access level defaults to restricted. If you want your scoped package to be [publicly viewable (and installable)](https://docs.npmjs.com/misc/config#access):
+
+```bash
+npm config set access public
+```

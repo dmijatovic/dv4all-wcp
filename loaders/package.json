@@ -40,6 +40,9 @@
     "type": "git",
     "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/dmijatovic/dv4all-wcp-lerna/issues"
   },

@@ -91,3 +91,11 @@ lerna run release
 ```
 
 Alternatively you can use [lerna publish command](LERNA.md) which will perform all these task and update CHANGELOG file you.
+
+### Publishing scoped packages
+
+When publishing scoped packages, the access level defaults to restricted. If you want your scoped package to be [publicly viewable (and installable)](https://docs.npmjs.com/misc/config#access):
+
+```bash
+npm config set access public
+```
