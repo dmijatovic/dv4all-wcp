@@ -90,3 +90,7 @@ import "@dv4all/loaders";
 ```
 
 For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/nuxt-demo)
+
+## Icons
+
+- [arrow-right](src/arrow-right/README.md): arrow-right svg icon as custom web component

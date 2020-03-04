@@ -15,6 +15,7 @@
     "prebuild:components": "rimraf lib",
     "build:components": "rollup -c",
     "test": "jest",
+    "tdd": "jest --watch",
     "prerelease": "npm run build",
     "release": "npm publish --access public"
   },
@@ -40,6 +41,9 @@
     "type": "git",
     "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/dmijatovic/dv4all-wcp-lerna/issues"
   },
@@ -48,6 +52,7 @@
     "@babel/preset-env": "^7.8.4",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "babel-jest": "25.1.0",
     "eslint": "^6.1.0",
     "jest": "^25.1.0",
     "rimraf": "^3.0.1",
@@ -56,9 +61,6 @@
   },
   "dependencies": {
     "@dv4all/wcp-utils": "^0.1.3"
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"
 }

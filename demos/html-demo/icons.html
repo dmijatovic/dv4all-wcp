@@ -7,7 +7,7 @@
   <title>Icons - web components</title>
   <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
   <script src="node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
-  <script src="node_modules/@dv4all/components/lib/dv4wcp.cjs.js"></script>
+  <script src="node_modules/@dv4all/web-components/lib/dv4wcp.cjs.js"></script>
   <script src="styles/layout.js"></script>
   <link rel="stylesheet" href="icons.css">
 </head>
@@ -16,7 +16,30 @@
 <dv4-page-header role="heading" aria-level="1"></dv4-page-header>
 
 <main>
-  <dv4-icon-cancel-circle class="dv4-icon" title="My new title"/>
+  <section>
+    <h1>SVG Icons as web components</h1>
+    <p>
+      Below you see examples of SVG icons avaliable in @dv4all/icons module.
+      Hower over the icon to see the name of the component.
+      Look at the source code of html to see how icon is implemented.
+      More info is avaliable in REDME and <a href="https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/html-demo">Github repo</a>.
+    </p>
+  </section>
+  <section>
+    <!-- CANCEL CIRCLE -->
+    <dv4-icon-cancel-circle
+      class="dv4-icon"
+      title="dv4-icon-cancel-circle"
+      role="button">
+    </dv4-icon-cancel-circle>
+    <!-- ARROW RIGHT -->
+    <dv4-icon-arrow-right
+      class="dv4-icon"
+      title="dv4-icon-cancel-circle"
+      role="button">
+    </dv4-icon-arrow-right>
+
+  </section>
 </main>
 
 <dv4-page-footer></dv4-page-footer>

@@ -15,4 +15,6 @@
   --page-padding: 1rem 2rem;
   --footer-bg-color: var(--color-primary);
   --footer-tx-color: var(--color-primary-contrast,#E8EDEE);
+
+  --box-shadow: 4px 4px #ccc;
 }
