@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.1.3...@dv4all/icons@0.2.0) (2020-03-04)
+
+
+### Features
+
+* added arrow-right icon ([0ca9fec](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/0ca9fec6b170bd9a6263348a635025565bc8dab9))
+
+
+
+
+
 ## [0.1.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.1.0...@dv4all/icons@0.1.1) (2020-03-03)
 
 
