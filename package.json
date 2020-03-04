@@ -9,8 +9,8 @@
 		"build:components":"lerna run build:components",
 		"new-version":"lerna version --conventional-commits",
 		"diff":"lerna diff",
-		"publish":"git push --tags",
-		"release":"lerna publish"
+		"publish:git":"git push --tags",
+		"release":"lerna publish --access public "
 	},
   "devDependencies": {
     "lerna": "^3.19.0"

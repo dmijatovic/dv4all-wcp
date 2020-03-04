@@ -98,5 +98,6 @@ Lerna publish supports automaticall creation of CHANGELOG.md if you use [commits
 
 ```bash
 # start interactive publish mode
-lerna publish
+# you need to provide public access
+lerna publish --access public
 ```
