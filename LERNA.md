@@ -47,20 +47,6 @@ lerna create <package-name>
 
 In section command-bootstrap add hoist:true param. Now you can run bootstrap command without parameter --hoist as it is part of configuration.
 
-lerna.json
-
-```json
-{
-  "packages": ["components", "loaders", "icons", "utils"],
-  "command": {
-    "bootstrap": {
-      "hoist": true
-    }
-  },
-  "version": "independent"
-}
-```
-
 ## [Versioning with LERNA](https://github.com/lerna/lerna/tree/master/commands/version#readme)
 
 ```bash
@@ -106,10 +92,12 @@ lerna publish --access public
 
 To publish scoped packages as open source you need to [add definition in package.json](https://github.com/lerna/lerna/tree/master/commands/publish#per-package-configuration)
 
+package.json
+
 ```json
 // ... OTHER
 "publishConfig": {
-    "access": "public"
+  "access": "public"
 },
 // ... OTHER
 
@@ -119,4 +107,25 @@ When publishing scoped packages, the access level defaults to restricted. If you
 
 ```bash
 npm config set access public
+```
+
+## LERNA config file (lerna.json)
+
+lerna.json
+
+```json
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "bootstrap": {
+      "hoist": true
+    },
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish package with lerna"
+    }
+  },
+  "packages": ["components", "icons", "loaders", "utils/**"]
+}
 ```

@@ -6,7 +6,8 @@
       "hoist": true
     },
     "version": {
-      "message": "chore(release): publish package with lerna"
+      "conventionalCommits": true,
+      "message": "chore(release): publish packages with lerna"
     }
   },
   "packages": [

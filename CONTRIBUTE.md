@@ -45,3 +45,27 @@ A commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope
 footers other than BREAKING CHANGE: \<description> may be provided and follow a convention similar to git trailer format.
 
 Additional types are not mandated by the conventional commits specification, and have no implicit effect in semantic versioning (unless they include a BREAKING CHANGE).
+
+## Publishing flow
+
+In this repo I am testing two approaches.
+
+### Manual publishing of packages to NPM
+
+This can be called traditional approach. It is slower but allows for more granularity.
+The steps are:
+
+- commit changes: `git commit ...`
+- increase version number: manually set version number in package.json
+- update CHANGELOG.ms file: manually add text to changelog.md
+- commit and tag version: push a tag in format `@scope/module@version`
+- push to github: `git push`
+- publish npm package: `npm run release` or `npm publish --access public`
+
+### Using LERNA to publish
+
+This approach automates most of the tasks from manual approach. This repo is created to test how well automated approach with LERNA works. What are its strenghts and weaknesses?
+
+- commit changes: `git ...`
+- check changes: `lerna changed`
+- publish packages: `lerna publish`
