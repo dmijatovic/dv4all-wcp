@@ -90,4 +90,4 @@ lerna run release
 
 ```
 
-### [Lerna publish](https://github.com/lerna/lerna/tree/master/commands/publish#readme)
+Alternatively you can use [lerna publish command](LERNA.md) which will perform all these task and update CHANGELOG file you.

@@ -51,15 +51,7 @@ lerna.json
 
 ```json
 {
-  "packages": [
-    "components",
-    "loaders",
-    "icons",
-    "next-demo",
-    "nuxt-demo",
-    "web-demo",
-    "utils"
-  ],
+  "packages": ["components", "loaders", "icons", "utils"],
   "command": {
     "bootstrap": {
       "hoist": true
@@ -96,4 +88,15 @@ This will detect new commits that are not published and will show list of packag
 ```bash
 # check what is changed
 lerna changed
+```
+
+## Publishing with LERNA
+
+Use [lerna publish command](https://github.com/lerna/lerna/tree/master/commands/publish) to publish the packages. Lerna will publish only changed packages. After executing code, if version is defined as `independent` you can select which version to apply for each package.
+
+Lerna publish supports automaticall creation of CHANGELOG.md if you use [commits convention](https://conventionalcommits.org)
+
+```bash
+# start interactive publish mode
+lerna publish
 ```
