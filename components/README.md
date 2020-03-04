@@ -2,9 +2,7 @@
 
 `THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS, LERNA AND HOW PUBLISHING TO NPM WORKS.`
 
-This lib contains basic web components like buttons, inputs etc. It exports all components into dv4wc module. It depens on two other libraries from @dv4all scope.
-
-**This module is part of monorepo dv4all-wcp-lerna.**
+It contains basic web components like buttons, inputs etc. It depens on two other libraries from @dv4all scope.
 
 ## Usage
 
@@ -32,3 +30,5 @@ For more details see [demos/next-demo](https://github.com/dmijatovic/dv4all-wcp-
 In the NuxtJS I added web components as plugins and set SSR flag to false. This was sufficient. Nuxt has also a component `<client-only>...</client-only>` that can be used to wrap markup that should only be rendered on the client side.
 
 For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/nuxt-demo)
+
+**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**

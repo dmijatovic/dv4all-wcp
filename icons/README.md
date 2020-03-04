@@ -94,3 +94,5 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 ## Icons
 
 - [arrow-right](src/arrow-right/README.md): arrow-right svg icon as custom web component
+
+**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**

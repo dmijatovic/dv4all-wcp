@@ -12,7 +12,9 @@ import { newCustomElement } from "@dv4all/wcp-utils";
 
 const html = `
   <style>
-
+    :host{
+      display:block;
+    }
   </style>
   <h1>Test custom component</h1>
 `;

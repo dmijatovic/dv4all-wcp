@@ -95,3 +95,5 @@ app.prepare().then(() => {
     })
 });
 ```
+
+**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**

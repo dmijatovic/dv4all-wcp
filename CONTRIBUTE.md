@@ -3,15 +3,11 @@
 `THIS REPO IS USED TO TEST WEB COMPONENTS, WORKING WITH LERNA AND HOW PUBLISHING TO NPM WORKS.`
 
 - clone repo
-- then
+- then run lerna bootstrap
 
 ```bash
 # install
 lerna bootstrap
-# build components
-lerna run build:components
-# run any of the demo options
-
 ```
 
 I prefer to run components build and watch in one bash window and one of the demos (next,nuxt,html) in another window. There are scripts created in the root package.json file to support this approach.
@@ -64,8 +60,13 @@ The steps are:
 
 ### Using LERNA to publish
 
-This approach automates most of the tasks from manual approach. This repo is created to test how well automated approach with LERNA works. What are its strenghts and weaknesses?
+This repo is created to test how well automated approach with LERNA works. In the lerna config file (lerna.json) we stated that versioning should use conventional commits. We run `lerna changed` to check which packages are changed. If we have changes then we run `lerna publish` which will update changelog.md file, decide on version increase (major|minor|patch), create tag with the version number, push tag to the github repo and publish the module(s) to NPM.
 
 - commit changes: `git ...`
 - check changes: `lerna changed`
 - publish packages: `lerna publish`
+
+My first impleressions are: lerna does quite a lot automatically which is good. What I would like to be improved:
+
+- CHANGELOG.md: there is lot of empty space in the file between each release tag
+- Minor version bump: it is based on conventional commits and in some cases I did not have a need for a minor version bump but lerna advices so. I am new to conventional commits so why/when the minor version is used insteda of patch is not completely clear to me.
