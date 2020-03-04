@@ -10,9 +10,12 @@
 		"new-version":"lerna version --conventional-commits",
 		"diff":"lerna diff",
 		"publish:git":"git push --tags",
-		"release":"lerna publish"
+		"prerelease":"cypress run --browser chrome --headless",
+		"release":"lerna publish",
+		"e2e:open":"cypress open"
 	},
   "devDependencies": {
-    "lerna": "^3.19.0"
+		"lerna": "^3.19.0",
+		"cypress":"^4.1.0"
   }
 }
