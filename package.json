@@ -10,7 +10,7 @@
 		"new-version":"lerna version --conventional-commits",
 		"diff":"lerna diff",
 		"publish:git":"git push --tags",
-		"release":"lerna publish --access public "
+		"release":"lerna publish"
 	},
   "devDependencies": {
     "lerna": "^3.19.0"

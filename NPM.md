@@ -99,3 +99,16 @@ When publishing scoped packages, the access level defaults to restricted. If you
 ```bash
 npm config set access public
 ```
+
+## Unpublishing an entire NPM package
+
+To unpublish an entire package, run the following command, replacing \<package-name> with the name of your package
+
+```bash
+# unpublish
+npm unpublish <package-name> -f
+```
+
+### Unpublish specific version
+
+For more information see [documentation](https://docs.npmjs.com/unpublishing-packages-from-the-registry).
