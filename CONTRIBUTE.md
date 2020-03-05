@@ -20,6 +20,9 @@ in the SECOND bash window run any of these
 `npm run dev:next`
 `npm run dev:nuxt`
 
+in THIRD window run Cypress to create test
+`npm run e2e:open`
+
 ## [Commit conventions](https://www.conventionalcommits.org/en/v1.0.0/#summary)
 
 This repo is also used to test working of conventional commits for generating CHANGELOG. This feature is supported by lerna.

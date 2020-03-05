@@ -35,10 +35,10 @@ module.exports = {
 
 ## Testing customElements/web components
 
-My first impression is that testing web components with Jest at this moment is not optimal. There is not support for customElements at the time of writing this.
+My first impression is that testing web components with Jest at this moment is not optimal. There is [no support for customElements at the time of writing this](https://github.com/facebook/jest/issues/8818). Work around is to include JSDOM.
 
-I can try to mockup customElement object and see if define is called with propper arguments.
+Maybe I can try to mockup customElement object and see if define is called with propper arguments?
 
-Another idea is to move test to Cypress? These test will need to be done in the demo modules. On the other hand same test can be applied to all 2 demos.
+Another idea is to move test to Cypress? These test will need to be done in the demo modules. On the other hand same test can be applied to all 3 demos.
 
-I decided to do both. Jest part will be experiental and Cypress will have real test that can cover both web components themselves and the demo pages :-).
+I decided to do both. Jest part will be experiental and Cypress will have real test that can cover web components through demo pages :-).
