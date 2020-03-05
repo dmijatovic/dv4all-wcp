@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "type": "module",
   "main": "lib/dv4wcp.js",
   "module": "lib/dv4wcp.js",
@@ -49,8 +49,8 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.3.0",
-    "@dv4all/wcp-utils": "^0.1.4"
+    "@dv4all/icons": "^0.3.1",
+    "@dv4all/wcp-utils": "^0.2.0"
   },
   "publishConfig": {
     "access": "public"

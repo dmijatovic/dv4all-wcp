@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.1.8...@dv4all/web-components@0.2.0) (2020-03-05)
+
+
+### Features
+
+* added button to web components ([8db192a](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/8db192a2479da07b461715d1b6311f2f1b4ab611))
+
+
+
+
+
 ## [0.1.8](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.1.7...@dv4all/web-components@0.1.8) (2020-03-05)
 
 **Note:** Version bump only for package @dv4all/web-components
