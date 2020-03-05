@@ -1,3 +1,16 @@
 @import 'styles/variables.css';
 @import 'styles/nav.css';
 @import 'styles/layout.css';
+
+
+.flex{
+  display:flex;
+}
+
+.left-panel{
+  flex:1;
+  margin-right: 1rem;
+}
+.right-panel{
+  flex:2;
+}

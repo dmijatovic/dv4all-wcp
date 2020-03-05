@@ -2,20 +2,19 @@ import attachTemplate from './attachTemplate'
 /**
  * Return class containing definitions of new loader custom element.
  * @param {Object} props = {
- *  name: {String} name of customElement,
- *  shadowMode: {ENUM} open, closed, null,
+ *  name: {String} name of customElement, 
  *  htmlTemplate: {Function} returns html
  * }
  */
-export default ({shadowMode, renderHtml, observedAttr=[]})=>{
+export default ({renderHtml, observedAttr=[]})=>{
   // props used to construct
   // return new custom HTML element
-  return class CustomHtmlElement extends HTMLElement{
+  return class CustomButtonElement extends HTMLButtonElement{
     constructor(){
       super()
-      if (!renderHtml) throw new Error ('CustomHtmlElement...renderHtml method not provided!')
-      //attach shadowDOM
-      if (shadowMode) this.attachShadow({mode:shadowMode})
+      if (!renderHtml) throw new Error ('CustomButtonElement...renderHtml method not provided!')
+      // HTMLButtonElement DOES NOT SUPPORT shadowRoot
+      // if (shadowMode) this.attachShadow({mode:shadowMode})
     }
     /**
      * Lifecycle event when component is mounted to DOM

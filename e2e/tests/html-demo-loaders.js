@@ -11,7 +11,7 @@ describe("Loaders demo page",()=>{
 
   beforeEach(()=>{
     //get all btns
-    cy.get("dv4-button").as('dv4btn')
+    cy.get("dv4-custom-button").as('dv4btn')
   })
 
   it("Shows loader page with title",()=>{

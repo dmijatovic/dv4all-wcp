@@ -17,8 +17,63 @@
 
 <main>
   <h2>Web components demo @dv4all/components</h2>
-  <section>
-    Here comes the demonstration?!?
+  <section class="flex">
+    <section class="left-panel">
+      <h3>Custom components CSS challenges</h3>
+      <p>
+        I faced serious challenge using web component for base elements. Below is an example.
+        <ul>
+          <li>Button that extends HTMLButtonElement: this element does not support shadowDOM. The styles for each button added this way are duplicated. At least when inspecting page with developer tools you can see that styles are repeated for each button (and overwritten). The styles are not scoped :-(.
+          </li>
+          <li>Button that extends HTMLElement: this element has shadowDOM. With shadowDOM the styles are scoped. Basic HTMLElement does not have all button functionalities. For example, it does not support active element state (which is used to animate button click). I decided to wrap standard button in the customElement and style it.
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section class="right-panel">
+      <div>
+        <h3>Custom Button extending HTMLButtonElement</h2>
+        <p>
+          <!-- EXTENDED BUTTON -->
+          <button is="is-dv4-button">Default button</button>
+          <!-- EXTENDED BUTTON -->
+          <button is="is-dv4-button" primary>Primary button</button>
+        </p>
+        <p>
+          <button is="is-dv4-button">
+            <dv4-icon-camera class="dv4-icon-btn"></dv4-icon-camera>
+            Icon Default Button
+          </button>
+          <button is="is-dv4-button" primary>
+            <dv4-icon-camera class="dv4-icon-btn"></dv4-icon-camera>
+            Icon Primary Button
+          </button>
+        </p>
+      </div>
+      <div>
+        <h3>Button wrapped in the custom HTMLElement</h2>
+        <!-- CUSTOM BUTTON -->
+        <p>
+          <dv4-custom-button>Default button</dv4-custom-button>
+          <dv4-custom-button primary>Primary button</dv4-custom-button>
+          <dv4-custom-button danger>Danger button</dv4-custom-button>
+        </p>
+        <p>
+          <dv4-custom-button>
+            <dv4-icon-camera></dv4-icon-camera>
+            Icon Default Button
+          </dv4-custom-button>
+          <dv4-custom-button primary>
+            <dv4-icon-checkmark></dv4-icon-checkmark>
+            Icon Primary Button
+          </dv4-custom-button>
+          <dv4-custom-button danger>
+            <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
+            Icon Danger Button
+          </dv4-custom-button>
+        </p>
+      </div>
+    </section>
   </section>
 </main>
 

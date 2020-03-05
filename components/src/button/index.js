@@ -4,15 +4,15 @@ import htmlButton from './htmlButton'
 
 //props
 const props={
-  observedAttr:['role'],
-  shadowMode:'open',
+  observedAttr:['role','primary'],
+  shadowMode: 'open',
   renderHtml:htmlButton
 }
 
 //create new custom element
-const Dv4Button = newCustomElement(props)
+const Dv4CustomButton = newCustomElement(props)
 
 //register custom element
-customElements.define('dv4-button',Dv4Button)
+customElements.define('dv4-custom-button',Dv4CustomButton)
 
-export default Dv4Button
+export default Dv4CustomButton
