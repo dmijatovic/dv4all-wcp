@@ -1,5 +1,7 @@
 # Cog Icon
 
+<img src="../../assets/SVG/cog.svg" alt="cogs icon" style="width:3rem"/>
+
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` folder of this repo.
 
 ## Usage

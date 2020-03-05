@@ -1,5 +1,7 @@
 # Cancel Circle Icon
 
+<img src="../../assets/SVG/cancel-circle.svg" alt="cancel-circle icon" style="width:3rem"/>
+
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` repo folder.
 
 ## Usage
