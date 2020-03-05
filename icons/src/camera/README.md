@@ -1,18 +1,18 @@
-# Arrow-right Icon
+# Camera Icon
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` repo folder.
 
 ## Usage
 
 ```html
-<dv4-icon-arrow-right title="Arrow right icon" />
+<dv4-icon-camera class="dv4-icon" title="Camera icon" />
 ```
 
 ### Props
 
 Each prop has a default value you can overwrite.
 
-- title: svg title to be shown on mouseover. This is standard html prop. Default value is 'Arrow'
+- title: svg title to be shown on mouseover. This is standard html prop. Default value is 'Camera'.
 
 ### CSS
 
@@ -23,7 +23,7 @@ The default `display` property of the component is `inline-block`.
 **NOTE: Because the content is in SVG format use `fill` and `stroke` props!**
 
 ```css
-dv4-icon-arrow-right {
+.dv4-icon {
   width: 3rem;
   height: 3rem;
   fill: #fff;
@@ -34,12 +34,12 @@ dv4-icon-arrow-right {
   cursor: pointer;
 }
 
-dv4-icon-arrow-right:hover {
+.dv4-icon:hover {
   fill: rebeccapurple;
   box-shadow: 2px 4px #ccc;
 }
 
-dv4-icon-arrow-right:active {
+.dv4-icon:active {
   transform: translateY(4px);
 }
 ```

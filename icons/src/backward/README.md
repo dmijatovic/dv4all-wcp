@@ -12,7 +12,7 @@ Custom web component using svg icon as a source. The SVG source is exported from
 
 Each prop has a default value you can overwrite.
 
-- title: svg title to be shown on mouseover. This is standard html prop.
+- title: svg title to be shown on mouseover. This is standard html prop. Default value is 'Backward'.
 
 ### CSS
 
