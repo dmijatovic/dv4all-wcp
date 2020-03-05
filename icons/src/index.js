@@ -8,4 +8,9 @@ export {default as Dv4IconCamera} from './camera/index.js'
 export {default as Dv4IconCancelCircle} from './cancel-circle/index.js'
 //dv4-icon-chekmark
 export {default as Dv4IconCheckmark} from './checkmark/index.js'
+//dv4-icon-circle-right
+export {default as Dv4IconCircleRight} from './circle-right/index.js'
+//dv4-icon-cog
+export {default as Dv4IconCog} from './cog/index.js'
+
 

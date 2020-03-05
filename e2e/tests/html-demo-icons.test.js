@@ -8,7 +8,9 @@ const icons=[
   'dv4-icon-backward',
   'dv4-icon-camera',
   'dv4-icon-cancel-circle',
-  'dv4-icon-checkmark'
+  'dv4-icon-checkmark',
+  'dv4-icon-circle-right',
+  'dv4-icon-cog'
 ]
 
 describe("Icons html-demo page",()=>{
