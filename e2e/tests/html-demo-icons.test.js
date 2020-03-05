@@ -5,7 +5,8 @@
  */
 const icons=[
   'dv4-icon-cancel-circle',
-  'dv4-icon-arrow-right'
+  'dv4-icon-arrow-right',
+  'dv4-icon-backward'
 ]
 
 describe("Icons html-demo page",()=>{
