@@ -94,5 +94,13 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 ## Icons
 
 - [arrow-right](src/arrow-right/README.md): arrow-right svg icon as custom web component
+- [backward](src/backward/README.md): backward svg icon as custom web component
+- [camera](src/camera/README.md): camera svg icon as custom web component
+- [cancel-circle](src/cancel-circle/README.md): cancel-circle svg icon as custom web component
+- [checkmark](src/checkmark/README.md): checkmark svg icon as custom web component
+- [circle-right](src/circle-right/README.md): circle-right svg icon as custom web component
+- [cog](src/cog/README.md): cog svg icon as custom web component
+- [cogs](src/cogs/README.md): cogs svg icon as custom web component
+- [connection](src/connection/README.md): connection svg icon as custom web component
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
