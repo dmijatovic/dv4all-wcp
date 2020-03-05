@@ -12,5 +12,7 @@ export {default as Dv4IconCheckmark} from './checkmark/index.js'
 export {default as Dv4IconCircleRight} from './circle-right/index.js'
 //dv4-icon-cog
 export {default as Dv4IconCog} from './cog/index.js'
+//dv4-icon-cogs
+export {default as Dv4IconCogs} from './cogs/index.js'
 
 

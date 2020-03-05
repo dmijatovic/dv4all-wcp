@@ -10,7 +10,8 @@ const icons=[
   'dv4-icon-cancel-circle',
   'dv4-icon-checkmark',
   'dv4-icon-circle-right',
-  'dv4-icon-cog'
+  'dv4-icon-cog',
+  'dv4-icon-cogs'
 ]
 
 describe("Icons html-demo page",()=>{
@@ -62,14 +63,19 @@ describe("Demo icons on the page",()=>{
     })
   })
 
-  it(`All icons [${icons.length}] have SVG in the shadowRoot`,()=>{
+  it.only(`All icons [${icons.length}] have SVG element in shadowRoot`,()=>{
     icons.map(icon=>{
       cy.get(icon)
         .then(e=>{
           //get element reference
           //from selector -> it should be first element
           const [el] = e.get()
-          const svg = el.shadowRoot.querySelector('svg')
+          let svg
+          if (el.shadowRoot){
+            svg = el.shadowRoot.querySelector('svg')
+          }else{
+            throw new Error(`${icon} element has no shadowRoot.`)
+          }
           // const title = svg.querySelector('title')
           // console.log("svg...",svg)
           if (svg) return true
@@ -78,7 +84,7 @@ describe("Demo icons on the page",()=>{
     })
   })
 
-  it.only(`All icons [${icons.length}] have title attribute equal to element name`,()=>{
+  it(`All icons [${icons.length}] have title attribute equal to element name`,()=>{
     icons.map(icon=>{
       cy.get(icon)
         .then(e=>{
