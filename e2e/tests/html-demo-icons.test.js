@@ -11,7 +11,8 @@ const icons=[
   'dv4-icon-checkmark',
   'dv4-icon-circle-right',
   'dv4-icon-cog',
-  'dv4-icon-cogs'
+  'dv4-icon-cogs',
+  'dv4-icon-connection'
 ]
 
 describe("Icons html-demo page",()=>{
