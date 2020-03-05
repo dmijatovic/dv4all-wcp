@@ -6,14 +6,14 @@ const loaders=[
 
 describe("Loaders demo page",()=>{
   before(()=>{
-    cy.visit("http://localhost:5000/loaders")    
+    cy.visit("http://localhost:5000/loaders")
   })
 
   beforeEach(()=>{
     //get all btns
     cy.get("dv4-button").as('dv4btn')
   })
-  
+
   it("Shows loader page with title",()=>{
     cy.get("title")
       .should("contain.text","Loaders - ")

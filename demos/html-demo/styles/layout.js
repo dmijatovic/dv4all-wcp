@@ -74,7 +74,7 @@ class Dv4PageFooter extends HTMLElement{
    */
   render(){
     this.innerHTML=`
-      <h2>This is my footer</h2>
+      <h2>2020 @dv4all</h2>
     `
   }
 }

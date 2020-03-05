@@ -64,7 +64,7 @@ describe("Demo icons on the page",()=>{
     })
   })
 
-  it.only(`All icons [${icons.length}] have SVG element in shadowRoot`,()=>{
+  it(`All icons [${icons.length}] have SVG element in shadowRoot`,()=>{
     icons.map(icon=>{
       cy.get(icon)
         .then(e=>{
