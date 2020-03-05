@@ -6,4 +6,6 @@ export {default as Dv4IconBackward} from './backward/index.js'
 export {default as Dv4IconCamera} from './camera/index.js'
 //dv4-icon-cancel-circle
 export {default as Dv4IconCancelCircle} from './cancel-circle/index.js'
+//dv4-icon-chekmark
+export {default as Dv4IconCheckmark} from './checkmark/index.js'
 

@@ -4,10 +4,11 @@
  * List of custom elements to test
  */
 const icons=[
-  'dv4-icon-cancel-circle',
   'dv4-icon-arrow-right',
   'dv4-icon-backward',
-  'dv4-icon-camera'
+  'dv4-icon-camera',
+  'dv4-icon-cancel-circle',
+  'dv4-icon-checkmark'
 ]
 
 describe("Icons html-demo page",()=>{
@@ -70,6 +71,28 @@ describe("Demo icons on the page",()=>{
           // const title = svg.querySelector('title')
           // console.log("svg...",svg)
           if (svg) return true
+        })
+        .should('be.true')
+    })
+  })
+
+  it.only(`All icons [${icons.length}] have title attribute equal to element name`,()=>{
+    icons.map(icon=>{
+      cy.get(icon)
+        .then(e=>{
+          //get element reference
+          //from selector -> it should be first element
+          const [el] = e.get()
+          const svg = el.shadowRoot.querySelector('svg')
+          const title = svg.querySelector('title')
+          // const title = svg.getAttribute('svg:title')
+          // const iconTitle = `<title>${icon}</title>`
+          console.log("title...", title.innerHTML, icon)
+          if (title.innerHTML === icon){
+            return true
+          } else {
+            throw new Error(`Expected ${title.innerHTML} to equal ${icon}`)
+          }
         })
         .should('be.true')
     })
