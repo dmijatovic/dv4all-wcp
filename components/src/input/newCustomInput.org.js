@@ -1,21 +1,43 @@
-import attachTemplate from './attachTemplate'
+import {attachTemplate} from '@dv4all/wcp-utils'
+
 /**
- * Return class containing definitions of new loader custom element.
- * @param {Object} props = {
- *  name: {String} name of customElement,
- *  shadowMode: {ENUM} open, closed, null,
- *  htmlTemplate: {Function} returns html
+ * observedEvents object
+ * {
+ *  el: element to select
+ *  event: event to listen for
+ *  fn: (target)=>{
+ *    //function that handles event
+ *  }
  * }
  */
+const handleInputChange={
+  el:'input',
+  event:'onchange',
+  bubble: true,
+  fn:(target)=>{
+    if (target.value!==''){
+      target.classList.add('changed')
+    } else {
+      target.classList.remove('changed')
+    }
+    //bubble up this event
+    const newEvent = new Event('onChange',{bubbles:true, composed:true})
+    target.dispatchEvent(newEvent)
+  }
+}
+
+
 export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
   // props used to construct
   // return new custom HTML element
-  return class CustomHtmlElement extends HTMLElement{
+  return class CustomInputElement extends HTMLElement{
     constructor(){
       super()
       if (!renderHtml) throw new Error ('CustomHtmlElement...renderHtml method not provided!')
       //attach shadowDOM
       if (shadowMode) this.attachShadow({mode:shadowMode})
+      // internal value state
+      this.value=''
     }
     /**
      * Lifecycle event when component is mounted to DOM
@@ -62,6 +84,25 @@ export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
       }
       //attach html template to element
       attachTemplate(this, htmlTemplate )
+      //attach event listeners
+      if (observedEvents.length > 0){
+        this.attachListeners()
+      }
+    }
+    attachListeners(){
+      observedEvents.forEach(item=>{
+        const el = this.shadowRoot.querySelector(item.el)
+        el[item.event] = function({target}){
+          if (item.fn){
+            //target.classList.toggle(item.class)
+            item.fn(target)
+          }
+          // console.log(`${item.event}...on...${item.el}...value...`, target.value)
+          // bubble this event to parent
+          // if (item)
+          // const newEvent = new Event(item.event,{bubbles:true, composed:true})
+        }
+      })
     }
     /**
      * Listen for changes in these attributes

@@ -1,21 +1,16 @@
-import attachTemplate from './attachTemplate'
-/**
- * Return class containing definitions of new loader custom element.
- * @param {Object} props = {
- *  name: {String} name of customElement,
- *  shadowMode: {ENUM} open, closed, null,
- *  htmlTemplate: {Function} returns html
- * }
- */
-export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
+import {attachTemplate} from '@dv4all/wcp-utils'
+
+export default ({shadowMode, renderHtml, observedAttr=[]})=>{
   // props used to construct
   // return new custom HTML element
-  return class CustomHtmlElement extends HTMLElement{
+  return class CustomInputElement extends HTMLElement{
     constructor(){
       super()
-      if (!renderHtml) throw new Error ('CustomHtmlElement...renderHtml method not provided!')
+      if (!renderHtml) throw new Error ('CustomInputElement...renderHtml method not provided!')
       //attach shadowDOM
       if (shadowMode) this.attachShadow({mode:shadowMode})
+      // internal value state
+      this.value=''
     }
     /**
      * Lifecycle event when component is mounted to DOM
@@ -62,6 +57,28 @@ export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
       }
       //attach html template to element
       attachTemplate(this, htmlTemplate )
+      //attach event listeners
+      this.attachListeners()
+    }
+    attachListeners(){
+      this.handleInputChange()
+    }
+    handleInputChange(){
+      //select input
+      const input = this.shadowRoot.querySelector('input')
+      //listen for onchange
+      input['onchange'] = ({target})=>{
+        if (target.value!==''){
+          target.classList.add('changed')
+        } else {
+          target.classList.remove('changed')
+        }
+        //save new value
+        this.value = target.value
+        //publish event outside this customElement
+        const newEvent = new Event('onChange',{bubbles:true, composed:true})
+        target.dispatchEvent(newEvent)
+      }
     }
     /**
      * Listen for changes in these attributes

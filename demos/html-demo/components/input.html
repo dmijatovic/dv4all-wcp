@@ -28,17 +28,21 @@
       <div>
         <h3>What where the challenges?</h3>
         <p>
-          Describe here the challenges during creation of this custom component
+          Describe here the challenges during creation of this custom component.
+
         </p>
       </div>
       <div>
         <h3>Here comes the implementation example</h2>
         <p>
-          <button is="is-dv4-button">
-            <dv4-icon-camera class="dv4-icon-btn"></dv4-icon-camera>
-            Click button for some magic?
-          </button>
-        </p>        
+          <dv4-material-input
+            type="text"
+            name="var-name"
+            label="Your name"
+            message="Type you first and last name"
+            >
+          </dv4-custom-button>
+        </p>
       </div>
     </section>
   </section>
@@ -46,6 +50,8 @@
 
 <!-- SEE styles/layout.js FOR IMPLEMENTATION-->
 <dv4-page-footer></dv4-page-footer>
+
+<script src="input.js"></script>
 
 </body>
 </html>
