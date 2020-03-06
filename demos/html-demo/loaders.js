@@ -5,6 +5,7 @@
 const btns = document.querySelectorAll('.btn-show-loader')
 const loaderSection = document.getElementById('loader-area')
 const standardMsg = 'In this section we inject loader element.'
+const body = document.querySelector("body")
 /**
  * Add loader to loader-area section
  * @param {String} type custom element type (loader type)
@@ -18,6 +19,8 @@ function addLoader(type){
   el.innerText = 'Loading...'
   //listen to destroy
   el.addEventListener('click', clearLoader)
+  //add no scroll
+  body.classList.toggle("noscroll")
   //append to loader section
   loaderSection.appendChild(el)
 }
@@ -25,6 +28,7 @@ function addLoader(type){
  * Remove elements from loader-area section
  */
 function clearLoader(){
+  body.classList.toggle("noscroll")
   loaderSection.innerHTML = standardMsg
 }
 /**

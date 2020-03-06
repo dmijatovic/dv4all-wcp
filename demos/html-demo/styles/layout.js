@@ -10,10 +10,10 @@
  * DEFINE PAGES for the header
  */
 const routes=[
-  {href:'/index.html', label:'Home', route:'/'},
+  {href:'/index.html', label:'Home', route:'/', exact:true},
   {href:'/icons.html', label:'Icons', route:'/icons'},
   {href:'/loaders.html', label:'Loaders', route:'/loaders'},
-  {href:'/components.html', label:'Components', route:'/components'}
+  {href:'/components/', label:'Components', route:'/components/'}
 ]
 
 /**
@@ -35,12 +35,21 @@ class Dv4PageHeader extends HTMLElement{
     const activeRoute = window.location.pathname
     let html=''
     routes.forEach(r=>{
-      html+=`
+      if (r['exact']){
+        html+=`
         <a href="${r.href}"
           class="link ${activeRoute === r.route ? 'active' : ''}">
           ${r.label}
         </a>
       `
+      }else{
+        html+=`
+        <a href="${r.href}"
+          class="link ${activeRoute.includes(r.route) ? 'active' : ''}">
+          ${r.label}
+        </a>
+      `
+      }
     })
     return html
   }

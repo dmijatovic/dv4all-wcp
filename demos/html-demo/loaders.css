@@ -6,3 +6,7 @@
 /* .btn-show-loader{
   padding: 0.5rem 1rem;
 } */
+
+body.noscroll{
+  margin: 0; height: 100%; overflow: hidden
+}

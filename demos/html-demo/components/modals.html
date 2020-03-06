@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/favicon.png" sizes="16x16" type="image/png">
+  <title>Custom elements - web components</title>
+  <script src="/node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
+  <script src="/node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
+  <script src="/node_modules/@dv4all/web-components/lib/dv4wcp.cjs.js"></script>
+  <script src="/styles/layout.js"></script>
+  <script src="/components/sidebar.js"></script>
+  <link rel="stylesheet" href="/components/index.css">
+</head>
+<body>
+
+<!-- SEE styles/layout.js FOR IMPLEMENTATION-->
+<dv4-page-header role="heading" aria-level="1"></dv4-page-header>
+
+<main>
+  <h2>Modal demo @dv4all/components</h2>
+  <section class="flex">
+    <section class="left-panel">
+      <!-- SEE ./sidebar.js FOR IMPLEMENTATION-->
+      <dv4-sidebar-menu></dv4-sidebar-menu>
+    </section>
+    <section class="right-panel">
+      <div>
+        <h3>What where the challenges?</h3>
+        <p>
+          Describe here the challenges during creation of this custom component
+        </p>
+      </div>
+      <div>
+        <h3>Here comes the implementation example</h2>
+        <p>
+          <button is="is-dv4-button">
+            <dv4-icon-camera class="dv4-icon-btn"></dv4-icon-camera>
+            Click button for some magic?
+          </button>
+        </p>        
+      </div>
+    </section>
+  </section>
+</main>
+
+<!-- SEE styles/layout.js FOR IMPLEMENTATION-->
+<dv4-page-footer></dv4-page-footer>
+
+</body>
+</html>

@@ -1,8 +1,6 @@
 # Custom button web component
 
-This web components extends generic HTMLElement. It can have shadowRoot.
-
-However the HTMLElement does not natively support active state :-(.
+This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default button element is styled. There is one generic slot. The slot supports adding custom icon elements from @dv4all/icons.
 
 ## Usage
 
@@ -29,14 +27,14 @@ However the HTMLElement does not natively support active state :-(.
 
 ### Attributes
 
-- primary: primary flag, see next section
-- danger: danger flag, see next section
+- primary: primary attribute, will use primary color for the button background
+- danger: danger attribute, will use warning color for the button background
+
+See next section about CSS variables for more information about available variables.
 
 ### CSS variables
 
-Following css variables can be applied
-
-- variable, default value
+Each variable has default value which is used if CSS variable is not provided. The following css variables can be applied to custom button component. The listing is in the format: variable, default value
 
 - btn-font-size, 1rem
 - btn-border, 1px solid lightgrey
