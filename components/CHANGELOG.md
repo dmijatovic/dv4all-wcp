@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.3.0...@dv4all/web-components@0.3.1) (2020-03-13)
+
+**Note:** Version bump only for package @dv4all/web-components
+
+
+
+
+
 # [0.3.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.2.0...@dv4all/web-components@0.3.0) (2020-03-13)
 
 

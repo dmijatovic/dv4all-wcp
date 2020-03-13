@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/wcp-utils",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "type": "module",
   "main": "lib/dv4wcp.utils.js",
   "module": "lib/dv4wcp.utils.js",
@@ -57,7 +57,7 @@
     "rollup-plugin-babel": "4.3.3"
   },
   "dependencies": {
-    "@dv4all/log-utils": "^0.1.0",
+    "@dv4all/log-utils": "^0.1.1",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-uglify": "^6.0.4"
   },
