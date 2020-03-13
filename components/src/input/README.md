@@ -1,4 +1,4 @@
-# Custom input web component
+# Custom text input web component
 
 This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default input element is styled. For this web component custom class was created to propagate value to the input element wrapped. in addition
 
@@ -24,6 +24,20 @@ This web components extends generic HTMLElement. It has shadowRoot. In the shado
 - value: optional, default value
 
 See next section about CSS variables for more information about available variables.
+
+### Events
+
+- onChange: the elemnt will emit custom event `onChange` where you can listen to value changes in the input element.
+
+```javascript
+//get element
+const dv4input = document.querySelector("dv4-text-input");
+
+//listen to onChange event
+dv4input.addEventListener("onChange", function({ target }) {
+  console.log("dv4-material-input.onChange...value...", target.value);
+});
+```
 
 ### CSS variables
 
