@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.2.0...@dv4all/web-components@0.3.0) (2020-03-13)
+
+
+### Features
+
+* implemented custom text input element ([99e759c](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/99e759c4f4772745f546af49fcf59285a280e0b3))
+
+
+
+
+
 # [0.2.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.1.8...@dv4all/web-components@0.2.0) (2020-03-05)
 
 
