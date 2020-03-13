@@ -31,6 +31,10 @@ lerna add axios typescript ts-node
 lerna add @rollup/plugin-node-resolve --scope=@dv4all/* --dev
 lerna add @rollup/plugin-commonjs --scope=@dv4all/* --dev
 
+# add log-utils as dependency to wcp-utils
+# make sure dependency is not in package.json, otherwise remove it
+lerna add @dv4all/log-utils --scope=@dv4all/wcp-utils
+
 ```
 
 `To be seen as package you need definition to main file in package.json`
