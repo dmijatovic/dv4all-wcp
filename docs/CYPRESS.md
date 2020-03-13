@@ -15,3 +15,14 @@ I created e2e folder where I will put all Cypress files to test all web componen
 I still looking for the optimal approach of integrating Cypress tests into CI/CD pipelines. I also want to test Github actions for CI/CD. This is yet another new approach to be tested in this project :-).
 
 There is an example setup in Cypress repo I need to study more in details and decide how I want to integrate it in this project.
+
+## Kill serve process
+
+Current problem with starting multiple commands is that serve which runs web server move to background in the terminal. Therefore simple Ctrl+C cannot stop server.
+
+```bash
+# find process on port 5000
+lsof -i tcp:5000
+# kill process with id displayed in previous info
+kill <PID>
+```
