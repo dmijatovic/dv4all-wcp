@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/icons",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "type": "module",
   "main": "lib/dv4icons.js",
   "module": "lib/dv4icons.js",
@@ -62,7 +62,7 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "@dv4all/wcp-utils": "^0.2.2"
+    "@dv4all/wcp-utils": "^0.2.3"
   },
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.1.9...@dv4all/loaders@0.1.10) (2020-03-13)
+
+
+### Bug Fixes
+
+* moved rollup modules to devDependencies ([f965598](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/f965598c3c3587b393dfb57b6e05e2b8326a77d5))
+
+
+
+
+
 ## [0.1.9](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.1.8...@dv4all/loaders@0.1.9) (2020-03-13)
 
 **Note:** Version bump only for package @dv4all/loaders

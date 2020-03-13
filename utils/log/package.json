@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/log-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "lib/dv4log.utils.js",
   "module": "lib/dv4log.utils.js",

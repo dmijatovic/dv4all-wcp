@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.3.3...@dv4all/icons@0.3.4) (2020-03-13)
+
+
+### Bug Fixes
+
+* moved rollup modules to devDependencies ([f965598](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/f965598c3c3587b393dfb57b6e05e2b8326a77d5))
+
+
+
+
+
 ## [0.3.3](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.3.2...@dv4all/icons@0.3.3) (2020-03-13)
 
 **Note:** Version bump only for package @dv4all/icons
