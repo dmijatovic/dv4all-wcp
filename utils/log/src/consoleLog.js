@@ -8,7 +8,6 @@ function closeGroup(){
 }
 
 function consoleLog(log){
-  debugger
   if (typeof log === 'object'){
     const groups = Object.keys(log)
     groups.map(g=>{
@@ -23,7 +22,7 @@ function consoleLog(log){
   }
 }
 
-export default (log, env="development")=>{
+export default (log, env='development')=>{
   if (env==='development'){
     consoleLog(log)
   }

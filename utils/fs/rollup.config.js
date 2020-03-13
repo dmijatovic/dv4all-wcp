@@ -1,13 +1,13 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
+import resolve from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default {
   input: 'src/index.js',
   output: [{
     file: 'lib/dv4fs.utils.js',
-    format: 'esm',    
+    format: 'esm',
   },{
-    name: "Dv4FSU",
+    name: 'Dv4FSU',
     file: 'lib/dv4fs.utils.cjs.js',
     format: 'iife'
   }
@@ -19,4 +19,4 @@ export default {
   // }
   ],
   plugins: [resolve(), commonjs()]
-};
+}

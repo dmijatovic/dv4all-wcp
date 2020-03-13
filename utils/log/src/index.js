@@ -1,2 +1,2 @@
 
-export { default as consoleLog} from "./consoleLog"
+export { default as consoleLog} from './consoleLog'
