@@ -27,7 +27,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      */
     getPropsFromAttributes(){
       const props={
-        ...this.props
+        type:'text'
       }
       for (let att of this.attributes){
         // console.log('att...', att)
@@ -36,6 +36,23 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
         } else {
           props[att.name] = 'true'
         }
+      }
+      //add value to props list
+      return this.setValueProp(props)
+    }
+    /**
+     * Set value based on attribute input
+     * and user input
+     * @param {Array} props
+     */
+    setValueProp(props){
+      //add value to props list
+      if (props['value'] && this.value===''){
+        return props
+      } else if(this.value) {
+        props['value'] = this.value
+      } else {
+        props['value'] =  ''
       }
       return props
     }
@@ -46,6 +63,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * @param {Object} props
      */
     render(){
+      console.log(`${this.localName}...render element`)
       //get attributes from the element
       let htmlTemplate=''
       if (typeof renderHtml === 'function'){
@@ -92,7 +110,22 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      */
     attributeChangedCallback(name, oldVal, newVal){
       console.log(`${this.localName}...attribut changed...`, name, newVal)
-      this.render()
+      // call render on attribute changes
+      this.defferRender()
+    }
+    /**
+     * Call render function after all attrs initialized.
+     * we do this by setting call at the end of the callstack
+     */
+    defferRender(){
+      //clear previous if exists
+      if (this.timeout){
+        clearTimeout(this.timeout)
+      }
+      //set lastone
+      this.timeout = setTimeout(()=>{
+        this.render()
+      },10)
     }
     /**
      * Lifecycle event when element is removed from DOM

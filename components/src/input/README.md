@@ -1,38 +1,27 @@
 # Custom input web component
 
-This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default input element is styled. There is one slot which supports adding of custom icon elements from @dv4all/icons.
+This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default input element is styled. For this web component custom class was created to propagate value to the input element wrapped. in addition
 
 [Custom elements cannot be self-closing because HTML only allows a few elements to be self-closing. Always write a closing tag (\<app-drawer>\</app-drawer>)](https://developers.google.com/web/fundamentals/web-components/customelements).
 
 ## Usage
 
 ```html
-<!-- WITHOUT custom icons -->
-<dv4-material-input
-  type="text"
+<!-- CUSTOM TEXT INPUT ELEMENT -->
+<dv4-text-input
   name="var-name"
-  label="My label">
-</dv4-custom-button>
-
-<!--WITH custom dv4all icons -->
-<dv4-custom-button>
-  <dv4-icon-camera></dv4-icon-camera>
-  Icon Default Button
-</dv4-custom-button>
-<dv4-custom-button primary>
-  <dv4-icon-checkmark></dv4-icon-checkmark>
-  Icon Primary Button
-</dv4-custom-button>
-<dv4-custom-button danger>
-  <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
-  Icon Danger Button
-</dv4-custom-button>
+  label="Your name"
+  message="Type your first and last name"
+>
+</dv4-text-input>
 ```
 
 ### Attributes
 
-- primary: primary attribute, will use primary color for the button background
-- danger: danger attribute, will use warning color for the button background
+- name: variable name
+- label: input label
+- message: the message shown onder the input
+- value: optional, default value
 
 See next section about CSS variables for more information about available variables.
 
@@ -40,16 +29,14 @@ See next section about CSS variables for more information about available variab
 
 Each variable has default value which is used if CSS variable is not provided. The following css variables can be applied to custom button component. The listing is in the format: variable, default value
 
-- btn-font-size, 1rem
-- btn-border, 1px solid lightgrey
-- btn-border-radius, 0.25rem
-- btn-padding, 0.5rem 1rem
-- btn-min-width, 3rem
-- btn-cursor, pointer
-- btn-focus-color, lightblue
-- btn-icon-height, 1rem
-- btn-icon-width, 1rem
-- btn-icon-margin, 0rem 0.5rem 0rem 0rem
+- input-margin, 1.25rem 0rem
+- input-bg-color, #fff
+- input-sub-color, #ccc
+- input-font-size, 1rem
+- input-text-color, #333
+- input-label-left, 0.25rem
+- input-label-top, -0.25rem
+- input-label-size, 1rem
 
 These are the styles applied in shadowDOM. You can look at the htmlButton.js for the most accurate version of styles :-).
 
@@ -60,56 +47,60 @@ These are the styles applied in shadowDOM. You can look at the htmlButton.js for
     align-items: flex-start;
     justify-content: space-between;
   }
-  button{
-    display: inline-flex;
-    align-items: end;
-    justify-content: space-between;
-    font-family: inherit;
-    font-size: var(--btn-font-size, 1rem);
-    border: var(--btn-border, 1px solid lightgrey);
-    border-radius: var(--btn-border-radius, 0.25rem);
-    padding: var(--btn-padding, 0.5rem 1rem);
-    min-width: var(--btn-min-width, 3rem);
-    min-height: var(--btn-min-height, 1rem);
-    cursor: var(--btn-cursor, pointer);
-    background-color: transparent;
+  .dv4-input{
+    flex:1;
+    position:relative;
+    margin: var(--input-margin, 1.25rem 0rem);
   }
-  button:focus{
+  /* INPUT STYLES */
+  input{
+    display: block;
+    background: none;
+    background-color: var(--input-bg-color, #fff);
+    color: var(--input-text-color, #333);
+    font-size: var(--input-font-size, 1rem);
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--input-sub-color, #ccc);
+  }
+
+  input:focus {
     outline: none;
-    box-shadow: 0 0 1pt 1pt var(--btn-focus-color, lightblue);
   }
-  button:hover,
-  button[primary]:hover,
-  button[danger]:hover{
-    color: var(--color-accent, lightblue);
-    fill:  var(--color-accent, lightblue);
+  /*
+  label needs to BE AFTER
+  input for this to work
+  */
+  input:focus ~ label {
+    ${shrinkCss}
   }
-  button:hover > ::slotted(*),
-  button[danger]:hover > ::slotted(*),
-  button[primary]:hover > ::slotted(*){
-    color: var(--color-accent, lightblue);
-    fill: var(--color-accent, lightblue);
+
+  input.changed ~ label{
+    ${shrinkCss}
   }
-  button:active,
-  button[primary]:active{
-    transform: translate(1px,1px);
+
+  /* LABEL STYLES */
+  label{
+    position: absolute;
+    left: var(--input-label-left, 0.25rem);
+    top: var(--input-label-top, -0.25rem);
+    color: var(--input-sub-color, #ccc);
+    font-size: var(--input-label-size, 1rem);
+    font-weight: normal;
+    pointer-events: none;
+    transition: 300ms ease all;
   }
-  button[primary],
-  button[primary] > ::slotted(*){
-    background-color: var(--color-primary, darkblue);
-    color: var(--color-primary-contrast, #fff);
-    fill: var(--color-primary-contrast, #fff);
+
+  label.shrink {
+    ${shrinkCss}
   }
-  button[danger],
-  button[danger] > ::slotted(*){
-    background-color: var(--color-warning, darkred);
-    color: var(--color-warning-contrast, #fff);
-    fill: var(--color-warning-contrast, #fff);
+
+  /* MESSAGE */
+  span{
+    position: absolute;
+    font-size: calc(var(--input-label-size, 1rem) * 0.75);
   }
-  ::slotted(*){
-    height: var(--btn-icon-height, 1rem);
-    width: var(--btn-icon-width, 1rem);
-    margin: var(--btn-icon-margin, 0rem 0.5rem 0rem 0rem) !important;
-  }
+
 </style>
 ```

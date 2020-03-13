@@ -28,20 +28,23 @@
       <div>
         <h3>What where the challenges?</h3>
         <p>
-          Describe here the challenges during creation of this custom component.
-
+          I decided to have separate custom elements for each input type.
+          Decission is based on the idea to be able to have custom validators
+          in each class. For example for numeric input we might be able to
+          implement custom validator in the class. This is inital tought
+          and experimenting here is used to test this idea.
         </p>
       </div>
       <div>
-        <h3>Here comes the implementation example</h2>
+        <h3>Example input type text</h2>
         <p>
-          <dv4-material-input
-            type="text"
+          <dv4-text-input
             name="var-name"
             label="Your name"
-            message="Type you first and last name"
+            message="Type your first and last name"
             >
-          </dv4-custom-button>
+          </dv4-text-input>
+          <div id="text-output"></div>
         </p>
       </div>
     </section>

@@ -6,7 +6,7 @@ const shrinkCss=`
   color: var(--input-main-color, #000);
 `
 
-const htmlInput = ({type='text',name='',
+const htmlInput = ({name='',
   label='Default', value='', message=''}) =>(`
   <style>
     :host{
@@ -22,8 +22,9 @@ const htmlInput = ({type='text',name='',
     }*/
 
     .dv4-input{
+      flex:1;
       position:relative;
-      margin: 1.25rem 0rem;
+      margin: var(--input-margin, 1.25rem 0rem);
     }
 
     /* INPUT STYLES */
@@ -31,7 +32,7 @@ const htmlInput = ({type='text',name='',
       display: block;
       background: none;
       background-color: var(--input-bg-color, #fff);
-      color: var(--input-sub-color, #ccc);
+      color: var(--input-text-color, #333);
       font-size: var(--input-font-size, 1rem);
       width: 100%;
       border: none;
@@ -57,8 +58,8 @@ const htmlInput = ({type='text',name='',
     /* LABEL STYLES */
     label{
       position: absolute;
-      left: 0.25rem;
-      top: -0.25rem;
+      left: var(--input-label-left, 0.25rem);
+      top: var(--input-label-top, -0.25rem);
       color: var(--input-sub-color, #ccc);
       font-size: var(--input-label-size, 1rem);
       font-weight: normal;
@@ -78,7 +79,7 @@ const htmlInput = ({type='text',name='',
 
   </style>
   <div class="dv4-input">
-    <input type="${type}" id="${name}" name="${name}" value="${value}"/>
+    <input type="text" id="${name}" name="${name}" value="${value}"/>
     ${value ==='' ? '<label>' : '<label class="shrink">'}
       ${label}
     </label>

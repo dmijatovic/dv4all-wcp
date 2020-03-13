@@ -1,20 +1,20 @@
-import newCustomElement from './newCustomInput'
+import newCustomInput from './newCustomInput'
 //html template
-import htmlInput from './htmlInput'
+import htmlInput from './htmlTextInput'
 
 //props
 const props={
   //these attributes are passed to htmlInput template
-  observedAttr:['type','name', 'label', 'value', 'message'],
+  observedAttr:['name', 'label', 'value', 'message'],
   shadowMode: 'open',
   renderHtml: htmlInput
 }
 
 //create new custom element
-const Dv4MaterialInput = newCustomElement(props)
+const Dv4TextInput = newCustomInput(props)
 
 //register custom element
-customElements.define('dv4-material-input',Dv4MaterialInput)
+customElements.define('dv4-text-input',Dv4TextInput)
 
 //export so it can be misused?
-export default Dv4MaterialInput
+export default Dv4TextInput
