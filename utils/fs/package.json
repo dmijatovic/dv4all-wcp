@@ -48,5 +48,9 @@
     "rollup": "1.30.1",
     "rollup-plugin-babel": "4.3.3"
   },
-  "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"
+  "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a",
+  "dependencies": {
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  }
 }

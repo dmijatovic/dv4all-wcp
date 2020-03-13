@@ -59,7 +59,9 @@
   },
   "dependencies": {
     "@dv4all/icons": "^0.3.1",
-    "@dv4all/wcp-utils": "^0.2.0"
+    "@dv4all/wcp-utils": "^0.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"
 }

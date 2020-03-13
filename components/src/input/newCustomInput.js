@@ -1,4 +1,5 @@
 import {attachTemplate} from '@dv4all/wcp-utils'
+import {consoleLog} from '@dv4all/log-utils'
 
 export default ({shadowMode, renderHtml, observedAttr=[]})=>{
   // props used to construct
@@ -16,7 +17,8 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when component is mounted to DOM
      */
     connectedCallback(){
-      console.log(`${this.localName}...mounted to DOM!`)
+      consoleLog(`${this.localName}...mounted to DOM!`, ENV)
+      // console.log(`${this.localName}...mounted to DOM!`)
       //init with props (attribute values
       this.render()
     }
@@ -63,7 +65,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * @param {Object} props
      */
     render(){
-      console.log(`${this.localName}...render element`)
+      consoleLog(`${this.localName}...render element`, ENV)
       //get attributes from the element
       let htmlTemplate=''
       if (typeof renderHtml === 'function'){
@@ -109,7 +111,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when attribute is changed
      */
     attributeChangedCallback(name, oldVal, newVal){
-      console.log(`${this.localName}...attribut changed...`, name, newVal)
+      consoleLog(`${this.localName}...attribut changed...${name}=${newVal}`, ENV)
       // call render on attribute changes
       this.defferRender()
     }
@@ -131,7 +133,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when element is removed from DOM
      */
     disconnectedCallback(){
-      console.log(`${this.localName}...removed...bye!bye!`)
+      consoleLog(`${this.localName}...removed...bye!bye!`, ENV)
     }
   }
 }
