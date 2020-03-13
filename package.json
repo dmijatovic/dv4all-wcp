@@ -10,7 +10,7 @@
 		"new-version":"lerna version --conventional-commits",
 		"diff":"lerna diff",
 		"publish:git":"git push --tags",
-		"prerelease":"cypress run --browser chrome --headless",
+		"prerelease":"npm run dev:html & cypress run --browser chrome --headless",
 		"release":"lerna publish",
 		"e2e:open":"cypress open"
 	},
