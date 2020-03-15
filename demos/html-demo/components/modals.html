@@ -34,11 +34,17 @@
       <div>
         <h3>Here comes the implementation example</h2>
         <p>
-          <button is="is-dv4-button">
-            <dv4-icon-camera class="dv4-icon-btn"></dv4-icon-camera>
-            Click button for some magic?
-          </button>
-        </p>        
+          <dv4-custom-button primary>
+            <dv4-icon-cog></dv4-icon-cog>
+            Show info modal
+          </dv4-custom-button>
+        </p>
+        <dv4-info-modal
+          img="/img/18-RDG-004_3A8A51069_m.jpg"
+          title="This is modal title"
+          subtitle="This is modal subtitle"
+          content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        ></dv4-info-modal>
       </div>
     </section>
   </section>
@@ -46,6 +52,8 @@
 
 <!-- SEE styles/layout.js FOR IMPLEMENTATION-->
 <dv4-page-footer></dv4-page-footer>
+
+<script src="modals.js"></script>
 
 </body>
 </html>
