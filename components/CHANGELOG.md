@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.3.2...@dv4all/web-components@0.4.0) (2020-03-15)
+
+
+### Features
+
+* add info type of modal to components ([406898d](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/406898dd7cbfc639f309926855039e82b4dd4136))
+
+
+
+
+
 ## [0.3.2](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.3.1...@dv4all/web-components@0.3.2) (2020-03-13)
 
 
