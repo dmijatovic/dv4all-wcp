@@ -75,6 +75,8 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
       attachTemplate(this, htmlTemplate )
       //attach event listeners
       this.attachListeners()
+      //load reference to modal
+      this.modal = this.shadowRoot.querySelector('section')
     }
     attachListeners(){
       this.handleOnClose()
@@ -82,7 +84,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
     handleOnClose(){
       //select input
       const close = this.shadowRoot.querySelector('.dv4-modal-close-btn')
-      this.modal = this.shadowRoot.querySelector('section')
+      if (!close) return
       //listen for onchange
       close['onclick'] = ({target})=>{
         consoleLog('Close button clicked...', ENV)

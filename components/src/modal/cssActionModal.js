@@ -1,5 +1,5 @@
 
-export default (img)=>(`
+export default ()=>(`
 <style>
 :host {
   display: block;
@@ -33,7 +33,6 @@ export default (img)=>(`
 }
 
 .dv4-modal.active{
-  /* display:flex; */
   visibility: visible;
   opacity:1;
   z-index: var(--modal-z-index, 99);
@@ -44,10 +43,12 @@ export default (img)=>(`
     2 cell layout and center right cell in the middle
   */
   position: relative;
-  display: table;
+  display: flex;
+  flex-direction: column;
   width: 65%;
   min-height: 50vh;
   max-height: 70vh;
+  padding: var(--modal-content-padding, 1.5rem);
   border-radius: 3px;
   overflow: hidden;
   background-color: var(--modal-window-bg-color, #eee);
@@ -62,19 +63,11 @@ export default (img)=>(`
   transform: scale(1);
 }
 
-.dv4-modal-image{
-  display: table-cell;
-  vertical-align: middle;
-  width: var(--modal-img-width, 33.33333%);
-  background-size: cover;
-}
-
 .dv4-modal-content{
-  display: table-cell;
+  flex: 1;
+  display: block;
   vertical-align: top;
-  padding: var(--modal-content-padding, 1.5rem);
   overflow: auto;
-  ${!img ? '' : 'width: calc(100% - var(--modal-img-width, 33.33333%));'}
 }
 
 .dv4-modal-title{
@@ -82,8 +75,9 @@ export default (img)=>(`
   line-height: calc(var(--modal-title-font-size, 2rem) * 1.125);
   text-transform: uppercase;
   color: var(--modal-title-color,#333);
-  /* margin to facilitate button */
+  /* margin to facilitate button
   margin-right: 2.75rem;
+  */
 }
 
 .dv4-modal-subtitle{
@@ -99,7 +93,7 @@ export default (img)=>(`
   font-size: var(--modal-content-font-size, 1.125rem);
   /* //new css3 column layout props
   //number of columns */
-  column-count: var(--modal-content-column-cnt, 2);
+  column-count: var(--modal-content-column-cnt, 1);
   /* //gap between columns */
   column-gap: var(--modal-content-column-gap, 2rem);
   /* v-line between columns */
@@ -113,15 +107,9 @@ export default (img)=>(`
   word-break: var(--modal-content-word-break, break-all);
 }
 
-.dv4-modal-close-btn{
-  position: absolute;
-  top: 1.25rem;
-  right: 1rem;
-  font-size: 2rem;
-  padding: 0rem 1rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.dv4-modal-nav{
+  display: flex;
+  width: 100%;
 }
 
 @media screen and (min-width: 1600px) {
@@ -145,13 +133,11 @@ export default (img)=>(`
 }
 
 @media screen and (max-width: 420px) {
-  :host{
-    font-size: 50%;
-  }
   .dv4-modal-window{
     display: flex;
     width: 100vw;
     max-height: 100vh;
+    height: 100vh;
     border-radius: 0px;
   }
   .dv4-modal-content{

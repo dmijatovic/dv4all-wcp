@@ -6,8 +6,15 @@ This web components extends generic HTMLElement. It has shadowRoot. In the shado
 
 ## Usage
 
+Currently there are 2 types of modals:
+
+- info modal: info modal supports image and text info. There is no support for actions (buttons). All info is passed to modal using element attributes.
+- action modal: action modal supports buttons. This element uses slots for passing the information.
+
+### Info modal
+
 ```html
-<!-- CUSTOM MODAL ELEMENT -->
+<!-- INFO MODAL -->
 <dv4-info-modal
   title="This is modal title"
   subtitle="This is modal subtitle"
@@ -20,9 +27,11 @@ This web components extends generic HTMLElement. It has shadowRoot. In the shado
 const dv4modal = document.querySelector("dv4-info-modal");
 //Show modal
 dv4modal.setAttribute("active", "true");
+//Hide modal
+dv4modal.removeAttribute("active");
 ```
 
-### Attributes
+#### Attributes
 
 - active: true/false flag to show/hide modal
 - title: modal title
@@ -30,7 +39,7 @@ dv4modal.setAttribute("active", "true");
 - content: modal body content
 - img [OPTIONAL]: modal image placed on left side
 
-### Events
+#### Events
 
 - onClose: modal will emit custom event `onClose` where you can listen to. To hide modal remove `active` attribute from custom element.
 
@@ -46,7 +55,59 @@ dv4modal.addEventListener("onClose", ({ target }) => {
 });
 ```
 
+### Action modal
+
+This modal supports passing (action) buttons. All information is passed using named slots.
+
+```html
+<!--ACTION MODAL -->
+<dv4-action-modal>
+  <!--MODAL TITLE SLOT -->
+  <span slot="title">Action modal with a longer title</span>
+  <!--MODAL SUBTITLE SLOT -->
+  <span slot="subtitle">Use YES button to close modal</span>
+  <!--CONTENT SLOT -->
+  <div slot="content">
+    <p>This is content of the action modal. Here we explain something.</p>
+    <p>
+      To close this modal click on YES button. Note that other 2 buttons don't
+      do much in this example.
+    </p>
+  </div>
+  <!--NAVIGATION SLOT -->
+  <div slot="nav" class="action-modal-nav">
+    <dv4-custom-button primary>
+      <dv4-icon-checkmark></dv4-icon-checkmark>
+      <div class="btn-lbl">Yes</div>
+    </dv4-custom-button>
+    <dv4-custom-button>
+      <dv4-icon-cogs></dv4-icon-cogs>
+      <div class="btn-lbl">Maybe</div>
+    </dv4-custom-button>
+    <dv4-custom-button danger>
+      <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
+      <div class="btn-lbl">No way!</div>
+    </dv4-custom-button>
+  </div>
+</dv4-action-modal>
+```
+
+#### Attributes action modal
+
+- active: true/false flag to show/hide modal
+
+```javascript
+//Select modal element
+const dv4modal = document.querySelector("dv4-action-modal");
+//Show modal
+dv4modal.setAttribute("active", "true");
+//Hide modal
+dv4modal.removeAttribute("active");
+```
+
 ### CSS variables
+
+Both modal types use similair variables. Action modal does not support image on the left side.
 
 Each variable has default value which is used if CSS variable is not provided. The following css variables can be applied to custom button component. The listing is in the format: variable, default value
 
@@ -59,7 +120,7 @@ Each variable has default value which is used if CSS variable is not provided. T
 - modal-content-padding, 1.5rem
 - modal-title-font-size, 2rem,
 - modal-title-color,#333
-- modal-subtitle-margin, 0.75rem 0.25rem
+- modal-subtitle-margin, 0.75rem 0rem
 - modal-subtitle-opacity, 0.8
 - modal-content-font-size, 1.125rem
 - modal-content-column-cnt, 2
