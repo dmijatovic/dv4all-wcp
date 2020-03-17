@@ -7,8 +7,7 @@ export default(props)=>{
       <style jsx>
         {`
           main{
-            display:block;
-            background-color: var(--color-accent,#E2CE4D);
+            display:block;            
             padding: 1rem;
           };
         `}

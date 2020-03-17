@@ -2,12 +2,13 @@ const Paragraph = props => {
   return (
     <>
     <style jsx>{`
-      p{
+      div{
         font-size:1rem;
-        font-color: red;
+        line-height: 1.5rem;
+        padding: 0.5rem 0rem;
       }
     `}</style>
-    <p>{props.children}</p>
+    <div>{props.children}</div>
     </>
   );
 };

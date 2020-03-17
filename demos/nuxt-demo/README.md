@@ -9,8 +9,8 @@ Nuxt test of web components in this monorepo.
 ## Build Setup
 
 ```bash
-# install dependencies
-$ npm run install
+# install latest @dv4all modules
+$ npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
 
 # serve with hot reload at localhost:3000
 $ npm run dev

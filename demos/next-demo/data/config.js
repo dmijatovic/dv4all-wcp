@@ -1,11 +1,13 @@
 export default{
-  appTitle:"This is app title",
-  footerText:"This is default footer text",
+  appTitle:"Web components @dv4all demo",
+  footerText:"dv4all@2020",
   links:[
     {href:'/', label:'Home'},
-    {href:'/about', label:'About'},
-    {href:'/movie', label:'Movie'},
-    {href:'/loader', label:'Loader'},
+    {href:'/icons', label:'Icons'},
+    {href:'/loaders', label:'Loaders'},
+    {href:'/components/buttons', label:'Buttons'},
+    {href:'/components/input', label:'Inputs'},
+    {href:'/components/modals', label:'Modals'},
     {href:'/ssr', label:'SSR'},
   ]
 }

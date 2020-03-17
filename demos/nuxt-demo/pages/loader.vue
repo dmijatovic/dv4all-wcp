@@ -9,12 +9,15 @@
         <div>loaderType: {{ loaderType }}</div>
         <div>message: {{ message }}</div>
         <p>
-          <dv4-button @click="showLoader('triangle')">
-            Show triangle
-          </dv4-button>
-          <dv4-button @click="showLoader('donut')">
-            Show donut
-          </dv4-button>
+
+            <dv4-custom-button primary
+              @click="showLoader('triangle')">
+              Show triangle
+            </dv4-custom-button>
+            <dv4-custom-button @click="showLoader('donut')">
+              Show donut
+            </dv4-custom-button>
+
         </p>
       </section>
       <section>

@@ -20,7 +20,7 @@ function addLoader(type){
   //listen to destroy
   el.addEventListener('click', clearLoader)
   //add no scroll
-  body.classList.toggle("noscroll")
+  // body.classList.toggle("noscroll")
   //append to loader section
   loaderSection.appendChild(el)
 }

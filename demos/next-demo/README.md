@@ -1,14 +1,28 @@
 # Next test web components
 
-**`THIS MODULE IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`**
+**`THIS MODULE TESTS USE OF WEB COMPONENTS with NextJS`**
 
-This is simple test of plain web components with next.
+This is simple test of (native) web components with NextJS.
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
 
-## Page template
+## Development
 
-With NextJS page template should be stored in \_app.js file.
+```bash
+# install latest
+npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+
+```
 
 ## Web components and SSR
 
@@ -41,9 +55,50 @@ import Head from "next/head";
 
 ```
 
-## Running server/browser side codes
+## Web component events and React
 
-NextJS has 'getInitalProps' function that is runned before page is loaded (on server side)
+React cannot listen to native custom element events by simply attaching the event to a custom element (as you can do with standard elements).
+
+There are several options to mitigate this problem but I find NONE really developer friendly. At this point in time my conclusion is that React is not web components friendly.
+
+For more info about possible ways to solve the challenge [see this article](https://coryrylan.com/blog/using-web-components-in-react).
+
+I used the following approach to listen to native custom element events in this demo:
+
+- Use reference to be able to access custom element from React component
+
+```javascript
+// set reference to custom element dv4info
+const dv4info = useRef(null);
+```
+
+- Set event listener to custom element event we need to listen to after react component mounted (and update state on event).
+
+```javascript
+// listen to onClose event after React component mounted
+useEffect(() => {
+  if (dv4info.current) {
+    dv4info.current.addEventListener("onClose", el => {
+      setState({
+        show: false,
+        type: "info"
+      });
+    });
+  }
+}, []);
+```
+
+## NextJS learnings
+
+Further in this readme I list learnings and remarks about NextJS. Some of remarks are not related to web components but to my experience with NextJS in general.
+
+### Page template
+
+With NextJS page template should be stored in `pages\_app.js` file.
+
+### Running server/browser side codes
+
+NextJS has `getInitalProps` function that is runned before page is loaded (on server side)
 
 Example of functional component is at link SSR.
 
@@ -62,7 +117,7 @@ ssr.getInitialProps = function(ctx) {
 };
 ```
 
-## Custom node server approach
+### Custom node server approach
 
 Next is universal Node app. It offers extending Node backend with custom codes for facilitating backend api.
 

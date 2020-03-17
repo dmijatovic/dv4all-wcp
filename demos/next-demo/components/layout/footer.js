@@ -1,6 +1,6 @@
-export default ()=>{  
+export default ({footerText})=>{
 
-  return (    
+  return (
     <footer>
       <style jsx>{`
         footer{
@@ -13,7 +13,7 @@ export default ()=>{
           font-weight:300;
         }
       `}</style>
-      <h2>Footer content</h2>
+      <h2>{footerText}</h2>
     </footer>
   )
 }
