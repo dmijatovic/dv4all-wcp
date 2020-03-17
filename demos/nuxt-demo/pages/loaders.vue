@@ -1,23 +1,30 @@
 <template>
   <PageContent>
     <template #page-title>
-      Loader demo
+      Demo @dv4all/loaders web components
     </template>
     <template #page-body>
       <section class="menu-left">
+        <p>
+          This page demos CSS loaders as web components. All CSS loaders are collected from
+          open source web examples. For each loader in the repo there is README file where
+          usage is explained. In the readme file I link to the CSS loader source.
+        </p>
+        <p>
+          Click on the button to show specific loader type. Click on the loader to close it.
+          By the way, the buttons are also custom web components :-).
+        </p>
         <div>Show: {{ show }}</div>
         <div>loaderType: {{ loaderType }}</div>
         <div>message: {{ message }}</div>
         <p>
-
-            <dv4-custom-button primary
-              @click="showLoader('triangle')">
-              Show triangle
-            </dv4-custom-button>
-            <dv4-custom-button @click="showLoader('donut')">
-              Show donut
-            </dv4-custom-button>
-
+          <dv4-custom-button primary
+            @click="showLoader('triangle')">
+            Show triangle
+          </dv4-custom-button>
+          <dv4-custom-button @click="showLoader('donut')">
+            Show donut
+          </dv4-custom-button>
         </p>
       </section>
       <section>

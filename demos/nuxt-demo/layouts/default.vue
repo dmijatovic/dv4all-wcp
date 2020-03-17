@@ -17,7 +17,7 @@
       <nuxt />
     </main>
     <footer class="app-footer">
-      Nuxt default template footer
+      @dv4all 2020
     </footer>
   </article>
 </template>
@@ -57,30 +57,39 @@ export default {
 .app-body,
 .app-footer{
   display: flex;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
 }
 
 .app-header{
+  display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: stretch;
   border-bottom: 1px solid var(--color-grey,#eee);
+  background-color: var(--color-accent, #333)
 }
 .app-header-nav{
+  display: flex;
+  align-items: stretch;
+  min-height: 4rem;
   padding: 0rem 1rem;
 }
 
 .app-header-nav-link{
-  color: var(--color-primary, blue);
+  display: flex;
+  align-items: center;
+  color: var(--color-primary, #09434D);
   padding: 0rem 1rem;
 }
 
 .nuxt-link-exact-active{
   font-weight: 700;
+  background-color:var(--link-active-color, #E8EDEE);
 }
 
 .app-footer{
-  background-color: #333;
-  color: #fff
+  background-color: var(--footer-bg-color, #333);
+  color: var(--footer-tx-color, #fff);
+  padding: 1rem 2rem;
 }
 
 </style>

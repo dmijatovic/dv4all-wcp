@@ -1,7 +1,7 @@
 <template>
   <section class="page-content">
     <h1 class="page-title">
-      This nested page title
+      This is parent page title
     </h1>
     <p>This is parent page content.</p>
     <section class="page-body">

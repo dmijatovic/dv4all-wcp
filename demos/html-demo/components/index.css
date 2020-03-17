@@ -7,11 +7,11 @@
   display:flex;
 }
 
-.left-panel{  
+.left-panel{
   margin-right: 1rem;
 }
 .right-panel{
-  flex:1;  
+  flex:1;
 }
 
 /* add some specing between buttons */
@@ -30,7 +30,7 @@ dv4-custom-button{
 }
 
 @media only screen and (max-width: 420px) {
-  .left-panel{ 
+  .left-panel{
     display: none;
   }
 }

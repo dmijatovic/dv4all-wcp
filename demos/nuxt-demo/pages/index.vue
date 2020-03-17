@@ -1,12 +1,20 @@
 <template>
   <PageContent>
     <template #page-title>
-      Hey there!
+      Welcome to Nuxt demo
     </template>
     <template #page-body>
-      <p>And here we add some content</p>
-      <h2>This is header 2</h2>
-      <p>And paragrpah 2</p>
+      <p>Welcome to web components demo with NuxtJS! In this demo project
+        we test how web components can be used with NuxtJS. This project is part
+        of monorepo where I test web components with NextJS, NuxtJS and with
+        plain HTML5 project.
+      </p>
+      <p>These are the steps needed to use web component:</p>
+      <ul>
+        <li>Include web components script. In the header of the html file
+          we include javascript file that contains the web component.</li>
+        <li>Apply propper web component html markup (html tag).</li>
+      </ul>
       <h2>Remarks navigation</h2>
       <p>
         The header navigation is auto-generated in default layout using router.
@@ -23,6 +31,11 @@
 <script>
 import PageContent from '@/components/page/PageContent'
 export default {
+  head:()=>{
+    return {
+      title:'Nuxt web components demo'
+    }
+  },
   components:{
     PageContent
   }

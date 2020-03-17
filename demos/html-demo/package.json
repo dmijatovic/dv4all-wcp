@@ -24,8 +24,9 @@
     "@dv4all/loaders": "^0.1.1",
     "@dv4all/web-components": "^0.1.2"
   },
-  "devDependencies": {    
-    "serve": "^11.3.0"
+  "devDependencies": {
+    "serve": "^11.3.0",
+    "eslint": "^6.8.0"
   },
   "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
 }

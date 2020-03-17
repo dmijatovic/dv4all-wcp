@@ -1,26 +1,30 @@
-# nuxt-demo web components
+# Nuxt demo web components
 
-**`THIS MODULE IS USED TO TEST USE OF WEB COMPONENTS AND HOW PUBLISHING TO NPM WORKS.`**
+**`THIS MODULE IS USED TO TEST WEB COMPONENTS with NuxtJS.`**
 
-Nuxt test of web components in this monorepo.
+Test web components with NuxtJS.
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
 
-## Build Setup
+## Setup
 
 ```bash
 # install latest @dv4all modules
-$ npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
+npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
+
+# install all dependencies
+npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+npm run build
+npm run start
 
 # generate static project
-$ npm run generate
+npm run generate
+
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

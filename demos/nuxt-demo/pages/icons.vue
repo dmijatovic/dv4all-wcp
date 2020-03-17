@@ -4,13 +4,72 @@
       Icons - demo page
     </template>
     <template #page-body>
-      <p>Here we demo use of SVG icons as customElements</p>
-      <p>
+      <section>
+        <h2 class="section-title">SVG Icons as web components</h2>
+        <p>
+          Below you see examples of SVG icons avaliable in @dv4all/icons module.
+          Hower over the icon to see the name of the component.
+          Look at the source code of html to see how icon is implemented.
+          More info is avaliable in REDME and <a href="https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/html-demo">Github repo</a>.
+        </p>
+      </section>
+      <section>
+        <!-- ARROW RIGHT -->
+        <dv4-icon-arrow-right
+          class="dv4-icon"
+          title="dv4-icon-arrow-right"
+          role="button">
+        </dv4-icon-arrow-right>
+        <!-- PLAY BACKWARD -->
+        <dv4-icon-backward
+          class="dv4-icon"
+          title="dv4-icon-backward"
+          role="button">
+        </dv4-icon-backward>
+        <!-- CAMERA -->
+        <dv4-icon-camera
+          class="dv4-icon"
+          title="dv4-icon-camera"
+          role="button">
+        </dv4-icon-camera>
+        <!-- CANCEL CIRCLE -->
         <dv4-icon-cancel-circle
-          title="Close window"
-          class="small-icon"
-        />
-      </p>
+          class="dv4-icon"
+          title="dv4-icon-cancel-circle"
+          role="button">
+        </dv4-icon-cancel-circle>
+        <!-- CHECKMARK -->
+        <dv4-icon-checkmark
+          class="dv4-icon"
+          title="dv4-icon-checkmark"
+          role="button">
+        </dv4-icon-checkmark>
+        <!-- CIRCLE RIGHT -->
+        <dv4-icon-circle-right
+          class="dv4-icon"
+          title="dv4-icon-circle-right"
+          role="button">
+        </dv4-icon-circle-right>
+        <!-- COG -->
+        <dv4-icon-cog
+          class="dv4-icon"
+          title="dv4-icon-cog"
+          role="button">
+        </dv4-icon-cog>
+        <!-- COGS -->
+        <dv4-icon-cogs
+          class="dv4-icon"
+          title="dv4-icon-cogs"
+          role="button">
+        </dv4-icon-cogs>
+        <!-- CONNECTION -->
+        <dv4-icon-connection
+          class="dv4-icon"
+          title="dv4-icon-connection"
+          role="button">
+        </dv4-icon-connection>
+
+      </section>
     </template>
   </PageContent>
 </template>
@@ -26,11 +85,5 @@ export default {
 </script>
 
 <style>
-
-.small-icon{
-  display: inline-block;
-  width:2rem;
-  height:2rem;
-  fill: var(--color-primary, #333);
-}
+@import '@/styles/icons.css';
 </style>

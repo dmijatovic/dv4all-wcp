@@ -12,7 +12,7 @@ class Dv4Sidebar extends HTMLElement{
   constructor(){
     super()
   }
-   /**
+  /**
    * Lifecycle event when component is mounted to DOM
    */
   connectedCallback(){
@@ -60,4 +60,4 @@ class Dv4Sidebar extends HTMLElement{
   }
 }
 
-customElements.define("dv4-sidebar-menu", Dv4Sidebar)
+customElements.define('dv4-sidebar-menu', Dv4Sidebar)

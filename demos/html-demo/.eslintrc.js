@@ -1,44 +1,40 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'es6': true,
-        "node": true,
-    },
-    'extends': [
-        'eslint:recommended',
+  'env': {
+    'browser': true,
+    'es6': true,
+    "node": true,
+  },
+  'extends': [
+    'eslint:recommended',
+  ],
+  'globals': {
+    'Atomics': 'readonly',
+    'SharedArrayBuffer': 'readonly'
+  },
+  'parserOptions': {
+    'ecmaVersion': 11,
+    'sourceType': 'module',
+    "allowImportExportEverywhere": true
+  },
+  'rules': {
+    'indent': [
+        'warn',
+        2
     ],
-    'globals': {
-        'Atomics': 'readonly',
-        'SharedArrayBuffer': 'readonly'
-    },
-    'parserOptions': {
-        'ecmaVersion': 2018,
-        'sourceType': 'module',
-        "allowImportExportEverywhere": true
-    },
-    'plugins': [
-        'vue'
+    'linebreak-style': [
+        'warn',
+        'unix'
     ],
-    'rules': {
-        'indent': [
-            'warn',
-            2
-        ],
-        'linebreak-style': [
-            'warn',
-            'unix'
-        ],
-        'quotes': [
-            'warn',
-            'single'
-        ],
-        'semi': [
-            'warn',
-            'never'
-        ],
-        'vue/no-unused-components':['warn'],
-        'no-unused-vars':['warn'],
-        'no-debugger':['warn'],
-        'no-trailing-spaces': ['warn']
-    }
+    'quotes': [
+        'warn',
+        'single'
+    ],
+    'semi': [
+        'warn',
+        'never'
+    ],
+    'no-unused-vars':['warn'],
+    'no-debugger':['warn'],
+    'no-trailing-spaces': ['warn']
+  }
 }
