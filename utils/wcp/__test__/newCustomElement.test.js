@@ -1,4 +1,4 @@
-import {newCustomElement} from "../src/"
+import {newCustomElement} from '../src/'
 
 //props
 const props={
@@ -9,9 +9,9 @@ const props={
   `
 }
 
-describe("newCustomElement",()=>{
-  it ("returns function to create CustomHtmlElement",()=>{
+describe('newCustomElement',()=>{
+  it ('returns function to create CustomHtmlElement',()=>{
     const ne = newCustomElement(props)
-    expect(typeof ne).toBe("function")
+    expect(typeof ne).toBe('function')
   })
 })

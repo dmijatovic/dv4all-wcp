@@ -1,10 +1,10 @@
-import attachTemplate from "../src/attachTemplate"
+import attachTemplate from '../src/attachTemplate'
 
 describe('attachTemplate',()=>{
 
   it ('Adds innerHTML to element',()=>{
     const el = document.createElement('div')
-    const html="<h1>Test</h1>"
+    const html='<h1>Test</h1>'
 
     const template = attachTemplate(el,html)
     expect(template.innerHTML).toBe(html)
@@ -14,10 +14,10 @@ describe('attachTemplate',()=>{
     //fake element with shadowRoot
     const el = {
       shadowRoot:{
-        innerHTML:""
+        innerHTML:''
       }
     }
-    const html="<h1>Test</h1>"
+    const html='<h1>Test</h1>'
     const template = attachTemplate(el,html)
     expect(template['shadowRoot'].innerHTML).toBe(html)
   })

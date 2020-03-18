@@ -105,18 +105,16 @@ import "@dv4all/loaders";
 
 ## Testing
 
-For testing I tried Jest and Cypress. At the moment of setting up this project testing web components with Jest have not worked out of the box.
-
-### Jest
-
-I used basic Jest setup with Babel. I did not managed to create succefull tests for web components. At this point there is no [support for customElements in Jest](https://github.com/facebook/jest/issues/8818). Work around requires including JSDOM.
-
-The test writen with Jest are in module utils/wcp where I was able to test basic JS functionality.
-
-See [JEST.md](JEST.md) file for more info.
+For testing I tried Jest and Cypress. At the moment of setting up this project testing web components with Jest have not worked well for me. I mainly used Cypress.
 
 ### Cypress
 
 Because customElement (web components) are browser specific proper testing requires testing in browser. As Cypress has support for customElements I decided to use it for most of the tests.
 
 Using e2e tool for testing web components makes it possible to cover demo projects and web components modules in one go. I belive that testing web components using Cypress is the optimal approach to testing web components.
+
+### Jest
+
+I used basic Jest setup with Babel. I did not managed to create succefull tests for the web components. At this point there is no [support for customElements in Jest](https://github.com/facebook/jest/issues/8818). In some articles on web I have seen approach with JSDOM.
+
+I was able to test basic JS functionality in the module utils/wcp with Jest. See [JEST.md](JEST.md) file for more info.
