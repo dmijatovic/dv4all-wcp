@@ -12,7 +12,10 @@ This folders contains plain JS demos of web components:
 
 ```bash
 # install npm packages to test
-npm install @dv4all/web-components @dv4all/icons @dv4all/loaders
+npm install @dv4all/web-components@latest @dv4all/icons@latest @dv4all/loaders@latest
+
+# run dev server
+npm run dev
 ```
 
 Import cjs version of the library () file in the header of html file. For example of the implementation see demos/html-demo/icons.html for example.
