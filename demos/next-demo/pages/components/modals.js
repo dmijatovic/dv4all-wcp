@@ -1,6 +1,6 @@
 import {useState, useEffect, useRef} from 'react'
 import Head from 'next/head'
-import {PageTitle, Paragraph} from "../../components/layout"
+import {PageTitle, Paragraph} from '../../components/layout'
 
 const Modals = () => {
   const [state, setState] = useState({
@@ -13,7 +13,7 @@ const Modals = () => {
 
   useEffect(()=>{
     if (dv4info.current){
-      dv4info.current.addEventListener("onClose",(target)=>{
+      dv4info.current.addEventListener('onClose',()=>{
         setState({
           show:false,
           type:'info'
@@ -23,19 +23,19 @@ const Modals = () => {
   },[])
 
   useEffect(()=>{
-    console.log("Show changed...", show)
-    console.log("Type changed...", type)
+    console.log('Show changed...', show)
+    console.log('Type changed...', type)
     if (show===true){
       if (type==='info'){
-        dv4info.current.setAttribute("active",true)
+        dv4info.current.setAttribute('active',true)
       } else if(type==='action'){
-        dv4action.current.setAttribute("active", true)
+        dv4action.current.setAttribute('active', true)
       }
     }else{
       if (type==='info'){
-        dv4info.current.removeAttribute("active")
+        dv4info.current.removeAttribute('active')
       }else if (type==='action'){
-        dv4action.current.removeAttribute("active")
+        dv4action.current.removeAttribute('active')
       }
     }
   },[show,type])
@@ -102,39 +102,39 @@ const Modals = () => {
       {/* ACTION MODAL CUSTOM ELEMENT */}
       <dv4-action-modal
         ref={dv4action}>
-          <span slot="title">Action modal with a longer title</span>
-          <span slot="subtitle">Use YES button to close modal</span>
-          <div slot="content">
-            <p>This is content of the action modal. Here we explain something.</p>
-            <p>
+        <span slot="title">Action modal with a longer title</span>
+        <span slot="subtitle">Use YES button to close modal</span>
+        <div slot="content">
+          <p>This is content of the action modal. Here we explain something.</p>
+          <p>
               To close this modal click on YES button. Note that other 2 buttons
-              don't do much in this example.
-            </p>
-          </div>
-          <div slot="nav" class="action-modal-nav">
-            <dv4-custom-button primary
-              onClick={()=>{
-                setState({
-                  show:false,
-                  type:'action'
-                })
-              }}>
-              <dv4-icon-checkmark></dv4-icon-checkmark>
-              <div class="btn-lbl">Yes</div>
-            </dv4-custom-button>
-            <dv4-custom-button>
-              <dv4-icon-cogs></dv4-icon-cogs>
-              <div class="btn-lbl">Maybe</div>
-            </dv4-custom-button>
-            <dv4-custom-button danger>
-              <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
-              <div class="btn-lbl">No way!</div>
-            </dv4-custom-button>
-          </div>
-        </dv4-action-modal>
+              don&apos;t do much in this example.
+          </p>
+        </div>
+        <div slot="nav" className="action-modal-nav">
+          <dv4-custom-button primary
+            onClick={()=>{
+              setState({
+                show:false,
+                type:'action'
+              })
+            }}>
+            <dv4-icon-checkmark></dv4-icon-checkmark>
+            <div className="btn-lbl">Yes</div>
+          </dv4-custom-button>
+          <dv4-custom-button>
+            <dv4-icon-cogs></dv4-icon-cogs>
+            <div className="btn-lbl">Maybe</div>
+          </dv4-custom-button>
+          <dv4-custom-button danger>
+            <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
+            <div className="btn-lbl">No way!</div>
+          </dv4-custom-button>
+        </div>
+      </dv4-action-modal>
 
     </>
-  );
-};
+  )
+}
 
-export default Modals;
+export default Modals

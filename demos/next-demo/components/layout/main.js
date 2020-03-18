@@ -1,13 +1,13 @@
 
-export default(props)=>{
+const Main = (props)=>{
   // console.log("Main.props...", props)
-  const { Component, pageProps } = props;
+  const { Component, pageProps } = props
   return (
     <main>
       <style jsx>
         {`
           main{
-            display:block;            
+            display:block;
             padding: 1rem;
           };
         `}
@@ -16,3 +16,5 @@ export default(props)=>{
     </main>
   )
 }
+
+export default Main

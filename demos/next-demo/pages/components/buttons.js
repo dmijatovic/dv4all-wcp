@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {PageTitle, Paragraph} from "../../components/layout"
+import {PageTitle, Paragraph} from '../../components/layout'
 
 const Buttons = () => {
   return (
@@ -52,7 +52,7 @@ const Buttons = () => {
         </p>
       </Paragraph>
     </>
-  );
-};
+  )
+}
 
-export default Buttons;
+export default Buttons

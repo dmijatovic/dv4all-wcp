@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 
-export default (props)=>{
+const Header = (props)=>{
   const {appTitle, links} = props
   const router = useRouter()
   return (
@@ -40,7 +40,7 @@ export default (props)=>{
           }
         `}
       </style>
-        <h1>{appTitle}</h1>
+      <h1>{appTitle}</h1>
       <nav>
         {
           links.map(l=>{
@@ -48,9 +48,9 @@ export default (props)=>{
               <Link
                 key={l.href}
                 href={l.href}>
-                  <a className={router.pathname===l.href ? "active" : "not-active"}>
-                    {l.label}
-                  </a>
+                <a className={router.pathname===l.href ? 'active' : 'not-active'}>
+                  {l.label}
+                </a>
               </Link>
             )
           })
@@ -59,3 +59,5 @@ export default (props)=>{
     </header>
   )
 }
+
+export default Header

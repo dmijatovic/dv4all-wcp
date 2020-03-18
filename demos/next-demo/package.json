@@ -13,15 +13,20 @@
     "dev:next": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate": "next export"
+    "export": "next export",
+    "static": "next build & next export"
   },
   "dependencies": {
     "@dv4all/icons": "^0.3.4",
     "@dv4all/loaders": "^0.1.10",
     "@dv4all/web-components": "^0.5.0",
-    "next": "9.3.0",
+    "next": "^9.3.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
-  "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
+  "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
+  }
 }

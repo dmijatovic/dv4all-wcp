@@ -1,18 +1,10 @@
-import React, {useState, useRef} from 'react';
+import React, {useRef} from 'react'
 import Head from 'next/head'
-import {PageTitle, Paragraph} from "../components/layout"
+import {PageTitle, Paragraph} from '../components/layout'
 
 
-const Loader = () => {
-  const [state, setState] = useState({show:false, message:""})
+const Loaders = () => {
   const loaderHolder = useRef(null)
-
-  const toggleState = ()=>{
-    setState({
-      show: !state.show,
-      message: state.show ? "Hidden" : "Loading..."
-    })
-  }
 
   const addLoader = type => {
     if (loaderHolder){
@@ -30,7 +22,7 @@ const Loader = () => {
 
   const clearLoader = () =>{
     if (loaderHolder){
-      loaderHolder.current.innerText = ""
+      loaderHolder.current.innerText = ''
     }
   }
 
@@ -65,7 +57,7 @@ const Loader = () => {
         </dv4-custom-button>
       </Paragraph>
     </>
-  )}
+    )}
 
   return (
     <>
@@ -82,13 +74,12 @@ const Loader = () => {
           margin-right:1rem;
         }
       `}</style>
-      <div>Show loader: {state.show.toString()}</div>
       {render()}
       <section ref={loaderHolder}>
         {/* <!--HERE WE ADD ELEMENT --> */}
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Loader;
+export default Loaders

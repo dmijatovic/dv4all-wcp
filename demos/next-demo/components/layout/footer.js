@@ -1,5 +1,6 @@
-export default ({footerText})=>{
 
+
+const Footer = ({footerText=''})=>{
   return (
     <footer>
       <style jsx>{`
@@ -17,3 +18,5 @@ export default ({footerText})=>{
     </footer>
   )
 }
+
+export default Footer

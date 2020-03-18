@@ -1,23 +1,23 @@
 import {useState, useRef, useEffect } from 'react'
 import Head from 'next/head'
-import {PageTitle, Paragraph} from "../../components/layout"
+import {PageTitle, Paragraph} from '../../components/layout'
 
 const Input = () => {
   useEffect(()=>{
     // console.log("dv4input..", dv4input)
-    dv4input.current.addEventListener("onChange",({target})=>{
+    dv4input.current.addEventListener('onChange',({target})=>{
       setState({
         output: target.value,
         message: target.value.length > 3 ?
-          "Well done!" :
-          "Type your first and last name"
+          'Well done!' :
+          'Type your first and last name'
       })
     })
   },[])
 
   const [state, setState] = useState({
-    output:"",
-    message:"Type your first and last name"
+    output:'',
+    message:'Type your first and last name'
   })
   const dv4input = useRef(null)
   const {output,message}=state
@@ -37,11 +37,11 @@ const Input = () => {
           and experimenting here is used to test this idea.
       </Paragraph>
       <Paragraph>
-          <strong>
+        <strong>
             React does not support listening to (native) events from custom
             elements.
-          </strong> In this example I have set reference to custom input
-          component and used effect to set event listener for 'onChange'
+        </strong> In this example I have set reference to custom input
+          component and used effect to set event listener for &apos;onChange&apos;
           event when Rect component loads.
       </Paragraph>
       <Paragraph>
@@ -52,7 +52,7 @@ const Input = () => {
             name="var-name"
             label="Your name"
             message={message}
-            >
+          >
           </dv4-text-input>
         </p>
       </Paragraph>
@@ -62,7 +62,7 @@ const Input = () => {
         </div>
       </Paragraph>
     </>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input

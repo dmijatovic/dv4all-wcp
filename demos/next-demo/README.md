@@ -9,8 +9,12 @@ This is simple test of (native) web components with NextJS.
 ## Development
 
 ```bash
-# install latest
+# install latest @dv4all modules
 npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
+# install latest next
+npm i -s next@latest react@latest react-dom@latest
+# linter
+npm i -D eslint@latest eslint-plugin-react@latest
 
 # serve with hot reload at localhost:3000
 $ npm run dev
@@ -91,6 +95,32 @@ useEffect(() => {
 ## NextJS learnings
 
 Further in this readme I list learnings and remarks about NextJS. Some of remarks are not related to web components but to my experience with NextJS in general.
+
+### Static site export
+
+NexJS makes possible to export Rect code to a static website. [See documentation for an example](https://nextjs.org/learn/excel/static-html-export).
+The repo from documentation is [here](https://github.com/zeit/next-learn-demo/tree/master/E1-static-export).
+
+- add path map to next.config.js. Note: each route that needs to be accessible from outside world (drop-in) need to be defined.
+
+```javascript
+module.exports = {
+  // static export definition
+  exportTrailingSlash: true,
+  exportPathMap: function() {
+    return {
+      "/": { page: "/" },
+      "/icons": { page: "/icons" },
+      "/loaders": { page: "/loaders" }
+    };
+  }
+};
+```
+
+- run `next build`: this will build the project
+- run `next export`: this will create static stite in out folder.
+
+There is a shortcut in package.json for build and export `npm run static`
 
 ### Page template
 
