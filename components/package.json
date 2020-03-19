@@ -2,9 +2,8 @@
   "name": "@dv4all/web-components",
   "version": "0.5.0",
   "type": "module",
-  "main": "lib/dv4wcp.js",
-  "module": "lib/dv4wcp.js",
-  "browser": "lib/dv4wcp.cjs.js",
+  "main": "lib/dv4wcp.cjs.js",
+  "module": "lib/dv4wcp.js",  
   "scripts": {
     "dev": "rollup -c -w",
     "dev:html": "rollup -c -w",
@@ -55,6 +54,7 @@
     "@dv4all/log-utils": "^0.1.2",
     "@dv4all/wcp-utils": "^0.2.3"
   },
+  "bundledDependencies": [],
   "publishConfig": {
     "access": "public"
   },

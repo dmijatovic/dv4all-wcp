@@ -2,9 +2,8 @@
   "name": "@dv4all/fs-utils",
   "version": "0.2.5",
   "type": "module",
-  "main": "lib/dv4fs.utils.js",
-  "module": "lib/dv4fs.utils.js",
-  "browser": "lib/dv4fs.utils.cjs.js",
+  "main": "lib/dv4fs.utils.cjs.js",
+  "module": "lib/dv4fs.utils.js",  
   "scripts": {
     "dev": "rollup -c -w",
     "prebuild": "rimraf lib",

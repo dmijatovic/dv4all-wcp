@@ -2,9 +2,8 @@
   "name": "@dv4all/log-utils",
   "version": "0.1.2",
   "type": "module",
-  "main": "lib/dv4log.utils.js",
+  "main": "lib/dv4log.utils.cjs.js",
   "module": "lib/dv4log.utils.js",
-  "browser": "lib/dv4log.utils.cjs.js",
   "scripts": {
     "dev": "rollup -c -w",
     "prebuild": "rimraf lib",
