@@ -5,6 +5,7 @@
 		"dev:html":"bash start-demo-app.sh html-demo",
 		"dev:next":"bash start-demo-app.sh next-demo",
 		"dev:nuxt":"bash start-demo-app.sh nuxt-demo",
+		"dev:webpack":"bash start-demo-app.sh webpack-demo",
 		"dev:components":"lerna run dev --scope=@dv4all/* --parallel",
 		"build:components":"lerna run build:components",
 		"new-version":"lerna version --conventional-commits",

@@ -1,13 +1,13 @@
-# Cross Icon
+# Embed2 Icon
 
-<img src="../../assets/SVG/cross.svg" alt="cross icon" style="width:3rem"/>
+<img src="../../assets/SVG/embed2.svg" alt="embed icon" style="width:3rem"/>
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` folder of this repo.
 
 ## Usage
 
 ```html
-<dv4-icon-cross class="dv4-icon" title="Cross icon" />
+<dv4-icon-embed2 class="dv4-icon" title="Embed icon" />
 ```
 
 ### Props
