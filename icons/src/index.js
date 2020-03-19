@@ -16,5 +16,7 @@ export {default as Dv4IconCog} from './cog/index.js'
 export {default as Dv4IconCogs} from './cogs/index.js'
 //dv4-icon-connection
 export {default as Dv4IconConnection} from './connection/index.js'
+//dv4-icon-cross
+export {default as Dv4IconCross} from './cross/index.js'
 
 

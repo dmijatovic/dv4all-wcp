@@ -1,10 +1,12 @@
 # Icons as web components
 
-`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS, LERNA AND HOW PUBLISHING TO NPM WORKS.`
+`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS.`
 
-This module contains icons as web components. It is a part of @dv4all monorepo created to test web components implementation as NPM packages (modules), how LERNA works and how custom components can be applied with React (NextJS), Vue (NuxtJS) and HTML5.
+The module contains SVG icons as web components. It is a part of @dv4all monorepo created to test web components implementation as NPM packages (modules), how LERNA works and how custom components can be applied with React (NextJS), Vue (NuxtJS), Webpack and HTML5.
 
 **This module is part of monorepo dv4all-wcp-lerna.**
+
+There are demos of each implementation in the [demos folder of the monorepo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos).
 
 ## Usage
 
@@ -93,14 +95,14 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 
 ## Icons
 
-- [arrow-right](src/arrow-right/README.md): arrow-right svg icon as custom web component
-- [backward](src/backward/README.md): backward svg icon as custom web component
-- [camera](src/camera/README.md): camera svg icon as custom web component
-- [cancel-circle](src/cancel-circle/README.md): cancel-circle svg icon as custom web component
-- [checkmark](src/checkmark/README.md): checkmark svg icon as custom web component
-- [circle-right](src/circle-right/README.md): circle-right svg icon as custom web component
-- [cog](src/cog/README.md): cog svg icon as custom web component
-- [cogs](src/cogs/README.md): cogs svg icon as custom web component
-- [connection](src/connection/README.md): connection svg icon as custom web component
+- [arrow-right](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/arrow-right): arrow-right svg icon as custom web component
+- [backward](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/backward): backward svg icon as custom web component
+- [camera](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/camera): camera svg icon as custom web component
+- [cancel-circle](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/cancel-circle): cancel-circle svg icon as custom web component
+- [checkmark](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/checkmark): checkmark svg icon as custom web component
+- [circle-right](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/circle-right): circle-right svg icon as custom web component
+- [cog](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/cog): cog svg icon as custom web component
+- [cogs](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/cogs): cogs svg icon as custom web component
+- [connection](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/connection): connection svg icon as custom web component
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
