@@ -61,7 +61,11 @@ export default {
       // Extend only webpack config for client-bundle
       if (isClient) {
         // config.devtool = 'source-map'
-        // console.log("nuxt.config.js...", config)
+        config.optimization['sideEffects'] = false
+        console.log("nuxt.config.js...", config)
+        // optimization: {
+        //   sideEffects: false
+        // },
       }
     },
     // plugins: [
