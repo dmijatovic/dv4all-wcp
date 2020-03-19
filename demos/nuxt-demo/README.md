@@ -9,11 +9,11 @@ Test web components with NuxtJS.
 ## Setup
 
 ```bash
-# install latest @dv4all modules
-npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
-
 # install all dependencies
 npm install
+
+# install latest @dv4all modules
+npm i -s @dv4all/icons@latest @dv4all/loaders@latest @dv4all/web-components@latest
 
 # serve with hot reload at localhost:3000
 npm run dev
@@ -45,11 +45,22 @@ nuxt.config.js - plugins section
   */
   plugins: [
     // Client side ONLY plugins - SET ssr to FALSE
-    { src: '@/plugins/dv4-loaders-wc.js', ssr: false }
+    { src: '@/plugins/dv4all.js', mode: 'client' }
   ],
 ```
 
-Wrap your client side ONLY components with `client-only` markup
+The content of /plugins/dv4all.js is simply import
+
+```javascript
+/**
+ * Import @dv4all modules
+ */
+import "@dv4all/icons";
+import "@dv4all/loaders";
+import "@dv4all/web-components";
+```
+
+You might need to wrap your client side ONLY components with `client-only` markup
 
 ```html
 <client-only>

@@ -1,6 +1,10 @@
 
 export default {
   mode: 'universal',
+  generate:{
+    //404 page
+    fallback: true
+  },
   /*
   ** Headers of the page
   */
@@ -32,9 +36,7 @@ export default {
   */
   plugins: [
     // '@/plugins/dv4-loaders-wc.js'
-    { src: '@/plugins/dv4-loaders-wc.js', ssr: false },
-    { src: '@/plugins/dv4-icons.js', ssr: false },
-    { src: '@/plugins/dv4-wcp.js', ssr: false }
+    { src: '@/plugins/dv4all.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -55,7 +57,17 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
-    }
+    extend (config, { isClient }) {
+      // Extend only webpack config for client-bundle
+      if (isClient) {
+        // config.devtool = 'source-map'
+        // console.log("nuxt.config.js...", config)
+      }
+    },
+    // plugins: [
+    //   new webpack.ProvidePlugin({
+    //     identifier:['@dv4all/icons','@dv4all/loaders']
+    //   })
+    // ]
   }
 }

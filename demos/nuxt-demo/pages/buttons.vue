@@ -7,13 +7,13 @@
       <h3>What where the challenges?</h3>
       <p>
         I faced serious challenge using web component for base elements. Below is an example.
-        <ul>
-          <li>Button that extends HTMLButtonElement: this element does not support shadowDOM. The styles for each button added this way are duplicated. At least when inspecting page with developer tools you can see that styles are repeated for each button (and overwritten). The styles are not scoped :-(.
-          </li>
-          <li>Button that extends HTMLElement: this element has shadowDOM. With shadowDOM the styles are scoped. Basic HTMLElement does not have all button functionalities. For example, it does not support active element state (which is used to animate button click). I decided to wrap standard button in the customElement and style it.
-          </li>
-        </ul>
       </p>
+      <ul>
+        <li>Button that extends HTMLButtonElement: this element does not support shadowDOM. The styles for each button added this way are duplicated. At least when inspecting page with developer tools you can see that styles are repeated for each button (and overwritten). The styles are not scoped :-(.
+        </li>
+        <li>Button that extends HTMLElement: this element has shadowDOM. With shadowDOM the styles are scoped. Basic HTMLElement does not have all button functionalities. For example, it does not support active element state (which is used to animate button click). I decided to wrap standard button in the customElement and style it.
+        </li>
+      </ul>
       <h3>Button wrapped in the custom HTMLElement</h3>
       <!-- CUSTOM BUTTON -->
       <p>
@@ -54,7 +54,6 @@
 </template>
 
 <script>
-
 import PageContent from '@/components/page/PageContent'
 
 export default {

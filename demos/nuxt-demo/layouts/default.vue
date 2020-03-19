@@ -49,7 +49,7 @@ export default {
 .app-content{
   display:grid;
   grid-auto-columns:1fr;
-  grid-auto-rows: minmax(3rem,auto) 1fr minmax(2rem, auto);
+  grid-auto-rows: minmax(4rem,auto) 1fr minmax(2rem, auto);
   min-height:100vh;
 }
 
