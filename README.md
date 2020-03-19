@@ -23,13 +23,17 @@ One of the goals is to test use of web components as NPM packages with plain HTM
 - `next-demo`: using custom web components with React. NexyJS is selected because it offers more options like SSR and static sites using React components. This was important choise because universal app do not support customElements on server side. Specific approach is required for web components to work with SSR. Demo imports modules dynmically in the app template on `ComponentDidMount` lifecycle method.
 - `nuxt-demo`: using custom web components from this monorepo with Vue. Nuxt is selected in similair fastion as Next because it enables various approached like SSR and static website besides SPA. Demo implements web components as plugins with SSR disabled.
 
-### ES6 webpack implementation
-
-### HTML5 implementation
+### HTML implementation
 
 This is the easiest implementation of all tested. Just import cjs version of library (file) in the header of html file. For example of the implementation see demos/html-demo/icons.html for example.
 
 For more information [see README in html-demo](/demos/html-demo/README.md).
+
+### Webpack implementation
+
+The webpack demo is actually used for debugging of more complex setups like NextJS and NuxtJS implementations. I had few challenges with these libraries. At the certain point I realised that build problems I was facing could be lot easier discovered if I have simple basic webpack setup.
+
+For more infomation [see README file in webpack-demo](/demos/webpack-demo/README.md).
 
 ### NextJS implementation
 
