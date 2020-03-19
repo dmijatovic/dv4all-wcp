@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.3.6...@dv4all/icons@0.4.0) (2020-03-19)
+
+
+### Bug Fixes
+
+* readme title icons ([3f16e6f](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/3f16e6f4172ec72e2a41c73edd733fdcdb941176))
+
+
+### Features
+
+* add cross icon to @dv4all/icons ([2fa2a48](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/2fa2a48a26b8bb017cc0ae63d49bb84077d26d69))
+* add embed2 icons to @dv4all/icons ([ea5534d](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/ea5534d30e40f6a44aa06415227b6b32fd433af6))
+* add enter and equalizer icons ([38dd4e8](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/38dd4e8cab0ea1c2cd1a3cfb0d767f62cf85bf2c))
+* add enter icon to @dv4all/icons ([0747400](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/074740090cd8de7c788854efb85f3cb35de6ba4b))
+* add exit icon to @dv4all/icons ([a1dfabe](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/a1dfabe5a45b5416ef72e5a31f670532b399e353))
+
+
+
+
+
 ## [0.3.6](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.3.5...@dv4all/icons@0.3.6) (2020-03-19)
 
 **Note:** Version bump only for package @dv4all/icons

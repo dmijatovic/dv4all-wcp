@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/loaders",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "type": "module",
   "main": "lib/dv4loaders.cjs.js",
   "module": "lib/dv4loaders.js",
@@ -56,7 +56,7 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.3.6",
+    "@dv4all/icons": "^0.4.0",
     "@dv4all/wcp-utils": "^0.2.5"
   },
   "bundledDependencies": [],
