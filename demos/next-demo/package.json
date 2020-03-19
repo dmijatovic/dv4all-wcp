@@ -17,9 +17,9 @@
     "static": "next build & next export"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.3.4",
-    "@dv4all/loaders": "^0.1.10",
-    "@dv4all/web-components": "^0.5.0",
+    "@dv4all/icons": "^0.3.6",
+    "@dv4all/loaders": "^0.1.12",
+    "@dv4all/web-components": "^0.5.2",
     "next": "^9.3.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"

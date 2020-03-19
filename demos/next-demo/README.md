@@ -17,14 +17,16 @@ npm i -s next@latest react@latest react-dom@latest
 npm i -D eslint@latest eslint-plugin-react@latest
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+npm run build
+npm start
 
 # generate static project
-$ npm run generate
+npm run build
+npm run export
+npm start
 
 ```
 
