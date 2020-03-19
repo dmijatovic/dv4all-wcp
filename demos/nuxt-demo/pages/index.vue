@@ -31,9 +31,17 @@
 <script>
 import PageContent from '@/components/page/PageContent'
 export default {
-  head:()=>{
+  head(){
     return {
-      title:'Nuxt web components demo'
+      title:'Web components demo in NuxtJS',
+      meta: [
+        // hid is used as unique identifier.
+        // Do not use `vmid` for it as it will not work
+        { hid: 'description',
+          name: 'description',
+          content: 'Custom @dv4all web components in NuxtJS.'
+        }
+      ]
     }
   },
   components:{

@@ -1,5 +1,7 @@
 const path = require('path');
 
+const { stats } = require('./webpack/stats')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -26,5 +28,16 @@ module.exports = (env) => ({
       //note: when no files folder is not copied!
       './static/',
     ]),
-  ]
+  ],
+  /**
+   * Webpack dev server setup
+   */
+  devtool: 'source-map',
+  devServer: {
+    port: 3000,
+    stats: stats,
+    compress: true,
+    //route rewrites
+    historyApiFallback: true,
+  },
 });

@@ -9,7 +9,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    // title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -61,11 +61,9 @@ export default {
       // Extend only webpack config for client-bundle
       if (isClient) {
         // config.devtool = 'source-map'
+        // set sideEffects to false to import @dv4all libs
         config.optimization['sideEffects'] = false
-        console.log("nuxt.config.js...", config)
-        // optimization: {
-        //   sideEffects: false
-        // },
+        // console.log("nuxt.config.js...", config)
       }
     },
     // plugins: [

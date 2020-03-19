@@ -18,7 +18,7 @@ npm i -D webpack@latest webpack-cli@latest webpack-dev-server@latest webpack-bun
 # 3. install webpack plugins for html and static assets copying
 npm i -D html-webpack-plugin@latest copy-webpack-plugin@latest
 
-# 4. more webpluck plugins - not used during test
+# 4. more webpack plugins - not used during test
 npm i -D url-loader@latest file-loader@latest uglifyjs-webpack-plugin clean-webpack-plugin
 
 ```
@@ -35,7 +35,7 @@ Basic setup was working in devlopment mode, but when building @dv4all web compon
 
 [Further investigation about sideEffects](<(https://webpack.js.org/guides/tree-shaking/)>) points out that sideEffect value provided in package.json is used for tree shaking. @dv4all modules have sideEffects value set to false in their package.json files. Simple import with Webpack when optimization sideEffects value is set to true it causes @dv4all web components not to be included in the build (while these are present in development mode).
 
-### Browser vs Module vs Main in package.json
+### `browser` vs `module` vs `main` prop in package.json
 
 [Next discovery I made](https://github.com/webpack/webpack/issues/4674) is that webpack prefers file defined in the browser prop of package.json. In @dv4all I defined CommonJS with IIFE as version for the browser. This seem to cause compile problems in webpack which are evindent ONLY in production build.
 

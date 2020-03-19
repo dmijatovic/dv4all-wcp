@@ -78,6 +78,19 @@
 import PageContent from '@/components/page/PageContent'
 
 export default {
+  head(){
+    return {
+      title:'Web components - Icons',
+      meta: [
+        // hid is used as unique identifier.
+        // Do not use `vmid` for it as it will not work
+        { hid: 'description',
+          name: 'description',
+          content: 'Custom @dv4all SVG icons as web components in NuxtJS.'
+        }
+      ]
+    }
+  },
   components:{
     PageContent
   }

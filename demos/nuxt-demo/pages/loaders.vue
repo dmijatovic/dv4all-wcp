@@ -54,6 +54,19 @@
 import PageContent from '@/components/page/PageContent'
 
 export default {
+  head(){
+    return {
+      title:'Web components - Loaders',
+      meta: [
+        // hid is used as unique identifier.
+        // Do not use `vmid` for it as it will not work
+        { hid: 'description',
+          name: 'description',
+          content: 'Custom @dv4all CSS loaders as web components in NuxtJS.'
+        }
+      ]
+    }
+  },
   components:{
     PageContent
   },
