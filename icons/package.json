@@ -5,10 +5,7 @@
   "main": "lib/dv4icons.cjs.js",
   "module": "lib/dv4icons.js",
   "scripts": {
-    "dev": "rollup -c -w",
-    "dev:html": "rollup -c -w",
-    "dev:next": "rollup -c -w",
-    "dev:nuxt": "rollup -c -w",
+    "dev": "rollup -c -w",    
     "prebuild": "rimraf lib",
     "build": "rollup -c",
     "prebuild:components": "rimraf lib",
