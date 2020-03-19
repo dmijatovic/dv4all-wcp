@@ -22,6 +22,8 @@ export {default as Dv4IconCross} from './cross/index.js'
 export {default as Dv4IconEmbed2} from './embed2/index.js'
 //dv4-icon-enter
 export {default as Dv4IconEnter} from './enter/index.js'
+//dv4-icon-equalizer
+export {default as Dv4IconEqualizer} from './equalizer/index.js'
 
 
 
