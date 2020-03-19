@@ -1,4 +1,4 @@
-# Cross Icon
+# Exit Icon
 
 <img src="../../assets/SVG/exit.svg" alt="Exit icon" style="width:3rem"/>
 

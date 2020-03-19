@@ -1,4 +1,4 @@
-# Cross Icon
+# Equalizer Icon
 
 <img src="../../assets/SVG/equalizer.svg" alt="equalizer icon" style="width:3rem"/>
 
