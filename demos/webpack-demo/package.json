@@ -1,0 +1,35 @@
+{
+  "name": "es6-demo",
+  "version": "0.0.1",
+  "description": "es6 modules demo with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --env=development",
+    "prod": "webpack-dev-server --env=production",
+    "build": "rm -rf dist & webpack --env=production",
+    "build:dev": "rm -rf dist & webpack --env=development"
+  },
+  "keywords": [
+    "es6",
+    "modules",
+    "web",
+    "components",
+    "webpack"
+  ],
+  "author": "Dusan Mijatovic",
+  "license": "MIT",
+  "dependencies": {
+    "@dv4all/icons": "^0.3.4",
+    "@dv4all/loaders": "^0.1.10",
+    "@dv4all/web-components": "^0.5.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.42.0",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

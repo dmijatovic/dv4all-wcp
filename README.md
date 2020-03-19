@@ -23,85 +23,27 @@ One of the goals is to test use of web components as NPM packages with plain HTM
 - `next-demo`: using custom web components with React. NexyJS is selected because it offers more options like SSR and static sites using React components. This was important choise because universal app do not support customElements on server side. Specific approach is required for web components to work with SSR. Demo imports modules dynmically in the app template on `ComponentDidMount` lifecycle method.
 - `nuxt-demo`: using custom web components from this monorepo with Vue. Nuxt is selected in similair fastion as Next because it enables various approached like SSR and static website besides SPA. Demo implements web components as plugins with SSR disabled.
 
+### ES6 webpack implementation
+
 ### HTML5 implementation
 
-Import cjs version of the library () file in the header of html file. For example of the implementation see demos/html-demo/icons.html for example.
+This is the easiest implementation of all tested. Just import cjs version of library (file) in the header of html file. For example of the implementation see demos/html-demo/icons.html for example.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png" />
-    <title>Icons - web components</title>
-    <!--IMPORT @dv4all PACKAGES to registed customElements -->
-    <script src="node_modules/@dv4all/icons/lib/dv4icons.cjs.js"></script>
-    <script src="node_modules/@dv4all/loaders/lib/dv4loaders.cjs.js"></script>
-    <script src="node_modules/@dv4all/components/lib/dv4wcp.cjs.js"></script>
-    <!-- END IMOPRT CUSTOM COMPONENTS-->
-    <script src="styles/layout.js"></script>
-    <link rel="stylesheet" href="icons.css" />
-  </head>
-  <body>
-    <!--EXAMPLE ICON CUSTOM WEB COMPONENT -->
-    <dv4-icon-cancel-circle class="dv4-icon" title="My new title" />
-  </body>
-</html>
-```
+For more information [see README in html-demo](/demos/html-demo/README.md).
 
 ### NextJS implementation
 
-NextJS supports SSR. On the server side customElements are not supported. Therefore you need to ensure that this library is loaded only at the client side. I achieve this in the demo by dynamically importing web components in the app template in React component life cycle method ComponentDidMount. See demos/next-demo/pages/\_app.js file for exact implementation.
+NextJS supports SSR. On the server side customElements are not supported. Therefore you need to ensure that web components library is loaded only at the client side. I achieved this by dynamically importing web components in the app template in React component life cycle method ComponentDidMount. See demos/next-demo/pages/\_app.js file for exact implementation.
 
-```javascript
-export default class MyApp extends App {
-  // IMPORT web components on CLIENT SIDE
-  // othewise NextJS will try to render it
-  // on the server and it will faile with error
-  // about customElements.define ... undefined
-  componentDidMount() {
-    console.log("MyApp.didMount...");
-    import("@dv4all/loaders").then(d => {
-      console.log("imported dv4loaders...", d);
-    });
-    import("@dv4all/icons").then(d => {
-      console.log("imported dv4icons...", d);
-    });
-    import("@dv4all/components").then(d => {
-      console.log("imported dv4components...", d);
-    });
-  }
-  // ... OTHER CODE ...
-}
-```
+For more information [see README in next-demo](/demos/next-demo/README.md).
 
 ### NuxtJS implementation
 
-In the NuxtJS I added web components as plugins and set SSR flag to false. This was sufficient. Nuxt has also a component `<client-only>...</client-only>` that can be used to wrap markup that should only be rendered on the client side.
+In NuxtJS demo I added web components as plugins and set SSR flag to false. Nuxt has also an `<client-only>...</client-only>` component that can be used to wrap markup that should only be rendered on the client side.
 
-`extract from nuxt.config.js`
+**`In development mode everything works fine, BUT when compiled web components are not included in the bundle. Further investigation is needed.`**
 
-```javascript
-  // .... OTHER CODE
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    // '@/plugins/dv4-loaders-wc.js'
-    { src: '@/plugins/dv4-loaders-wc.js', ssr: false },
-    { src: '@/plugins/dv4-components.js', ssr: false },
-    { src: '@/plugins/dv4-icons.js', ssr: false }
-  ],
-  // .... OTHER CODE
-```
-
-Content dv4-loaders-wc.js is simple import of @dv4all/loaders npm package
-
-```javascript
-// import NPM package
-import "@dv4all/loaders";
-```
+For more details [see README in nuxt-demo](/demos/nuxt-demo/README.md).
 
 ## Testing
 
