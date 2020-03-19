@@ -1,11 +1,11 @@
 {
   "name": "@dv4all/icons",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "type": "module",
   "main": "lib/dv4icons.cjs.js",
   "module": "lib/dv4icons.js",
   "scripts": {
-    "dev": "rollup -c -w",    
+    "dev": "rollup -c -w",
     "prebuild": "rimraf lib",
     "build": "rollup -c",
     "prebuild:components": "rimraf lib",
@@ -58,7 +58,7 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "@dv4all/wcp-utils": "^0.2.4"
+    "@dv4all/wcp-utils": "^0.2.5"
   },
   "bundledDependencies": [],
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"

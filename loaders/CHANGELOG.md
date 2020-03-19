@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.12](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.1.11...@dv4all/loaders@0.1.12) (2020-03-19)
+
+**Note:** Version bump only for package @dv4all/loaders
+
+
+
+
+
 ## [0.1.11](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.1.10...@dv4all/loaders@0.1.11) (2020-03-19)
 
 **Note:** Version bump only for package @dv4all/loaders
