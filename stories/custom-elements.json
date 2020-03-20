@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "tags": [
+    {
+      "name": "dv4-icon-arrow-right",
+      "properties": [
+        {
+          "name": "title",
+          "type": "String",
+          "attribute": "title",
+          "description": "Icon title",
+          "default": "Arrow"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    },
+    {
+      "name": "dv4-icon-backward",
+      "properties": [
+        {
+          "name": "title",
+          "type": "String",
+          "attribute": "title",
+          "description": "Icon title",
+          "default": "Arrow"
+        }
+      ],
+      "events": [],
+      "slots": [],
+      "cssProperties": []
+    }
+  ]
+}
