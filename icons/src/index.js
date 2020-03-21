@@ -40,6 +40,24 @@ export {default as Dv4IconImage} from './image/index.js'
 export {default as Dv4IconInfo} from './info/index.js'
 //dv4-icon-key
 export {default as Dv4IconKey} from './key/index.js'
+//dv4-icon-list
+export {default as Dv4IconList} from './list/index.js'
+//dv4-icon-map
+export {default as Dv4IconMap} from './map/index.js'
+//dv4-icon-menu
+export {default as Dv4IconMenu} from './menu/index.js'
+//dv4-icon-mic
+export {default as Dv4IconMic} from './mic/index.js'
+//dv4-icon-next
+export {default as Dv4IconNext} from './next/index.js'
+//dv4-icon-notification
+export {default as Dv4IconNotification} from './notification/index.js'
+//dv4-icon-paint-format
+export {default as Dv4IconPaintFormat} from './paint-format/index.js'
+//dv4-icon-paragraph
+export {default as Dv4IconParagraph} from './paragraph/index.js'
+//dv4-icon-pause
+export {default as Dv4IconPause} from './pause/index.js'
 
 
 

@@ -112,5 +112,10 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 - [flag](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/flag): flag svg icon as custom web component
 - [folder](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/folder): folder svg icon as custom web component. One element for open and closed folder icons
 - [forward](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/forward): forward svg icon as custom web component.
+- [home](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/home): home svg icon as custom web component.
+- [image](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/image): image svg icon as custom web component.
+- [info](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/info): info svg icon as custom web component.
+- [key](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/key): key svg icon as custom web component.
+- [map](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/map): map svg icon as custom web component.
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
