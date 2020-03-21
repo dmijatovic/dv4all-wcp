@@ -58,6 +58,18 @@ export {default as Dv4IconPaintFormat} from './paint-format/index.js'
 export {default as Dv4IconParagraph} from './paragraph/index.js'
 //dv4-icon-pause
 export {default as Dv4IconPause} from './pause/index.js'
+//dv4-icon-pencil
+export {default as Dv4IconPencil} from './pencil/index.js'
+//dv4-icon-phone
+export {default as Dv4IconPhone} from './phone/index.js'
+//dv4-icon-pie-chart
+export {default as Dv4IconPieChart} from './pie-chart/index.js'
+//dv4-icon-play
+export {default as Dv4IconPlay} from './play/index.js'
+//dv4-icon-previous
+export {default as Dv4IconPrevious} from './previous/index.js'
+//dv4-icon-share
+export {default as Dv4IconShare} from './share/index.js'
 
 
 
