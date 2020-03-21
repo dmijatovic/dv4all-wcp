@@ -2,11 +2,11 @@
 
 `THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS.`
 
+<img src="./assets/dv4all-icons-200321.png" alt="example icons"/>
+
 The module contains SVG icons as web components. It is a part of @dv4all monorepo created to test web components implementation as NPM packages (modules), how LERNA works and how custom components can be applied with React (NextJS), Vue (NuxtJS), Webpack and HTML5.
 
-**This module is part of monorepo dv4all-wcp-lerna.**
-
-<img src="./assets/dv4all-icons-200321.png" alt="example icons"/>
+**This module is part of monorepo dv4all-wcp.**
 
 There are demos of each implementation in the [demos folder of the monorepo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos).
 
@@ -45,7 +45,7 @@ Import cjs version of the library () file in the header of html file. See demos/
 </html>
 ```
 
-For more details see [demos/html-demo](https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/html-demo).
+For more details see [demos/html-demo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos/html-demo).
 
 ### NextJS implementation
 
@@ -67,7 +67,7 @@ export default class MyApp extends App {
 }
 ```
 
-For more details see [demos/next-demo](https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/next-demo).
+For more details see [demos/next-demo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos/next-demo).
 
 ### NuxtJS implementation
 
@@ -93,7 +93,7 @@ Content dv4-icons.js is simple import of npm package @dv4all/icons
 import "@dv4all/loaders";
 ```
 
-For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-lerna/tree/master/demos/nuxt-demo)
+For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos/nuxt-demo)
 
 ## Icons
 
@@ -143,4 +143,4 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 - [warning](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/warning): warning svg icon as custom web component.
 - [wrench](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/wrench): wrench svg icon as custom web component.
 
-**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
+**This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**

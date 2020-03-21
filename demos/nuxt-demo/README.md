@@ -4,7 +4,7 @@
 
 Test web components with NuxtJS.
 
-**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
+**This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**
 
 ## Setup
 
