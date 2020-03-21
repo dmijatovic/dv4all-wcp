@@ -30,8 +30,8 @@ export {default as Dv4IconExit} from './exit/index.js'
 export {default as Dv4IconFlag} from './flag/index.js'
 //dv4-icon-folder
 export {default as Dv4IconFolder} from './folder/index.js'
-//dv4-icon-folder-open
-export {default as Dv4IconFolderOpen} from './folder-open/index.js'
+//dv4-icon-forward
+export {default as Dv4IconForward} from './forward/index.js'
 
 
 
