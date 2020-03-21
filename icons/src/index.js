@@ -32,6 +32,14 @@ export {default as Dv4IconFlag} from './flag/index.js'
 export {default as Dv4IconFolder} from './folder/index.js'
 //dv4-icon-forward
 export {default as Dv4IconForward} from './forward/index.js'
+//dv4-icon-home
+export {default as Dv4IconHome} from './home/index.js'
+//dv4-icon-image
+export {default as Dv4IconImage} from './image/index.js'
+//dv4-icon-info
+export {default as Dv4IconInfo} from './info/index.js'
+//dv4-icon-key
+export {default as Dv4IconKey} from './key/index.js'
 
 
 
