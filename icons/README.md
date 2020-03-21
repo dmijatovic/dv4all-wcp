@@ -109,5 +109,6 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 - [enter](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/enter): enter svg icon as custom web component
 - [equalizer](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/equalizer): equalizer svg icon as custom web component
 - [exit](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/exit): exit svg icon as custom web component
+- [flag](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/flag): flag svg icon as custom web component
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
