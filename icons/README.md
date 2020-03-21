@@ -6,6 +6,8 @@ The module contains SVG icons as web components. It is a part of @dv4all monorep
 
 **This module is part of monorepo dv4all-wcp-lerna.**
 
+<img src="./assets/dv4all-icons-200321.png" alt="example icons"/>
+
 There are demos of each implementation in the [demos folder of the monorepo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos).
 
 ## Usage
@@ -117,5 +119,28 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 - [info](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/info): info svg icon as custom web component.
 - [key](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/key): key svg icon as custom web component.
 - [map](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/map): map svg icon as custom web component.
+- [menu](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/menu): menu svg icon as custom web component.
+- [mic](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/mic): mic svg icon as custom web component.
+- [next](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/next): next svg icon as custom web component.
+- [notification](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/notification): notification svg icon as custom web component.
+- [paint-format](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/paint-format): paint-format svg icon as custom web component.
+- [paragraph](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/paragraph): paragraph svg icon as custom web component.
+- [pause](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/pause): pause svg icon as custom web component.
+- [pencil](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/pencil): pencil svg icon as custom web component.
+- [phone](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/phone): phone svg icon as custom web component.
+- [pie-chart](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/pie-chart): pie-chart svg icon as custom web component.
+- [play](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/play): play svg icon as custom web component.
+- [previous](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/previous): previous svg icon as custom web component.
+- [share](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/share):
+  share svg icon as custom web component.
+- [stack](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/stack): stack svg icon as custom web component.
+- [star](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/star): star svg icon as custom web component.
+- [stop](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/stop): stop svg icon as custom web component.
+- [switch](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/switch): switch svg icon as custom web component.
+- [tree](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/tree): tree svg icon as custom web component.
+- [trophy](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/trophy): trophy svg icon as custom web component.
+- [video-camera](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/video-camera): video-camera svg icon as custom web component.
+- [warning](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/warning): warning svg icon as custom web component.
+- [wrench](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/wrench): wrench svg icon as custom web component.
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**

@@ -70,6 +70,24 @@ export {default as Dv4IconPlay} from './play/index.js'
 export {default as Dv4IconPrevious} from './previous/index.js'
 //dv4-icon-share
 export {default as Dv4IconShare} from './share/index.js'
+//dv4-icon-stack
+export {default as Dv4IconStack} from './stack/index.js'
+//dv4-icon-star
+export {default as Dv4IconStar} from './star/index.js'
+//dv4-icon-stop
+export {default as Dv4IconStop} from './stop/index.js'
+//dv4-icon-switch
+export {default as Dv4IconSwitch} from './switch/index.js'
+//dv4-icon-tree
+export {default as Dv4IconTree} from './tree/index.js'
+//dv4-icon-trophy
+export {default as Dv4IconTrophy} from './trophy/index.js'
+//dv4-icon-video-camera
+export {default as Dv4IconVideoCamera} from './video-camera/index.js'
+//dv4-icon-warning
+export {default as Dv4IconWarning} from './warning/index.js'
+//dv4-icon-wrench
+export {default as Dv4IconWrench} from './wrench/index.js'
 
 
 
