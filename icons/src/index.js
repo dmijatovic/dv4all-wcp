@@ -28,6 +28,8 @@ export {default as Dv4IconEqualizer} from './equalizer/index.js'
 export {default as Dv4IconExit} from './exit/index.js'
 //dv4-icon-flag
 export {default as Dv4IconFlag} from './flag/index.js'
+//dv4-icon-folder-open
+export {default as Dv4IconFolderOpen} from './folder-open/index.js'
 
 
 
