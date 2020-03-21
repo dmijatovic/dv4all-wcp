@@ -110,6 +110,6 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp-
 - [equalizer](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/equalizer): equalizer svg icon as custom web component
 - [exit](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/exit): exit svg icon as custom web component
 - [flag](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/flag): flag svg icon as custom web component
-- [folder-open](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/folder-open): folder-open svg icon as custom web component
+- [folder](https://github.com/dmijatovic/dv4all-wcp/tree/master/icons/src/folder): folder svg icon as custom web component. One element for open and closed folder icons
 
 **This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**

@@ -1,13 +1,18 @@
-# Flag Icon
+# Folder closed and open Icon
 
-<img src="../../assets/SVG/flag.svg" alt="Exit icon" style="width:3rem"/>
+<img src="../../assets/SVG/folder.svg" alt="Exit icon" style="width:3rem"/>
+
+<img src="../../assets/SVG/folder-open.svg" alt="Exit icon" style="width:3rem"/>
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` folder of this repo.
 
 ## Usage
 
 ```html
-<dv4-icon-flag class="dv4-icon" title="Flag icon" />
+<!-- CLOSED FOLDER -->
+<dv4-icon-folder class="dv4-icon" title="Folder closed"></dv4-icon-folder>
+<!-- OPEN FOLDER -->
+<dv4-icon-folder open class="dv4-icon" title="Folder open"></dv4-icon-folder>
 ```
 
 ### Props
@@ -15,6 +20,7 @@ Custom web component using svg icon as a source. The SVG source is exported from
 Each prop has a default value you can overwrite.
 
 - title: svg title to be shown on mouseover. This is standard html prop. Default value is 'Connection'.
+- open: when open attribute provided uses open folder icon
 
 ### CSS
 

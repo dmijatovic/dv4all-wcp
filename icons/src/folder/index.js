@@ -2,7 +2,7 @@
 import {newCustomElement} from '@dv4all/wcp-utils'
 
 //html template
-import html from './htmlFolderOpen'
+import html from './htmlFolder'
 
 // default props / attributes
 const props = {
@@ -11,17 +11,17 @@ const props = {
   //render function
   renderHtml: html,
   //pass attributes to observe
-  observedAttr: ['title']
+  observedAttr: ['title', 'open']
 }
 
 //create new customElement
-const Dv4IconFolderOpen = newCustomElement(props)
+const Dv4IconFolder = newCustomElement(props)
 
 //register custom element
-customElements.define('dv4-icon-folder-open', Dv4IconFolderOpen)
+customElements.define('dv4-icon-folder', Dv4IconFolder)
 
 //need to export class to work with rollup
 //additional benefit: class can be registered under custom name
 //by user consuming the module. It will register same element twice
 //which is not ideal (but only way at this point)
-export default Dv4IconFolderOpen
+export default Dv4IconFolder
