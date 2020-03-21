@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.4.0...@dv4all/icons@0.5.0) (2020-03-21)
+
+
+### Features
+
+* add flag icon ([58f3822](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/58f3822b987136bca2dc3c09078e94097f5034ac))
+* add folder closed and open as one element ([d69f550](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/d69f55056655b04cadc593de07b6cc8bc992a2fd))
+* add folder-open icon ([d402aa6](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/d402aa61defa5f83cdef2f3660e36f3a839b29ab))
+* add forward icon ([2e67ab4](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/2e67ab4ed962b770f0b04f1769d169509251dac3))
+* add icons home, image, info and key ([92d6d16](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/92d6d161984e9f4725e0e270f441af2c3a4fc2c6))
+* add icons list, map, menu, mic, next, notification, paint, paragraph and pause ([93a6775](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/93a67753becca28368d244529cb98ca83a27021c))
+* add icons pencil, phone, pie-chart, play, previous and share ([a4f5082](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/a4f50823ca3fa93b2e4bb104818e3423e5705409))
+* add stack, start, stop, switch, tree, trophy, video, warning and wrench icons ([ebe3024](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/ebe3024678bc5accdc5c2862cf9bb7dfa1d21f1c))
+
+
+
+
+
 # [0.4.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.3.6...@dv4all/icons@0.4.0) (2020-03-19)
 
 
