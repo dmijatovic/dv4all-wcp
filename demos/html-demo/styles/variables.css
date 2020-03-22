@@ -17,4 +17,6 @@
   --footer-tx-color: var(--color-primary-contrast,#E8EDEE);
 
   --box-shadow: 4px 4px #ccc;
+
+  --loader-body-color: var(--color-accent, #333);
 }
