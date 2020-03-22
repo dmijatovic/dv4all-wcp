@@ -21,7 +21,7 @@
   "license": "MIT",
   "dependencies": {
     "@dv4all/icons": "^0.5.1",
-    "@dv4all/loaders": "^0.2.1",
+    "@dv4all/loaders": "^0.2.2",
     "@dv4all/web-components": "^0.5.5"
   },
   "devDependencies": {

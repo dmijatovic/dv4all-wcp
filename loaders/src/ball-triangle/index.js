@@ -1,21 +1,24 @@
 //SHARED lib
-import {newCustomElement, defineCustomElement} from '@dv4all/wcp-utils'
+import {defineCustomElement} from '@dv4all/wcp-utils'
+import newCustomLoader from '../shared/util/newCustomLoader'
 
 //html template
-import htmlBallTriangle from './htmlBallTriangle'
+import bodyHtml from './htmlBallTriangle'
+//css styles
+import styles from './cssBallTriangle'
 
 // default props / attributes
 const props = {
-  //create open shadow DOM
-  shadowMode:'open',
-  //render function
-  renderHtml: htmlBallTriangle,
+  //loader body html
+  bodyHtml,
+  //styles
+  styles,
   //pass attributes to observe
   observedAttr: ['overlay','hide']
 }
 
 //create new customElement
-const Dv4LoaderBallTriangle = newCustomElement(props)
+const Dv4LoaderBallTriangle = newCustomLoader(props)
 
 //register custom element
 defineCustomElement('dv4-loader-ball-triangle', Dv4LoaderBallTriangle)

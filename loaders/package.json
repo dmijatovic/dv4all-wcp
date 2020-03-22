@@ -6,6 +6,7 @@
   "module": "lib/dv4loaders.js",
   "scripts": {
     "dev": "rollup -c -w",
+    "dev:loaders": "rollup -c -w",
     "prebuild": "rimraf lib",
     "build": "rollup -c",
     "prebuild:components": "rimraf lib",

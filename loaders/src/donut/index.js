@@ -1,21 +1,24 @@
 //SHARED lib
-import {newCustomElement, defineCustomElement} from '@dv4all/wcp-utils'
+import {defineCustomElement} from '@dv4all/wcp-utils'
+import newCustomLoader from '../shared/util/newCustomLoader'
 
 //html template
-import htmlDonut from './htmlDonut'
+import bodyHtml from './htmlDonut'
+//css styles
+import styles from './cssDonut'
 
 // default props / attributes
 const props = {
-  //create open shadow DOM
-  shadowMode:'open',
-  //render function
-  renderHtml: htmlDonut,
+  //loader body html
+  bodyHtml,
+  //styles
+  styles,
   //pass attributes to observe
   observedAttr: ['overlay','hide']
 }
 
 //create new customElement
-const Dv4LoaderDonut = newCustomElement(props)
+const Dv4LoaderDonut = newCustomLoader(props)
 
 //register custom element
 defineCustomElement('dv4-loader-donut', Dv4LoaderDonut)

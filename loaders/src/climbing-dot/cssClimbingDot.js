@@ -30,13 +30,13 @@ const cssBallClimbingDot=`
 }
 .la-ball-climbing-dot {
     width: var(--loader-width, 6rem);
-    height: var(--loader-height, 2rem);
+    height: var(--loader-height, 3rem);
     margin: var(--loader-margin, 1.5rem 0.25rem);
 }
 .la-ball-climbing-dot > div:nth-child(1) {
     position: absolute;
     bottom: 32%;
-    left: 18%;
+    left: calc(var(--climbing-dot-size, 1rem) * 1.5);
     width: var(--climbing-dot-size, 1rem);
     height: var(--climbing-dot-size, 1rem);
     border-radius: 100%;
@@ -54,7 +54,7 @@ const cssBallClimbingDot=`
     position: absolute;
     top: 0;
     right: 0;
-    width: var(--climbing-dot-size, 1rem);
+    width: calc(var(--climbing-dot-size, 1rem) * 1.25);
     height: 2px;
     border-radius: 0;
     -webkit-transform: translate(60%, 0);
