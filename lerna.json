@@ -12,6 +12,7 @@
   },
   "packages": [
     "components",
+    "demos/html-demo",
     "icons",
     "loaders",
     "utils/**"

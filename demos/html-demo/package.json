@@ -1,10 +1,11 @@
 {
-  "name": "html-demo",
+  "name": "@dv4all/web-components-demo-html",
   "version": "1.0.4",
-  "description": "simple basic html demo of web components",
+  "description": "Basic html demo of @dv4all web components",
   "keywords": [
     "spinner",
     "loader",
+    "icons",
     "web",
     "component"
   ],
@@ -13,7 +14,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp.git"
   },
   "scripts": {
     "start": "serve",

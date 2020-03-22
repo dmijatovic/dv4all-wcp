@@ -1,5 +1,5 @@
 {
-  "name": "webpack-demo",
+  "name":"@dv4all/webpack-web-components-demo",
   "version": "0.0.1",
   "description": "@dv4all web components with webpack",
   "main": "index.js",
