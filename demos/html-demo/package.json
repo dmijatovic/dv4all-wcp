@@ -1,6 +1,6 @@
 {
   "name": "dv4all-web-components-demo-html",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Basic html demo of @dv4all web components",
   "keywords": [
     "spinner",
@@ -21,13 +21,13 @@
     "dev": "serve"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.5.0",
-    "@dv4all/loaders": "^0.1.12",
-    "@dv4all/web-components": "^0.5.2"
+    "@dv4all/icons": "^0.5.1",
+    "@dv4all/loaders": "^0.2.0",
+    "@dv4all/web-components": "^0.5.5"
   },
   "devDependencies": {
-    "serve": "^11.3.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "serve": "^11.3.0"
   },
   "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
 }

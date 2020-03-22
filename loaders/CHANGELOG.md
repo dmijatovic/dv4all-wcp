@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.1.14...@dv4all/loaders@0.2.0) (2020-03-22)
+
+
+### Features
+
+* add climbing dot loader to [@dv4loaders](https://github.com/dv4loaders) ([90d55d5](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/90d55d5d91bcd0cab63ac3b11036f06fac9ff5dd))
+
+
+
+
+
 ## [0.1.14](https://github.com/dmijatovic/dv4all-wcp/compare/@dv4all/loaders@0.1.13...@dv4all/loaders@0.1.14) (2020-03-21)
 
 **Note:** Version bump only for package @dv4all/loaders
