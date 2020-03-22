@@ -1,5 +1,5 @@
 //SHARED lib
-import {newCustomElement} from '@dv4all/wcp-utils'
+import {newCustomElement, defineCustomElement} from '@dv4all/wcp-utils'
 
 //NOTE!
 //SHARED customElements dv4-overlay and dv4-loader-body
@@ -22,14 +22,7 @@ const props = {
 const Dv4LoaderBallTriangle = newCustomElement(props)
 
 //register custom element
-customElements.define('dv4-loader-ball-triangle', Dv4LoaderBallTriangle)
-
-//typescript declaration?
-// declare global {
-//   interface HTMLElementTagNameMap {
-//     "dv4-loader-ball-triangle": Dv4LoaderBallTriangle,
-//   }
-// }
+defineCustomElement('dv4-loader-ball-triangle', Dv4LoaderBallTriangle)
 
 //need to export class to work with rollup
 //additional benefit: class can be registered under custom name

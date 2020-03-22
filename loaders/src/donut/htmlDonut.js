@@ -20,7 +20,7 @@ const htmlDonut = props =>(`
     .donut-loader {
       border: var(--donut-border-width, 0.75rem) solid var(--donut-border-bg-color, #f3f3f3);
       border-radius: 50%;
-      border-top: var(--donut-border-width, 0.75rem) solid var(--donut-border-color, #3498db);
+      border-top: var(--donut-border-width, 0.75rem) solid var(--donut-border-color, #333);
       width: var(--donut-size, 4rem);
       height: var(--donut-size, 4rem);
       animation: spin var(--donut-rotation-speed-sec, 1.5s) linear infinite;

@@ -1,13 +1,15 @@
-# Rotating donut
+# Climbing-dot loader
 
-The code for this loader is borrowed from [here](https://www.w3schools.com/howto/howto_css_loader.asp)
+This loader is lended from [Daniel Cardoso](https://github.danielcardoso.net/load-awesome/animations/ball-climbing-dot.html)
+
+All credits for loader code go to Daniel :-).
 
 ## Usage
 
 ```html
-<dv4-loader-donut>
+<dv4-loader-climbing-dot>
   Loading message...
-</dv4-loader-donut>
+</dv4-loader--climbing-dot>
 ```
 
 ### Attributes
@@ -17,7 +19,7 @@ The code for this loader is borrowed from [here](https://www.w3schools.com/howto
 
 ### CSS classes, variables and defaults
 
-Donut loader uses CSS variables to assign specific values. The loader consist of 3 modules (subcomponents)
+Ball triangle loader uses CSS variables to assign specific values. The loader consist of 3 modules (subcomponents)
 
 #### CSS variables overlay/backdrop/scrim (overlay component)
 
@@ -27,7 +29,7 @@ Donut loader uses CSS variables to assign specific values. The loader consist of
 
 #### CSS variables loader body (loader-body component)
 
-Loader body has 2 slots for passing loader elements and loading text. For more info see utils/loader-body component README.md
+Loader body has 2 slots for passing loader elements and loading text. For more info see loader-body component README.md
 
 CSS variables are applied using var(--variable-name, [default value])
 
@@ -37,10 +39,7 @@ CSS variables are applied using var(--variable-name, [default value])
 - '--loader-body-color', default is #333
 - '--loader-body-z-index', default is 9
 
-#### CSS variables specific to donut loader
+#### CSS variables specific to ball triangle
 
-- '--donut-size', default 4rem
-- '--donut-border-bg-color', default #f3f3f3
-- '--donut-border-color', default #333
-- '--donut-border-width', default 0.75rem
-- '--donut-rotation-speed-sec', default 1.5s (seconds for one revolution)
+- '--climbing-dot-color', default #333
+- '--climbing-dot-size', default 1rem
