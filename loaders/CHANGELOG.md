@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.2.1...@dv4all/loaders@0.2.2) (2020-03-22)
+
+
+### Bug Fixes
+
+* create new basic loader elements to trigger export ([1311ed0](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/1311ed0e980eca4d103eb446d094063e0df94896))
+
+
+
+
+
 ## [0.2.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.2.0...@dv4all/loaders@0.2.1) (2020-03-22)
 
 
