@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
+    "eslint-plugin-html":"^6.0.0",
     "serve": "^11.3.0"
   },
   "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
