@@ -25,6 +25,17 @@ export default [{
   }],
   plugins: [resolve(), commonjs()]
 },{
+  input: 'src/climbing-dot/index.js',
+  output: [{
+    file: 'lib/climbing-dot/index.js',
+    format: 'esm'
+  },{
+    name: 'Dv4BallTriangle',
+    file: 'lib/climbing-dot/index.cjs.js',
+    format: 'iife'
+  }],
+  plugins: [resolve(), commonjs()]
+},{
   input: 'src/donut/index.js',
   output: [{
     file: 'lib/donut/index.js',
@@ -36,13 +47,24 @@ export default [{
   }],
   plugins: [resolve(), commonjs()]
 },{
-  input: 'src/climbing-dot/index.js',
+  input: 'src/line-scale/index.js',
   output: [{
-    file: 'lib/climbing-dot/index.js',
+    file: 'lib/line-scale/index.js',
     format: 'esm'
   },{
-    name: 'Dv4BallTriangle',
-    file: 'lib/climbing-dot/index.cjs.js',
+    name: 'Dv4LineScale',
+    file: 'lib/line-scale/index.cjs.js',
+    format: 'iife'
+  }],
+  plugins: [resolve(), commonjs()]
+},{
+  input: 'src/packman/index.js',
+  output: [{
+    file: 'lib/packman/index.js',
+    format: 'esm'
+  },{
+    name: 'Dv4Packman',
+    file: 'lib/packman/index.cjs.js',
     format: 'iife'
   }],
   plugins: [resolve(), commonjs()]
