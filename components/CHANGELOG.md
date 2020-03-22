@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.5.6...@dv4all/web-components@0.6.0) (2020-03-22)
+
+
+### Features
+
+* add ball-spin loader ([1a212f6](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/1a212f645626b6ac1ac7246d1473cffa6bd41c55))
+
+
+
+
+
 ## [0.5.6](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.5.5...@dv4all/web-components@0.5.6) (2020-03-22)
 
 **Note:** Version bump only for package @dv4all/web-components

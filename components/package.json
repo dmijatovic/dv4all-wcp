@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.5.6",
+  "version": "0.6.0",
   "type": "module",
   "main": "lib/dv4wcp.cjs.js",
   "module": "lib/dv4wcp.js",

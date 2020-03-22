@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.2.3...@dv4all/loaders@0.3.0) (2020-03-22)
+
+
+### Features
+
+* add ball-spin loader ([1a212f6](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/1a212f645626b6ac1ac7246d1473cffa6bd41c55))
+* add line-scale and packman loaders ([7342b97](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/7342b97f1b5b20d248dabcb74a4843950a64bd7d))
+
+
+
+
+
 ## [0.2.3](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.2.2...@dv4all/loaders@0.2.3) (2020-03-22)
 
 **Note:** Version bump only for package @dv4all/loaders
