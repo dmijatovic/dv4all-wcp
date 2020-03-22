@@ -33,3 +33,10 @@ In the NuxtJS I added web components as plugins and set SSR flag to false. This 
 For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp/tree/master/demos/nuxt-demo)
 
 **This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**
+
+## Loaders
+
+Below is the list of the loaders avaliable in this lib. You can import complete library or each loader separately.
+
+- [ball-triangle](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/ball-triangle)
+- [climbing-dot](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/climbing-dot)

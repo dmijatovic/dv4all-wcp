@@ -1,4 +1,4 @@
-# Ball-triangle loader
+# Ball-spin loader
 
 This loader is lended from [Daniel Cardoso](https://github.danielcardoso.net/load-awesome/animations/ball-triangle-path.html)
 
@@ -8,13 +8,13 @@ All credits for loader code go to Daniel :-).
 
 ```html
 <!-- FULL SCREEN WITH OVERLAY-->
-<dv4-loader-ball-triangle overlay="true">
+<dv4-loader-ball-spin overlay="true">
   Loading message...
-</dv4-loader-ball-triangle>
+</dv4-loader-ball-spin>
 <!-- BASIC SMALL -->
-<dv4-loader-ball-triangle overlay="true">
+<dv4-loader-ball-spin overlay="true">
   Loading message...
-</dv4-loader-ball-triangle>
+</dv4-loader-ball-spin>
 ```
 
 ```javascript
@@ -59,6 +59,6 @@ CSS variables are applied using var(--variable-name, [default value])
 
 #### CSS variables specific to ball triangle
 
-- '--ball-triangle-size', default 4rem
-- '--ball-color', default #333
-- '--ball-size', default 0.75rem
+- '--ball-spin-color', default #333
+- '--ball-spin-size', default 3rem
+- '--ball-size', default 0.5rem

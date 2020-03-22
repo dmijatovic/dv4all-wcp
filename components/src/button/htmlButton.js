@@ -7,6 +7,7 @@ const htmlButton = props =>(`
       justify-content: space-between;
     }
     button{
+      flex:1;
       display: inline-flex;
       align-items: end;
       justify-content: space-between;
