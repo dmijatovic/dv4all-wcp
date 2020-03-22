@@ -4,8 +4,8 @@ import Dv4LoaderBody from '../shared/loader-body/index.js'
 //STYLES
 import cssBallTriangle from './cssBallTriangle'
 //import trigger (for webpack)
-const d1 = Dv4LoaderOverlay()
-const d2 = Dv4LoaderBody()
+const d1 = new Dv4LoaderOverlay()
+const d2 = new Dv4LoaderBody()
 /**
  * BallTriangle loader html markup incl. basic customElements
  * @param {String} overlay true/false string. Default is false.

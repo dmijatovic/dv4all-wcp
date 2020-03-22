@@ -1,7 +1,8 @@
 
 import {Dv4IconCamera} from '@dv4all/icons'
 import {Dv4CustomButton} from '@dv4all/web-components'
-import {Dv4ClimbingDot} from "@dv4all/loaders"
+// import {Dv4ClimbingDot} from "@dv4all/loaders"
+import Dv4ClimbingDot from "@dv4all/loaders/lib/climbing-dot"
 
 // const main = document.getElementById("app-body")
 const iconSection = document.getElementById('icons-area')

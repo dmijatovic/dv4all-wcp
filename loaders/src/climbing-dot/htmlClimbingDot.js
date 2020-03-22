@@ -6,8 +6,8 @@ import cssClimbingDot from './cssClimbingDot'
 /**
  * This is import trigger for single exports
  */
-const d1 = Dv4LoaderOverlay()
-const d2 = Dv4LoaderBody()
+const d1 = new Dv4LoaderOverlay()
+const d2 = new Dv4LoaderBody()
 /**
  * Climbing dot loader html markup including basic customElements.
  * @param {String} overlay true/false string value. Default is false.
