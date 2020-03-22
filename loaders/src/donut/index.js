@@ -1,10 +1,6 @@
 //SHARED lib
 import {newCustomElement, defineCustomElement} from '@dv4all/wcp-utils'
 
-//NOTE!
-//SHARED customElements dv4-overlay and dv4-loader-body
-//NEED to be exported in index.js
-
 //html template
 import htmlDonut from './htmlDonut'
 

@@ -1,18 +1,23 @@
+//SHARED customElements
+import Dv4LoaderOverlay from '../shared/overlay/index.js'
+import Dv4LoaderBody from '../shared/loader-body/index.js'
+//STYLES
+import cssClimbingDot from './cssClimbingDot'
 /**
- * Import shared customElements
- * we use it as backpanel
+ * This is import trigger for single exports
  */
-
-import '../shared/loader-body/index'
-import '../shared/overlay/index'
-
-import cssBallClimbingDot from './cssClimbingDot'
-
-const htmlBallClimbingDot = props => (`
+const d1 = Dv4LoaderOverlay()
+const d2 = Dv4LoaderBody()
+/**
+ * Climbing dot loader html markup including basic customElements.
+ * @param {String} overlay true/false string value. Default is false.
+ * @returns {String} html markup
+ */
+const htmlClimbingDot = ({overlay='false'}) => (`
   <style>
-  ${cssBallClimbingDot}
+  ${cssClimbingDot}
   </style>
-  ${props['overlay'] === 'true' ? '<dv4-overlay></dv4-overlay>' : ''}
+  ${overlay === 'true' ? '<dv4-overlay></dv4-overlay>' : ''}
   <dv4-loader-body>
     <div slot="loader-body" class="la-ball-climbing-dot">
       <div></div>
@@ -26,4 +31,4 @@ const htmlBallClimbingDot = props => (`
   </dv4-loader-body>
 `)
 
-export default htmlBallClimbingDot
+export default htmlClimbingDot

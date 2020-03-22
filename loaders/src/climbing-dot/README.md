@@ -7,9 +7,15 @@ All credits for loader code go to Daniel :-).
 ## Usage
 
 ```html
+<!-- FULL SCREEN WITH OVERLAY-->
+<dv4-loader-climbing-dot overlay="true">
+  Loading message...
+</dv4-loader--climbing-dot>
+<!-- BASIC SMALL -->
 <dv4-loader-climbing-dot>
   Loading message...
 </dv4-loader--climbing-dot>
+
 ```
 
 ### Attributes

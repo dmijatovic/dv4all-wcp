@@ -1,105 +1,21 @@
+//SHARED customElements
+import Dv4LoaderOverlay from '../shared/overlay/index.js'
+import Dv4LoaderBody from '../shared/loader-body/index.js'
+//STYLES
+import cssBallTriangle from './cssBallTriangle'
+//import trigger (for webpack)
+const d1 = Dv4LoaderOverlay()
+const d2 = Dv4LoaderBody()
 /**
- * Import customElement 'dv4-scrim'
- * we use it as backpanel
+ * BallTriangle loader html markup incl. basic customElements
+ * @param {String} overlay true/false string. Default is false.
+ * @returns {String} html markup
  */
-const htmlBallTriangle = props => (`
+const htmlBallTriangle = ({overlay='false'}) => (`
   <style>
-    /* BASIC STYLES FOR ALL LOADERS */
-
-    :host{
-      display: flex;
-    }
-    :host([hide]),
-    :host([hide=true]){
-      display:none;
-    }
-
-    /* BALL TRIANGLE */
-    @keyframes ball-triangle-path-1 {
-      33% {
-        transform: translate(25px, -50px);
-      }
-      66% {
-        transform: translate(50px, 0px);
-      }
-      100% {
-        transform: translate(0px, 0px);
-      }
-    }
-    @keyframes ball-triangle-path-2 {
-      33% {
-        transform: translate(25px, 50px);
-      }
-      66% {
-        transform: translate(-25px, 50px);
-      }
-      100% {
-        transform: translate(0px, 0px);
-      }
-    }
-
-    @keyframes ball-triangle-path-3 {
-      33% {
-        transform: translate(-50px, 0px);
-      }
-      66% {
-        transform: translate(-25px, -50px);
-      }
-      100% {
-        transform: translate(0px, 0px);
-      }
-    }
-
-    .ball-triangle-path {
-      position: relative;
-      width: var(--ball-triangle-size, 4rem);
-      height: var(--ball-triangle-size, 4rem);
-      margin: 1rem auto;
-    }
-
-    .ball-triangle-path > div:nth-child(1) {
-      animation-name: ball-triangle-path-1;
-      animation-delay: 0;
-      animation-duration: 2s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-    }
-    .ball-triangle-path > div:nth-child(2) {
-      animation-name: ball-triangle-path-2;
-      animation-delay: 0;
-      animation-duration: 2s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-    }
-    .ball-triangle-path > div:nth-child(3) {
-      animation-name: ball-triangle-path-3;
-      animation-delay: 0;
-      animation-duration: 2s;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-    }
-    .ball-triangle-path > div {
-      animation-fill-mode: both;
-      position: absolute;
-      width: var(--ball-size, 0.75rem);
-      height: var(--ball-size, 0.75rem);
-      border-radius: 100%;
-      border: 1px solid var(--ball-color, #333);
-      background-color: var(--ball-color, #333);
-    }
-    .ball-triangle-path > div:nth-of-type(1) {
-      top: 50px;
-    }
-    .ball-triangle-path > div:nth-of-type(2) {
-      left: 25px;
-    }
-    .ball-triangle-path > div:nth-of-type(3) {
-      top: 50px;
-      left: 50px;
-    }
-
+    ${cssBallTriangle}
   </style>
-  ${ props['overlay'] === 'true' ? '<dv4-overlay></dv4-overlay>' : '' }
+  ${ overlay === 'true' ? '<dv4-overlay></dv4-overlay>' : '' }
   <dv4-loader-body>
     <div slot="loader-body" class="ball-triangle-path">
       <div></div>

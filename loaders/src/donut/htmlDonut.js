@@ -1,38 +1,24 @@
-
-const htmlDonut = props =>(`
+//SHARED customElements
+import Dv4LoaderOverlay from '../shared/overlay/index.js'
+import Dv4LoaderBody from '../shared/loader-body/index.js'
+//STYLES
+import cssDonut from './cssDonut'
+/**
+ * This is import trigger for single exports
+ */
+const d1 = Dv4LoaderOverlay()
+const d2 = Dv4LoaderBody()
+/**
+ * Donut loader html markup. It depends on Dv4LoaderOverlay
+ * and Dv4LoaderBody customElements (imported).
+ * @param {String} overlay true/false string value. Default is false.
+ * @returns {String} html markup
+ */
+const htmlDonut = ({overlay='false'}) =>(`
   <style>
-    /* BASIC STYLES FOR ALL LOADERS */
-
-    :host{
-      display: flex;
-    }
-    :host([hide]),
-    :host([hide=true]){
-      display:none;
-    }
-
-    /* DONUT LOADER */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .donut-loader {
-      border: var(--donut-border-width, 0.75rem) solid var(--donut-border-bg-color, #f3f3f3);
-      border-radius: 50%;
-      border-top: var(--donut-border-width, 0.75rem) solid var(--donut-border-color, #333);
-      width: var(--donut-size, 4rem);
-      height: var(--donut-size, 4rem);
-      animation: spin var(--donut-rotation-speed-sec, 1.5s) linear infinite;
-    }
-
-    .donut-text{
-      text-align: center;
-    }
-
+    ${cssDonut}
   </style>
-  ${ props['overlay'] === 'true' ? '<dv4-overlay></dv4-overlay>' : '' }
-
+  ${ overlay === 'true' ? '<dv4-overlay></dv4-overlay>' : '' }
   <dv4-loader-body>
     <div slot="loader-body">
       <div class="donut-loader"></div>

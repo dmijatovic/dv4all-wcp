@@ -3,8 +3,8 @@
  */
 
 //SHARED customElements
-export {default as Dv4LoaderOverlay} from './shared/overlay/index.js'
-export {default as Dv4LoaderBody} from './shared/loader-body/index.js'
+// export {default as Dv4LoaderOverlay} from './shared/overlay/index.js'
+// export {default as Dv4LoaderBody} from './shared/loader-body/index.js'
 
 //LOADERS
 export {default as Dv4LoaderBallTriangle} from './ball-triangle/index.js'
