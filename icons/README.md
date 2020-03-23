@@ -1,10 +1,10 @@
 # Icons as web components
 
-`THIS LIBRARY IS USED TO TEST USE OF WEB COMPONENTS.`
+`THIS LIBRARY IS USED TO TEST SVG ICONS AS WEB COMPONENTS.`
 
-<img src="./assets/dv4all-icons-200321.png" alt="example icons"/>
+<img src="https://github.com/dmijatovic/dv4all-wcp/blob/master/icons/assets/dv4all-icons-200321.png" alt="example icons"/>
 
-The module contains SVG icons as web components. It is a part of @dv4all monorepo created to test web components implementation as NPM packages (modules), how LERNA works and how custom components can be applied with React (NextJS), Vue (NuxtJS), Webpack and HTML5.
+This module contains SVG icons as web components. It is a part of @dv4all monorepo created to test web components implementation as NPM packages (modules), how LERNA works and how custom components can be applied with React (NextJS), Vue (NuxtJS), Webpack and HTML5.
 
 **This module is part of monorepo dv4all-wcp.**
 
