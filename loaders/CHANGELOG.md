@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.3.0...@dv4all/loaders@0.4.0) (2020-03-23)
+
+
+### Features
+
+* add packman, squares and timer loaders ([14a1594](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/14a159466ec0a21b425dd1a7d98ceaf8a873fa3f))
+
+
+
+
+
 # [0.3.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/loaders@0.2.3...@dv4all/loaders@0.3.0) (2020-03-22)
 
 
