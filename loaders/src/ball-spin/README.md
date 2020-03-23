@@ -1,6 +1,6 @@
 # Ball-spin loader
 
-This loader is lended from [Daniel Cardoso](https://github.danielcardoso.net/load-awesome/animations/ball-triangle-path.html)
+This loader is lended from [Daniel Cardoso](https://github.danielcardoso.net/load-awesome/animations/ball-spin-clockwise.html)
 
 All credits for loader code go to Daniel :-).
 

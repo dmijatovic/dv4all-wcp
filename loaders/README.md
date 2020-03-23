@@ -69,5 +69,12 @@ For more details see [demos/nuxt-demo](https://github.com/dmijatovic/dv4all-wcp/
 
 Below is the list of the loaders avaliable in this lib. You can import complete library or each loader separately.
 
+- [ball-spin](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/ball-spin)
 - [ball-triangle](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/ball-triangle)
 - [climbing-dot](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/climbing-dot)
+- [donut](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/donut)
+- [line-scale](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/line-scale)
+- [packman](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/packman)
+- [square-jelly](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/square-jelly)
+- [square-spin](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/square-spin)
+- [timer](https://github.com/dmijatovic/dv4all-wcp/tree/master/loaders/src/timer)
