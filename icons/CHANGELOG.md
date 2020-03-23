@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.5.2...@dv4all/icons@0.5.3) (2020-03-23)
+
+**Note:** Version bump only for package @dv4all/icons
+
+
+
+
+
 ## [0.5.2](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.5.1...@dv4all/icons@0.5.2) (2020-03-22)
 
 **Note:** Version bump only for package @dv4all/icons
