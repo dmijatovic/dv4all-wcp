@@ -1,5 +1,5 @@
 {
-  "name":"@dv4all/nuxt-web-components-demo",
+  "name": "@dv4all/nuxt-web-components-demo",
   "version": "1.0.4",
   "description": "nuxt web components demo",
   "author": "Dusan Mijatovic (xps2018)",
@@ -14,9 +14,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.5.0",
-    "@dv4all/loaders": "^0.1.14",
-    "@dv4all/web-components": "^0.5.4",
+    "@dv4all/icons": "^0.5.3",
+    "@dv4all/loaders": "^0.4.1",
+    "@dv4all/web-components": "^0.6.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {

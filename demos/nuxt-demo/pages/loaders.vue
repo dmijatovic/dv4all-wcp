@@ -20,10 +20,50 @@
         <p>
           <dv4-custom-button primary
             @click="showLoader('triangle')">
-            Show triangle
+            Ball Triangle
           </dv4-custom-button>
           <dv4-custom-button @click="showLoader('donut')">
-            Show donut
+            Donut
+          </dv4-custom-button>
+          <dv4-custom-button @click="createLoader('dv4-loader-climbing-dot')"
+            danger>
+            Climbing Dot
+          </dv4-custom-button>
+        </p>
+        <p>
+          <dv4-custom-button
+            primary
+            @click="createLoader('dv4-loader-ball-spin')"
+            >
+            Ball Spin
+          </dv4-custom-button>
+          <dv4-custom-button
+            danger
+            @click="createLoader('dv4-loader-line-scale')">
+            Line Scale
+          </dv4-custom-button>
+          <dv4-custom-button
+            @click="createLoader('dv4-loader-packman')"
+            >
+            Packman
+          </dv4-custom-button>
+        </p>
+        <p>
+          <dv4-custom-button
+            danger
+            @click="createLoader('dv4-loader-square-jelly')"
+            >
+            Square Jelly
+          </dv4-custom-button>
+          <dv4-custom-button
+            primary
+            @click="createLoader('dv4-loader-square-spin')">
+            Square Spin
+          </dv4-custom-button>
+          <dv4-custom-button
+            @click="createLoader('dv4-loader-timer')"
+            >
+            Timer
           </dv4-custom-button>
         </p>
       </section>
@@ -45,6 +85,7 @@
           </dv4-loader-donut>
         </client-only>
       </section>
+      <section id="loader-area"></section>
     </template>
   </PageContent>
 </template>
@@ -78,6 +119,24 @@ export default {
     }
   },
   methods:{
+    createLoader(type){
+      const loaderSection = document.getElementById('loader-area')
+      const el = document.createElement(type)
+      //add overlay
+      el.setAttribute('overlay', true)
+      //set Loading... text
+      el.innerText = 'Loading...'
+      //listen to destroy
+      el.addEventListener('click', this.clearLoader)
+      //add no scroll
+      // body.classList.toggle("noscroll")
+      //append to loader section
+      loaderSection.appendChild(el)
+    },
+    clearLoader(){
+      const loaderSection = document.getElementById('loader-area')
+      loaderSection.innerHTML = ''
+    },
     showLoader(loaderType){
       this.show = true
       this.loaderType = loaderType
@@ -93,8 +152,7 @@ export default {
 }
 </script>
 <style>
-dv4-button{
-  min-width:9rem;
-  text-align: center;
+dv4-custom-button{
+  min-width: 8rem;
 }
 </style>
