@@ -21,7 +21,7 @@ export default `
             box-sizing: border-box;
 }
 .la-packman {
-    display: block;    
+    display: block;
     height: var(--packman-size, 2rem);
     width: calc(var(--packman-size, 2rem) * 1.5);
     font-size: 0;

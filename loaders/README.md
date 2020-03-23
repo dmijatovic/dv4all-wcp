@@ -14,6 +14,37 @@ The only added value of this library is that these are created as plain web comp
 npm install @dv4all/loaders
 ```
 
+Import module into your page.
+
+```javascript
+//import complete lib or single loader
+import { Dv4LoaderTimer } from "@dv4all/loaders";
+//import single loader
+import Dv4LoaderTimer from "@dv4all/loaders/lib/timer";
+
+//add loader using javascript
+const loader = new Dv4SquareSpin();
+//add overlay
+loader.setAttribute("overlay", true);
+//get refference to body element
+const body = document.querySelector("body");
+//append loader to body
+body.appendChild(loader);
+```
+
+Apply html markup or add it using JavaScript as shown above.
+
+```html
+<!-- FULL SCREEN WITH OVERLAY-->
+<dv4-loader-timer overlay="true">
+  Loading message...
+</dv4-loader-timer>
+<!-- BASIC SMALL -->
+<dv4-loader-timer>
+  Loading message...
+</dv4-loader-timer>
+```
+
 ### HTML5 implementation
 
 Import cjs version of the library file in the header of html file. See demos/html-demo/icons.html for an example of the implementation.
