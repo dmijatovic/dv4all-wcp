@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.3.1...dv4all-web-components-demo-html@1.4.0) (2020-03-25)
+
+
+### Features
+
+* add disabled attribute formatting to custom button. ([f080482](https://github.com/dmijatovic/dv4all-wcp/commit/f080482eaf0520f0148659f70259084914f7733f))
+
+
+
+
+
 ## [1.3.1](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.3.0...dv4all-web-components-demo-html@1.3.1) (2020-03-23)
 
 **Note:** Version bump only for package dv4all-web-components-demo-html
