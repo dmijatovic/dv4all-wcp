@@ -25,9 +25,34 @@ npm i -D @storybook/addon-a11y @storybook/addon-actions @storybook/addon-console
 # Datapunt plugins
 npm i -D @storybook/addon-info @storybook/addon-actions @storybook/addon-knobs @storybook/addon-links
 
+# plugin to deploy to gh_pages
+@storybook/storybook-deployer
+
 ```
 
-### Addons
+## Stories location
+
+Storybook works with the .stories.js files. The location of the files is defined in main.js prop stories or can be defined in preview.js. In this repo I have multiple locations to load stories from. The advice from documentation is to define these in preview.js file like this.
+
+```javascript
+// excerpt from ./storybook/preview.js
+//... OTHER CODE ...
+// Load stories from 3 locations
+const reqStories = () => [
+  require.context("../components/src", true, /\.stories\.(js|mdx)$/),
+  require.context("../icons/src", true, /\.stories\.(js|mdx)$/),
+  require.context("../loaders/src", true, /\.stories\.(js|mdx)$/)
+];
+configure(reqStories(), module);
+```
+
+## Add Custom Head Tags
+
+You can add different tags to the HTML head. This is useful for adding web fonts or some external scripts.
+
+See here for [more info](https://storybook.js.org/docs/configurations/add-custom-head-tags/)
+
+## Addons
 
 There are lot of [addons for storybook](https://storybook.js.org/addons/). These are defined in main.js file.
 
@@ -49,34 +74,9 @@ module.exports = {
 };
 ```
 
-### Stories location
+### Addon-notes
 
-Storybook works with the .stories.js files. The location of the files is defined in main.js prop stories or can be defined in preview.js. In this repo I have multiple locations to load stories from. The advice from documentation is to define these in preview.js file like this.
-
-```javascript
-// excerpt from ./storybook/preview.js
-//... OTHER CODE ...
-// Load stories from 3 locations
-const reqStories = () => [
-  require.context("../components/src", true, /\.stories\.(js|mdx)$/),
-  require.context("../icons/src", true, /\.stories\.(js|mdx)$/),
-  require.context("../loaders/src", true, /\.stories\.(js|mdx)$/)
-];
-configure(reqStories(), module);
-```
-
-## Plugins
-
-There are number of usefull [addons for storybook](https://storybook.js.org/addons/). We test few here.
-
-### Console and actions
-
-More info about [console addon](https://github.com/storybookjs/storybook-addon-console)
-
-```bash
-# install plugins
-npm i -D @storybook/addon-console @storybook/addon-actions
-```
+It enables [markdown notes](https://www.npmjs.com/package/@storybook/addon-notes).
 
 ### Accessibility
 
@@ -106,4 +106,40 @@ There is [demo web components repo on storybook](https://github.com/storybookjs/
 
 ```bash
 npm i -D @storybook/addon-docs
+```
+
+### Console and actions
+
+More info about [console addon](https://github.com/storybookjs/storybook-addon-console)
+
+```bash
+# install plugins
+npm i -D @storybook/addon-console @storybook/addon-actions
+```
+
+## Publishing
+
+Storybook can build static site.
+
+```bash
+# build static site in folder gh_pages
+build-storybook -o gh_pages
+
+# npm script in this project
+npm run build:storybook
+```
+
+### Publish to githug pages
+
+There is addon for [publishing storybook to Github pages](https://github.com/storybookjs/storybook-deployer).
+
+```bash
+# install addon
+npm i -D @storybook/storybook-deployer
+
+# script to deploy
+storybook-to-ghpages
+
+# npm script
+npm run deploy:storybook
 ```

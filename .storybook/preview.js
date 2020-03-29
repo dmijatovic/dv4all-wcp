@@ -8,19 +8,17 @@ import {
 
 import customElements from '../icons/custom-elements.json';
 
+// import '../components/lib/dv4wcp'
+
 import '@storybook/addon-console';
 // import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
+// console.log("setCustomElements...", customElements)
 setCustomElements(customElements);
-
-console.log("setCustomElements...", customElements)
-
-// import customElements from '../custom-elements.json';
-// setCustomElements(customElements);
 
 addParameters({
   docs: {
-    iframeHeight: '100%',
+    iframeHeight: '800',
     // container: DocsContainer,
     // page: DocsPage,
     // inlineStories: false,
@@ -40,7 +38,7 @@ configure(
 
 // force full reload to not reregister web components
 if (module.hot) {
-  module.hot.accept(req.id, () => {
+  module.hot.accept(reqStories().id, () => {
     const currentLocationHref = window.location.href;
     window.history.pushState(null, null, currentLocationHref);
     window.location.reload();

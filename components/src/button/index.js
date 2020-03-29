@@ -1,4 +1,4 @@
-import {newCustomElement} from '@dv4all/wcp-utils'
+import {newCustomElement, defineCustomElement} from '@dv4all/wcp-utils'
 //html template
 import htmlButton from './htmlButton'
 
@@ -13,6 +13,7 @@ const props={
 const Dv4CustomButton = newCustomElement(props)
 
 //register custom element
-customElements.define('dv4-custom-button',Dv4CustomButton)
+defineCustomElement('dv4-custom-button',Dv4CustomButton)
+// customElements.define()
 
 export default Dv4CustomButton
