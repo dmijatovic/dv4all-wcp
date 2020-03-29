@@ -4,7 +4,7 @@ import htmlButton from './htmlButton'
 
 //props
 const props={
-  observedAttr:['role','primary'],
+  observedAttr:['primary','danger','disabled'],
   shadowMode: 'open',
   renderHtml:htmlButton
 }

@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/dmijatovic/nuxt-next-lerna/compare/@dv4all/wcp-utils@0.3.0...@dv4all/wcp-utils@0.3.1) (2020-03-22)
+
+
+### Bug Fixes
+
+* added check for rendering on element load ([34bfd4c](https://github.com/dmijatovic/nuxt-next-lerna/commit/34bfd4c846e073eb626b3c9bdb35dd8f10588663))
+
+
+
+
+
+# [0.3.0](https://github.com/dmijatovic/nuxt-next-lerna/compare/@dv4all/wcp-utils@0.2.5...@dv4all/wcp-utils@0.3.0) (2020-03-22)
+
+
+### Features
+
+* add defineCustomElement to wcp utils ([2256534](https://github.com/dmijatovic/nuxt-next-lerna/commit/2256534982f3679c0e52105b972cc695e43a1f26))
+* add generic define element function to utils ([c2cbf18](https://github.com/dmijatovic/nuxt-next-lerna/commit/c2cbf18b564ada9ecbe559bebc6975a241cc55dc))
+
+
+
+
+
 ## [0.2.5](https://github.com/dmijatovic/nuxt-next-lerna/compare/@dv4all/wcp-utils@0.2.4...@dv4all/wcp-utils@0.2.5) (2020-03-19)
 
 **Note:** Version bump only for package @dv4all/wcp-utils

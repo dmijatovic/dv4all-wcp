@@ -45,4 +45,4 @@ Import cjs version of the library () file in the header of html file. For exampl
 
 `npm run dev` will run development server on localhost:5000.
 
-**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
+**This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**

@@ -7,15 +7,33 @@ All credits for loader code go to Daniel :-).
 ## Usage
 
 ```html
-<dv4-loader-ball-triangle>
+<!-- FULL SCREEN WITH OVERLAY-->
+<dv4-loader-ball-triangle overlay="true">
   Loading message...
 </dv4-loader-ball-triangle>
+<!-- BASIC SMALL -->
+<dv4-loader-ball-triangle overlay="true">
+  Loading message...
+</dv4-loader-ball-triangle>
+```
+
+```javascript
+//improt loader
+import Dv4BallTriangle from "@dv4all/loaders/lib/ball-triangle";
+//create new instance
+const loader = new Dv4BallTriangle();
+//add overlay
+loader.setAttribute("overlay", true);
+//get refference to body element
+const body = document.querySelector("body");
+//append loader to body
+body.appendChild(loader);
 ```
 
 ### Attributes
 
 - `hide`: show/hide flag for the loader. If hide attribute is not provided we show the loader.
-- `backdrop`: adds full screen backdrop that will block access to page elements. The backgrop position is absolute. If you want to limit it to section of the page you will need to set parent position to relative in CSS (position:relative;).
+- `overlay`: adds full screen backdrop that will block access to page elements. The backgrop position is absolute. If you want to limit it to section of the page you will need to set parent position to relative in CSS (position:relative;).
 
 ### CSS classes, variables and defaults
 

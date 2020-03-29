@@ -7,7 +7,7 @@ import attachTemplate from './attachTemplate'
  *  htmlTemplate: {Function} returns html
  * }
  */
-export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
+export default ({shadowMode, renderHtml, observedAttr=[]})=>{
   // props used to construct
   // return new custom HTML element
   return class CustomHtmlElement extends HTMLElement{
@@ -16,13 +16,15 @@ export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
       if (!renderHtml) throw new Error ('CustomHtmlElement...renderHtml method not provided!')
       //attach shadowDOM
       if (shadowMode) this.attachShadow({mode:shadowMode})
+      this.rendered = false
     }
     /**
      * Lifecycle event when component is mounted to DOM
      */
     connectedCallback(){
       console.log(`${this.localName}...mounted to DOM!`)
-      //init with props (attribute values
+      if (this.rendered) return
+      //render if not already done
       this.render()
     }
     /**
@@ -75,6 +77,9 @@ export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
      */
     attributeChangedCallback(name, oldVal, newVal){
       console.log(`${this.localName}...attribut changed...`, name, newVal)
+      //reset render flag
+      this.rendered = false
+      //render again
       this.render()
     }
     /**

@@ -1,10 +1,11 @@
 {
-  "name": "html-demo",
-  "version": "1.0.4",
-  "description": "simple basic html demo of web components",
+  "name": "dv4all-web-components-demo-html",
+  "version": "1.4.0",
+  "description": "Basic html demo of @dv4all web components",
   "keywords": [
     "spinner",
     "loader",
+    "icons",
     "web",
     "component"
   ],
@@ -13,20 +14,21 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmijatovic/dv4all-wcp-lerna.git"
+    "url": "git+https://github.com/dmijatovic/dv4all-wcp.git"
   },
   "scripts": {
     "start": "serve",
     "dev": "serve"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.3.6",
-    "@dv4all/loaders": "^0.1.12",
-    "@dv4all/web-components": "^0.5.2"
+    "@dv4all/icons": "^0.5.3",
+    "@dv4all/loaders": "^0.4.1",
+    "@dv4all/web-components": "^0.7.0"
   },
   "devDependencies": {
-    "serve": "^11.3.0",
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "eslint-plugin-html": "^6.0.0",
+    "serve": "^11.3.0"
   },
   "gitHead": "dc38d634ec2a60092f31bd95e26403bbbb8ad444"
 }

@@ -41,6 +41,6 @@ CSS variables are applied using var(--variable-name, [default value])
 
 - '--donut-size', default 4rem
 - '--donut-border-bg-color', default #f3f3f3
-- '--donut-border-color', default #3498db
+- '--donut-border-color', default #333
 - '--donut-border-width', default 0.75rem
 - '--donut-rotation-speed-sec', default 1.5s (seconds for one revolution)

@@ -16,6 +16,9 @@ module.exports = {
     'sourceType': 'module',
     "allowImportExportEverywhere": true
   },
+  "plugins": [
+    "html"
+  ],
   'rules': {
     'indent': [
         'warn',

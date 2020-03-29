@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/wcp-utils",
-  "version": "0.2.5",
+  "version": "0.3.1",
   "type": "module",
   "main": "lib/dv4wcp.utils.cjs.js",
   "module": "lib/dv4wcp.utils.js",
@@ -46,7 +46,7 @@
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "babel-jest": "25.1.0",
-    "eslint": "^6.1.0",
+    "eslint": "^6.8.0",
     "jest": "^25.1.0",
     "rimraf": "^3.0.1",
     "rollup": "1.30.1",
@@ -55,7 +55,7 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "@dv4all/log-utils": "^0.1.3"
+    "@dv4all/log-utils": "^0.1.4"
   },
   "bundledDependencies": [],
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"

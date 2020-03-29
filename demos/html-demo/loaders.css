@@ -10,3 +10,11 @@
 body.noscroll{
   margin: 0; height: 100%; overflow: hidden
 }
+
+.btn-show-loader{
+  min-width: 8rem;
+}
+
+.btn-show-loader button{
+  text-align: center;
+}

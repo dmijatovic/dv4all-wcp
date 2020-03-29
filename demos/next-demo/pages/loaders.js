@@ -44,16 +44,60 @@ const Loaders = () => {
       <Paragraph>
         <dv4-custom-button class="btn-show-loader"
           role="button"
-          data-loader-type="dv4-loader-ball-triangle"
           onClick={()=>addLoader('dv4-loader-ball-triangle')}>
             Ball triangle
         </dv4-custom-button>
         <dv4-custom-button class="btn-show-loader"
           role="button"
-          data-loader-type="dv4-loader-donut"
           onClick={()=>addLoader('dv4-loader-donut')}
           primary>
             Donut loader
+        </dv4-custom-button>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-climbing-dot')}
+          primary>
+            Climbing dot
+        </dv4-custom-button>
+      </Paragraph>
+      <Paragraph>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-ball-spin')}
+          primary>
+            Ball spin
+        </dv4-custom-button>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-line-scale')}
+          >
+            Line scale
+        </dv4-custom-button>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-packman')}
+          danger>
+            Packman
+        </dv4-custom-button>
+      </Paragraph>
+      <Paragraph>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-square-jelly')}
+          danger>
+            Square Jelly
+        </dv4-custom-button>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-square-spin')}
+          primary>
+            Square Spin
+        </dv4-custom-button>
+        <dv4-custom-button class="btn-show-loader"
+          role="button"
+          onClick={()=>addLoader('dv4-loader-timer')}
+          >
+            Timer
         </dv4-custom-button>
       </Paragraph>
     </>
@@ -72,6 +116,7 @@ const Loaders = () => {
       <style jsx global>{`
         .btn-show-loader{
           margin-right:1rem;
+          min-width: 8rem;
         }
       `}</style>
       {render()}

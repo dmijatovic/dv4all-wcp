@@ -1,5 +1,5 @@
 {
-  "name": "next-test",
+  "name": "@dv4all/next-web-components-demo",
   "version": "0.2.1",
   "description": "next text",
   "keywords": [
@@ -17,9 +17,9 @@
     "static": "next build & next export"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.3.6",
-    "@dv4all/loaders": "^0.1.12",
-    "@dv4all/web-components": "^0.5.2",
+    "@dv4all/icons": "^0.5.3",
+    "@dv4all/loaders": "^0.4.1",
+    "@dv4all/web-components": "^0.6.1",
     "next": "^9.3.1",
     "react": "16.13.0",
     "react-dom": "16.13.0"

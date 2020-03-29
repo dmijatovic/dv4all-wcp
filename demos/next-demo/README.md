@@ -4,7 +4,7 @@
 
 This is simple test of (native) web components with NextJS.
 
-**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
+**This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**
 
 ## Development
 
@@ -183,4 +183,4 @@ app.prepare().then(() => {
 });
 ```
 
-**This module is part of monorepo [dv4all-wcp-lerna](https://github.com/dmijatovic/dv4all-wcp-lerna).**
+**This module is part of monorepo [dv4all-wcp](https://github.com/dmijatovic/dv4all-wcp).**

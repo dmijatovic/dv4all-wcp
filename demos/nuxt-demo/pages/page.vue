@@ -35,19 +35,20 @@ export default {
 </script>
 
 <style>
-
 .page-tab-nav{
   padding: 0.5rem 0 0.25rem 0;
   border-bottom: 1px solid var(--color-grey,#eee);
 }
-
 .page-tab-nav-item{
   padding: 0 1rem 0 0;
   color: var(--color-accent,"orange");
 }
-
 .page-child-content{
   padding: 1rem 0rem;
 }
-
+</style>
+<style scoped>
+.nuxt-link-exact-active{
+  background-color: transparent;
+}
 </style>
