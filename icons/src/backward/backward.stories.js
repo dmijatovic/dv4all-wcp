@@ -1,19 +1,17 @@
-import { html } from 'lit-html';
-import '../../icons/lib/dv4icons'
+import { html } from 'lit-html'
+import '../../lib/dv4icons'
 
 //check accessibility
-import { withA11y } from '@storybook/addon-a11y';
-
-import mdx from './backward.mdx';
+import { withA11y } from '@storybook/addon-a11y'
+import markdown from './README.md'
 
 export default{
-  title:"Icons/dv4icon-backward",
+  title:'Icons/dv4icon-backward',
   decorators: [withA11y],
   component:'dv4-icon-backward',
   parameters:{
-    docs: {
-      page: mdx,
-    }
+    componentSubtitle:'SVG icon as web component',
+    notes: markdown
   }
 }
 

@@ -6,11 +6,10 @@ import {
   setCustomElements,
 } from '@storybook/web-components';
 
-import customElements from '../stories/custom-elements.json';
+import customElements from '../icons/custom-elements.json';
 
 import '@storybook/addon-console';
-import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
-
+// import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 
 setCustomElements(customElements);
 
@@ -21,18 +20,25 @@ console.log("setCustomElements...", customElements)
 
 addParameters({
   docs: {
-    iframeHeight: '200px',
-    container: DocsContainer,
-    page: DocsPage,
+    iframeHeight: '100%',
+    // container: DocsContainer,
+    // page: DocsPage,
     // inlineStories: false,
   },
 });
 
-// configure(require.context('../stories', true, /\.stories\.(js|mdx)$/), module);
-// force full reload to not reregister web components
+// Load stories from 3 loacations
+const reqStories = () => [
+  require.context('../components/src', true, /\.stories\.(js|mdx)$/),
+  require.context('../icons/src', true, /\.stories\.(js|mdx)$/),
+  require.context('../loaders/src', true, /\.stories\.(js|mdx)$/)
+]
+configure(
+  reqStories(),
+  module
+);
 
-const req = require.context('../stories', true, /\.stories\.(js|mdx)$/);
-configure(req, module);
+// force full reload to not reregister web components
 if (module.hot) {
   module.hot.accept(req.id, () => {
     const currentLocationHref = window.location.href;
