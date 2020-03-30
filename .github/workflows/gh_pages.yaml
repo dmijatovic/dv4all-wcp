@@ -1,9 +1,10 @@
+# NOTE THIS SETUP IS NOT COMPLETED YET!
 name: "Github pages"
 
 on:
   push:
     branches:
-      - storybook
+      - gh_pages
 
 jobs:
   gh_deploy:
@@ -16,7 +17,7 @@ jobs:
       #     version:  12.x
 
       - name: Clean install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build static storybook
         run: npm run storybook:build
