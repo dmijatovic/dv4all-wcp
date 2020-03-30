@@ -16,7 +16,7 @@
     "e2e:open": "cypress open",
     "storybook": "start-storybook -p 7000",
     "build:storybook": "build-storybook -c .storybook -o gh_pages",
-    "deploy:storybook": "storybook-to-ghpages"
+    "publish:storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
