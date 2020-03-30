@@ -1,6 +1,6 @@
 # Backward Icon
 
-<img src="../../assets/SVG/backward.svg" alt="backward icon" style="width:3rem"/>
+<img src="https://github.com/dmijatovic/dv4all-wcp/raw/master/icons/assets/SVG/backward.svg?sanitize=true" alt="backward icon" style="width:3rem"/>
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` repo folder.
 

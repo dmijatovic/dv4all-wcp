@@ -31,14 +31,20 @@ const reqStories = () => [
   require.context('../icons/src', true, /\.stories\.(js|mdx)$/),
   require.context('../loaders/src', true, /\.stories\.(js|mdx)$/)
 ]
+
+const req = reqStories()
+
+
 configure(
-  reqStories(),
+  req,
   module
 );
 
+console.log("req...maybe..id", req)
+
 // force full reload to not reregister web components
 if (module.hot) {
-  module.hot.accept(reqStories().id, () => {
+  module.hot.accept(req.id, () => {
     const currentLocationHref = window.location.href;
     window.history.pushState(null, null, currentLocationHref);
     window.location.reload();

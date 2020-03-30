@@ -143,3 +143,238 @@ storybook-to-ghpages
 # npm script
 npm run deploy:storybook
 ```
+
+## Webpack config
+
+```json
+{
+  "mode": "production",
+  "bail": true,
+  "devtool": "#cheap-module-source-map",
+  "entry": [
+    "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@storybook/core/dist/server/common/polyfills.js",
+    "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@storybook/core/dist/server/preview/globals.js",
+    "/home/dusan/iis/dev/dv4all/dv4all-wcp/.storybook/preview.js"
+  ],
+  "output": {
+    "path": "/home/dusan/iis/dev/dv4all/dv4all-wcp/gh_pages",
+    "filename": "[name].[hash].bundle.js",
+    "publicPath": ""
+  },
+  "plugins": [
+    {
+      "options": {
+        "template": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@storybook/core/dist/server/templates/index.ejs",
+        "templateContent": false,
+        "filename": "iframe.html",
+        "hash": false,
+        "inject": false,
+        "scriptLoading": "blocking",
+        "compile": true,
+        "favicon": false,
+        "minify": {
+          "collapseWhitespace": true,
+          "removeComments": true,
+          "removeRedundantAttributes": true,
+          "removeScriptTypeAttributes": false,
+          "removeStyleLinkTypeAttributes": true,
+          "useShortDoctype": true
+        },
+        "cache": true,
+        "showErrors": true,
+        "chunks": "all",
+        "excludeChunks": [],
+        "chunksSortMode": "none",
+        "meta": {},
+        "base": false,
+        "title": "Webpack App",
+        "xhtml": false,
+        "alwaysWriteToDisk": true
+      },
+      "version": 4
+    },
+    {
+      "definitions": {
+        "process.env": {
+          "NODE_ENV": "\"production\"",
+          "NODE_PATH": "\"\"",
+          "PUBLIC_URL": "\".\""
+        },
+        "NODE_ENV": "\"production\""
+      }
+    },
+    {
+      "options": {},
+      "logger": {},
+      "pathCache": {},
+      "fsOperations": 0,
+      "primed": false
+    },
+    {
+      "profile": false,
+      "modulesCount": 500,
+      "showEntries": false,
+      "showModules": true,
+      "showActiveModules": true
+    },
+    {
+      "definitions": {}
+    },
+    {
+      "resourceRegExp": {}
+    }
+  ],
+  "module": {
+    "rules": [
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "babel-loader",
+            "options": {
+              "cacheDirectory": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/.cache/storybook",
+              "presets": [
+                [
+                  "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@babel/preset-env/lib/index.js",
+                  {
+                    "shippedProposals": true,
+                    "useBuiltIns": "usage",
+                    "corejs": "3"
+                  }
+                ],
+                [
+                  "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/babel-preset-minify/lib/index.js",
+                  {
+                    "builtIns": false,
+                    "mangle": false,
+                    "simplify": false
+                  }
+                ]
+              ],
+              "plugins": [
+                "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+                "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@babel/plugin-proposal-class-properties/lib/index.js",
+                "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js",
+                [
+                  "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/babel-plugin-emotion/dist/babel-plugin-emotion.cjs.js",
+                  {
+                    "sourceMap": true,
+                    "autoLabel": true
+                  }
+                ],
+                "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/babel-plugin-macros/dist/index.js"
+              ]
+            }
+          }
+        ],
+        "include": ["/home/dusan/iis/dev/dv4all/dv4all-wcp"],
+        "exclude": ["/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules"]
+      },
+      {
+        "test": {},
+        "use": [
+          {
+            "loader": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/raw-loader/dist/cjs.js"
+          }
+        ]
+      },
+      {
+        "test": [{}, {}, {}, {}, {}, {}, {}],
+        "use": {
+          "loader": "babel-loader",
+          "options": {
+            "plugins": [
+              "@babel/plugin-syntax-dynamic-import",
+              "@babel/plugin-syntax-import-meta",
+              [
+                "bundled-import-meta",
+                {
+                  "importStyle": "baseURI"
+                }
+              ]
+            ],
+            "presets": [
+              [
+                "@babel/preset-env",
+                {
+                  "useBuiltIns": "entry",
+                  "corejs": 3
+                }
+              ]
+            ],
+            "babelrc": false
+          }
+        }
+      },
+      {
+        "test": {},
+        "sideEffects": true,
+        "use": [
+          "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/style-loader/dist/cjs.js",
+          {
+            "loader": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/css-loader/dist/cjs.js",
+            "options": {
+              "importLoaders": 1
+            }
+          },
+          {
+            "loader": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/postcss-loader/src/index.js",
+            "options": {
+              "ident": "postcss",
+              "postcss": {}
+            }
+          }
+        ]
+      },
+      {
+        "test": {},
+        "loader": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/file-loader/dist/cjs.js",
+        "query": {
+          "name": "static/media/[name].[hash:8].[ext]"
+        }
+      },
+      {
+        "test": {},
+        "loader": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/url-loader/dist/cjs.js",
+        "query": {
+          "limit": 10000,
+          "name": "static/media/[name].[hash:8].[ext]"
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "extensions": [".mjs", ".js", ".jsx", ".json"],
+    "modules": ["node_modules"],
+    "alias": {
+      "babel-runtime/core-js/object/assign": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/core-js/es/object/assign.js",
+      "react": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/react",
+      "react-dom": "/home/dusan/iis/dev/dv4all/dv4all-wcp/node_modules/react-dom"
+    }
+  },
+  "optimization": {
+    "splitChunks": {
+      "chunks": "all"
+    },
+    "runtimeChunk": true,
+    "minimizer": [
+      {
+        "options": {
+          "test": {},
+          "extractComments": true,
+          "sourceMap": true,
+          "cache": true,
+          "parallel": true,
+          "terserOptions": {
+            "mangle": false,
+            "keep_fnames": true
+          }
+        }
+      }
+    ]
+  },
+  "performance": {
+    "hints": "warning"
+  }
+}
+```

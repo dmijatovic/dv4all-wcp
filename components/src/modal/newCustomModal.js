@@ -1,6 +1,11 @@
 import {attachTemplate} from '@dv4all/wcp-utils'
 import {consoleLog} from '@dv4all/log-utils'
 
+let Env = 'development'
+if (typeof ENV !== 'undefined'){
+  Env = ENV
+}
+
 export default ({shadowMode, renderHtml, observedAttr=[]})=>{
   // props used to construct
   // return new custom HTML element
@@ -15,7 +20,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when component is mounted to DOM
      */
     connectedCallback(){
-      consoleLog(`${this.localName}...mounted to DOM!`, ENV)
+      consoleLog(`${this.localName}...mounted to DOM!`, Env)
       // console.log(`${this.localName}...mounted to DOM!`)
       //init with props (attribute values
       this.render()
@@ -61,7 +66,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * @param {Object} props
      */
     render(){
-      consoleLog(`${this.localName}...render element`, ENV)
+      consoleLog(`${this.localName}...render element`, Env)
       //get attributes from the element
       let htmlTemplate=''
       if (typeof renderHtml === 'function'){
@@ -87,7 +92,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
       if (!close) return
       //listen for onchange
       close['onclick'] = ({target})=>{
-        consoleLog('Close button clicked...', ENV)
+        consoleLog('Close button clicked...', Env)
         //publish event outside this customElement
         const newEvent = new Event('onClose',{bubbles:true, composed:true})
         target.dispatchEvent(newEvent)
@@ -113,7 +118,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when attribute is changed
      */
     attributeChangedCallback(name, oldVal, newVal){
-      consoleLog(`${this.localName}...attribut changed...${name}=${newVal}`, ENV)
+      consoleLog(`${this.localName}...attribut changed...${name}=${newVal}`, Env)
       if (name==='active'){
         this.handleActiveAttr(newVal)
       }else {
@@ -139,7 +144,7 @@ export default ({shadowMode, renderHtml, observedAttr=[]})=>{
      * Lifecycle event when element is removed from DOM
      */
     disconnectedCallback(){
-      consoleLog(`${this.localName}...removed...bye!bye!`, ENV)
+      consoleLog(`${this.localName}...removed...bye!bye!`, Env)
     }
   }
 }

@@ -1,6 +1,9 @@
 import { html } from 'lit-html'
-import '../../lib/dv4wcp'
-import '../../../icons/lib/dv4icons'
+// import '../../lib/dv4wcp'
+// import '../../../icons/lib/dv4icons'
+
+import {Dv4ActionModal} from "./index"
+import {Dv4IconCogs, Dv4IconCheckmark, Dv4IconCancelCircle} from '@dv4all/icons'
 
 //check accessibility
 import { withA11y } from '@storybook/addon-a11y'

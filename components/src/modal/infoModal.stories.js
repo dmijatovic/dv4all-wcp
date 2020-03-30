@@ -1,6 +1,6 @@
 import { html } from 'lit-html'
-import '../../lib/dv4wcp'
-import '../../../icons/lib/dv4icons'
+// import '../../lib/dv4wcp'
+// import '../../../icons/lib/dv4icons'
 
 //check accessibility
 import { withA11y } from '@storybook/addon-a11y'

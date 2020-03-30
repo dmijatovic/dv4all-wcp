@@ -1,6 +1,6 @@
 # Arrow-right Icon
 
-<img src="../../assets/SVG/arrow-right.svg" alt="arrow icon" style="width:3rem"/>
+<img src="https://github.com/dmijatovic/dv4all-wcp/raw/master/icons/assets/SVG/arrow-right.svg?sanitize=true" alt="arrow icon" style="width:3rem"/>
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` repo folder.
 

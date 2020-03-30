@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 import {Dv4IconCamera} from '@dv4all/icons'
-import {Dv4CustomButton} from '../../lib/dv4wcp'
+import {Dv4CustomButton} from '../index'
 
 //check accessibility
 import { withA11y } from '@storybook/addon-a11y'
