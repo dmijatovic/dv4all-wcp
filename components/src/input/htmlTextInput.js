@@ -73,7 +73,7 @@ const htmlInput = ({name='',
 
     /* MESSAGE */
     span{
-      position: absolute;
+      /*position: absolute;*/
       font-size: calc(var(--input-label-size, 1rem) * 0.75);
     }
 
