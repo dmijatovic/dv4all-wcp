@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.7.0...@dv4all/web-components@0.7.1) (2020-04-09)
+
+
+### Bug Fixes
+
+* include [@dv4all](https://github.com/dv4all) libs into storybooks webpack ([2e4c4f0](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/2e4c4f0d7d3ed5fe25722b6bee2426be51f6aa05))
+* remove abs position of input message ([55402f5](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/55402f510b18237e0081deec500e3b548ca48746))
+
+
+
+
+
 # [0.7.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.6.1...@dv4all/web-components@0.7.0) (2020-03-25)
 
 

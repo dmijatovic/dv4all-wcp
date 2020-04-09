@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.5.3...@dv4all/icons@0.5.4) (2020-04-09)
+
+
+### Bug Fixes
+
+* include [@dv4all](https://github.com/dv4all) libs into storybooks webpack ([2e4c4f0](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/2e4c4f0d7d3ed5fe25722b6bee2426be51f6aa05))
+
+
+
+
+
 ## [0.5.3](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.5.2...@dv4all/icons@0.5.3) (2020-03-23)
 
 **Note:** Version bump only for package @dv4all/icons

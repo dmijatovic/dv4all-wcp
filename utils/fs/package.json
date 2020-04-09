@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/fs-utils",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "type": "module",
   "main": "lib/dv4fs.utils.cjs.js",
   "module": "lib/dv4fs.utils.js",
