@@ -30,7 +30,7 @@
     "@storybook/storybook-deployer": "^2.8.3",
     "@storybook/web-components": "^5.3.17",
     "babel-loader": "^8.0.6",
-    "cypress": "^4.1.0",
+    "cypress": "^4.3.0",
     "lerna": "^3.19.0",
     "lit-html": "^1.2.1"
   },
