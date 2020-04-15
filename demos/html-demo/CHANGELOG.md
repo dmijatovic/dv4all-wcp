@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.4.1...dv4all-web-components-demo-html@1.5.0) (2020-04-15)
+
+
+### Features
+
+* add select page to html demo ([62ef86c](https://github.com/dmijatovic/dv4all-wcp/commit/62ef86ca810439e9c4898e0d888abc3081eba04c))
+
+
+
+
+
 ## [1.4.1](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.4.0...dv4all-web-components-demo-html@1.4.1) (2020-04-09)
 
 **Note:** Version bump only for package dv4all-web-components-demo-html

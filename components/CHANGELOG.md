@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.7.1...@dv4all/web-components@0.8.0) (2020-04-15)
+
+
+### Features
+
+* add customized select element ([c43c91d](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/c43c91df666e6392df92aa9b4a2656ce536373af))
+
+
+
+
+
 ## [0.7.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.7.0...@dv4all/web-components@0.7.1) (2020-04-09)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "type": "module",
   "main": "lib/dv4wcp.cjs.js",
   "module": "lib/dv4wcp.js",
@@ -48,9 +48,9 @@
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
-    "@dv4all/icons": "^0.5.4",
+    "@dv4all/icons": "^0.6.0",
     "@dv4all/log-utils": "^0.1.5",
-    "@dv4all/wcp-utils": "^0.3.2"
+    "@dv4all/wcp-utils": "^0.4.0"
   },
   "bundledDependencies": [],
   "publishConfig": {
