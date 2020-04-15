@@ -5,6 +5,7 @@
 const sidebarRoutes=[
   {href:'/components/', label:'Buttons', route:'/components/'},
   {href:'/components/input.html', label:'Input', route:'/components/input'},
+  {href:'/components/select.html', label:'Select', route:'/components/select'},
   {href:'/components/modals.html', label:'Modals', route:'/components/modals'},
 ]
 
