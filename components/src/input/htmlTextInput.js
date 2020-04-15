@@ -3,7 +3,7 @@ const shrinkCss=`
   top: calc(var(--input-label-size, 1rem) * -1.5);
   left: 0rem;
   font-size: calc(var(--input-label-size, 1rem) * 0.75);
-  color: var(--input-main-color, #000);
+  color: var(--input-main-color, #333);
 `
 
 const htmlInput = ({name='',
@@ -14,12 +14,6 @@ const htmlInput = ({name='',
       align-items: flex-start;
       justify-content: space-between;
     }
-    /*
-    ::slotted(*){
-      height: var(--btn-icon-height, 1rem);
-      width: var(--btn-icon-width, 1rem);
-      margin: var(--btn-icon-margin, 0rem 0.5rem 0rem 0rem) !important;
-    }*/
 
     .dv4-input{
       flex:1;
@@ -73,7 +67,6 @@ const htmlInput = ({name='',
 
     /* MESSAGE */
     span{
-      /*position: absolute;*/
       font-size: calc(var(--input-label-size, 1rem) * 0.75);
     }
 

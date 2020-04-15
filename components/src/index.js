@@ -4,6 +4,8 @@ export {default as Dv4CustomButton} from './button/index.js'
 export {default as Dv4IsButton} from './is-button/index.js'
 // dv4-text-input
 export {default as Dv4TextInput} from './input/index.js'
+// dv4-text-input
+export {default as Dv4Select} from './select/index.js'
 // dv4-modal
 export { Dv4InfoModal, Dv4ActionModal} from './modal/index.js'
 
