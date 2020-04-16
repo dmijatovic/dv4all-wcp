@@ -29,6 +29,11 @@
         <h3>What where the challenges?</h3>
         <p>
           This is custom dropdown / select element.
+          All data is passed using attributes.
+          Options attribute is comma separated list of options.
+          It supports missing-option which is shown as first 
+          option and preselected. This option returns value -1.
+          Other options return option value on custom event 'onChange'.
         </p>
       </div>
       <div>
@@ -36,13 +41,13 @@
         <p>
           <dv4-text-input
             name="var-name"
-            label="Your name"
+            title="Your name"
             message="Type your first and last name"
             >
           </dv4-text-input>
           <dv4-select
             id="dv4-select-car"
-            label="Select car"
+            title="Select car"
             message="Select car from the list",
             missing-option="Missing answer"
             >
@@ -56,6 +61,13 @@
           </dv4-select>
         </p>
         <div id="text-output"></div>
+        <h3>Minimum markup</h3>
+        <p>
+          <dv4-select
+            options="Option 1, Option 2, Option 3"
+            >
+          </dv4-select>
+        </p>
       </div>
     </section>
   </section>
