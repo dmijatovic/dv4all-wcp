@@ -11,17 +11,13 @@ Note! The list of options is comma separated string, eg "Option 1, Option 2 ..."
 <dv4-select options="Option 1, Option 2, Option 3"> </dv4-select>
 
 <!--WITH custom label and No answer missing option -->
-<dv4-select
-  label="Select option"
-  options="Option 1, Option 2, Option 3"
-  missing-option="No answer"
->
+<dv4-select title="Select option" options="Option 1, Option 2, Option 3">
 </dv4-select>
 
 <!--WITH custom name, custom label and No answer missing option -->
 <dv4-select
   name="select-options"
-  label="Select option"
+  title="Select option"
   options="Option 1, Option 2, Option 3"
   missing-option="No answer"
 >

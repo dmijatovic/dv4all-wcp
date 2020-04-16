@@ -2,10 +2,10 @@ import cssSelect from './cssSelect'
 
 const htmlSelect = props =>{
 
-  const labelElement = ({label})=>{
-    if (label){
+  const labelElement = ({title})=>{
+    if (title){
       return `
-        <label>${label}</label>
+        <label>${title}</label>
       `
     } else {
       return ''
@@ -29,6 +29,8 @@ const htmlSelect = props =>{
       }else{
         html+=`><option value="-1" class="dv4-missing-option" selected>${missingOption}</option>`
       }
+    } else {
+      html+='>'
     }
     items.forEach(option=>{
       if (option){
