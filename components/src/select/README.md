@@ -24,6 +24,18 @@ Note! The list of options is comma separated string, eg "Option 1, Option 2 ..."
 </dv4-select>
 ```
 
+### Events
+
+- onChange: component emits custom onChange event after each option change. Selected value can be received through `target.value` prop.
+
+```Javascript
+const dv4select = document.querySelector('dv4-select')
+
+dv4select.addEventListener('onChange',function({target}){
+  const value = target.value
+})
+```
+
 ### Attributes
 
 - name: element name. It uses name value to assign #id to inner select element.
