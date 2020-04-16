@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/dmijatovic/nuxt-next-lerna/compare/@dv4all/wcp-utils@0.4.0...@dv4all/wcp-utils@0.5.0) (2020-04-16)
+
+
+### Features
+
+* extended select example with 2 select boxes ([e4f5a30](https://github.com/dmijatovic/nuxt-next-lerna/commit/e4f5a301442fae44eef9e5565468d2560e9e114a))
+
+
+
+
+
 # [0.4.0](https://github.com/dmijatovic/nuxt-next-lerna/compare/@dv4all/wcp-utils@0.3.2...@dv4all/wcp-utils@0.4.0) (2020-04-15)
 
 

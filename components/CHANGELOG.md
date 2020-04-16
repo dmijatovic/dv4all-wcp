@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.8.0...@dv4all/web-components@0.9.0) (2020-04-16)
+
+
+### Bug Fixes
+
+* changed select label to use title attribute ([992b159](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/992b1590de002a5428c5a3357da57d7f8384a0c7))
+
+
+### Features
+
+* added missing-option to select element ([9f4f154](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/9f4f15475dd447ebdd755119bba140064a81be78))
+
+
+
+
+
 # [0.8.0](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/web-components@0.7.1...@dv4all/web-components@0.8.0) (2020-04-15)
 
 
