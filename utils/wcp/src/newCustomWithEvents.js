@@ -96,6 +96,8 @@ export default ({shadowMode, renderHtml, observedAttr=[], observedEvents=[]})=>{
         el[native] = ({target})=>{
           if (target.value && classes){
             if (target.value!==''){
+              // debugger
+              target.classList.add('touched')
               target.classList.add(classes)
             } else {
               target.classList.remove(classes)
