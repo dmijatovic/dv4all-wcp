@@ -47,7 +47,7 @@ const htmlSelect = props =>{
   const messageElement = ({message})=>{
     if (message){
       return `
-      <div class="msg">${message}</div>
+      <div class="dv4-message">${message}</div>
       `
     }else{
       return ''

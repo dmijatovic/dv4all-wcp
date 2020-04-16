@@ -39,7 +39,7 @@ dv4select.addEventListener('onChange',function({target}){
 ### Attributes
 
 - name: element name. It uses name value to assign #id to inner select element.
-- label: label shown above select box. If ommitted no label is shown/loaded
+- title: label shown above select box. If ommitted no label is shown/loaded
 - options: comma separated list of VALID options to select from
 - missing-option: ONE option to be added at the start of the option list. This option will be selected by default. It returns value of -1.
 - value: assign which value from the options is selected
@@ -63,7 +63,8 @@ Each variable has default value which is used if CSS variable is not provided. T
 - select-icon-size,1.5rem
 - select-icon-top, 0.825rem
 - select-icon-right, 0.25rem
-- select-message-padding, 0rem 0.25rem
+- message-padding, 0.25rem
+- message-font-size, 0.75rem
 
 These are the styles applied in shadowDOM. You can look at the htmlButton.js for the most accurate version of styles :-).
 
@@ -137,9 +138,10 @@ svg{
 }
 
 /* MESSAGE */
-.msg{
-  padding: var(--select-message-padding, 0rem 0.25rem);
-  font-size: calc(var(--select-label-size, 1rem) * 0.75);
+.dv4-message{
+  padding: var(--message-padding, 0.25rem);
+  font-size: calc(var(--message-font-size, 1rem) * 0.75);
+  line-height: var(--message-font-size, 1rem);
 }
 </style>
 ```

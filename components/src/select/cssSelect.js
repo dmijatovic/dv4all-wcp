@@ -1,3 +1,6 @@
+
+import dv4MessageClass from '../utils/cssDv4Message'
+
 export default `
 :host{
   position:relative;
@@ -71,9 +74,8 @@ svg{
   pointer-events: none;
 }
 
-/* MESSAGE */
-.msg{
-  padding: var(--select-message-padding, 0rem 0.25rem);
-  font-size: calc(var(--select-label-size, 1rem) * 0.75);
-}
+/* MESSAGE using .dv4-message class*/
+
+${dv4MessageClass}
+
 `

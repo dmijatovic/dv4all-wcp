@@ -51,8 +51,10 @@ Each variable has default value which is used if CSS variable is not provided. T
 - input-label-left, 0.25rem
 - input-label-top, -0.25rem
 - input-label-size, 1rem
+- message-padding, 0.25rem
+- message-font-size, 0.75rem
 
-These are the styles applied in shadowDOM. You can look at the htmlButton.js for the most accurate version of styles :-).
+These are the styles applied in shadowDOM. You can look at the cssTextInput.js for the most accurate version of styles :-).
 
 ```css
 <style>
@@ -111,10 +113,10 @@ These are the styles applied in shadowDOM. You can look at the htmlButton.js for
   }
 
   /* MESSAGE */
-  span{
-    position: absolute;
-    font-size: calc(var(--input-label-size, 1rem) * 0.75);
+  .dv4-message{
+    padding: var(--message-padding, 0.25rem);
+    font-size: calc(var(--message-font-size, 1rem) * 0.75);
+    line-height: var(--message-font-size, 1rem);
   }
-
 </style>
 ```
