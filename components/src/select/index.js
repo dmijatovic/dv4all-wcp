@@ -5,7 +5,8 @@ import htmlSelect from './htmlSelect'
 
 //props
 const props={
-  observedAttr:['name','label','options','value','message','disabled'],
+  observedAttr:['name','label','options','missing-option',
+    'value','message','disabled'],
   observedEvents:[{
     querySelector:'select',
     native:'onchange',

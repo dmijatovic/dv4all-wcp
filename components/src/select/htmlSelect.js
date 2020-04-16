@@ -2,8 +2,8 @@ import cssSelect from './cssSelect'
 
 const htmlSelect = props =>{
 
-  const labelElement = ({label, value})=>{
-    if (label && value && value!=='-1'){
+  const labelElement = ({label})=>{
+    if (label){
       return `
         <label>${label}</label>
       `
@@ -12,30 +12,30 @@ const htmlSelect = props =>{
     }
   }
 
-  const selectElement=({name, value, label,options=''})=>{
+  const selectElement=({name, value, options='',
+    'missing-option':missingOption})=>{
     const items = options.split(',')
     let html='<select '
     if (value && value!=='-1'){
+      // debugger
       html+= ' class="touched"'
     }
     if (name){
       html+= ` id="${name}" name="${name}"`
     }
-    if (label){
+    if (missingOption){
       if (value && value!=='-1'){
-        html+=`><option value="-1">${label}</option>`
+        html+=`><option value="-1" class="dv4-missing-option">${missingOption}</option>`
       }else{
-        html+=`><option value="-1" selected disabled>${label}</option>`
+        html+=`><option value="-1" class="dv4-missing-option" selected>${missingOption}</option>`
       }
-    } else {
-      html+='><option value="-1" selected disabled></option>'
     }
-    items.forEach((option,i)=>{
+    items.forEach(option=>{
       if (option){
-        if (value===`${i}`){
-          html+=`<option value="${i}" selected>${option}</option>`
+        if (value===option){
+          html+=`<option value="${option}" selected>${option}</option>`
         }else{
-          html+=`<option value="${i}">${option}</option>`
+          html+=`<option value="${option}">${option}</option>`
         }
       }
     })
