@@ -1,122 +1,137 @@
 # Custom select web component
 
-This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default button element is styled. There is one generic slot. The slot supports adding custom icon elements from @dv4all/icons.
+This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default button element is styled. There is no slot support, all data is passed using attributes.
+
+Note! The list of options is comma separated string, eg "Option 1, Option 2 ...". Missing option is ONE value used as starting selected value. This value returns -1 value in onChange event.
 
 ## Usage
 
 ```html
-<!-- WITHOUT custom icons -->
-<dv4-custom-button>Label</dv4-custom-button>
-<dv4-custom-button primary>Primary Button</dv4-custom-button>
-<dv4-custom-button danger>Danger Button</dv4-custom-button>
-<dv4-custom-button disabled>Disabled Button</dv4-custom-button>
+<!-- MINIMUM SETUP -->
+<dv4-select options="Option 1, Option 2, Option 3"> </dv4-select>
 
-<!--WITH custom dv4all icons -->
-<dv4-custom-button>
-  <dv4-icon-camera></dv4-icon-camera>
-  Icon Default Button
-</dv4-custom-button>
-<dv4-custom-button primary>
-  <dv4-icon-checkmark></dv4-icon-checkmark>
-  Icon Primary Button
-</dv4-custom-button>
-<dv4-custom-button danger>
-  <dv4-icon-cancel-circle></dv4-icon-cancel-circle>
-  Icon Danger Button
-</dv4-custom-button>
+<!--WITH custom label and No answer missing option -->
+<dv4-select
+  label="Select option"
+  options="Option 1, Option 2, Option 3"
+  missing-option="No answer"
+>
+</dv4-select>
+
+<!--WITH custom name, custom label and No answer missing option -->
+<dv4-select
+  name="select-options"
+  label="Select option"
+  options="Option 1, Option 2, Option 3"
+  missing-option="No answer"
+>
+</dv4-select>
 ```
 
 ### Attributes
 
-- primary: primary attribute, will use primary color for the button background
-- danger: danger attribute, will use warning color for the button background
-- disabled: `visualy indicates that button is disabled`. Programmer needs to handle events ingnore on its own. This just visually indicates to user that click won't work.
-
-See next section about CSS variables for more information about available variables.
+- name: element name. It uses name value to assign #id to inner select element.
+- label: label shown above select box. If ommitted no label is shown/loaded
+- options: comma separated list of VALID options to select from
+- missing-option: ONE option to be added at the start of the option list. This option will be selected by default. It returns value of -1.
+- value: assign which value from the options is selected
+- message: helper message to be shown below select box
+- disabled: disables the select box and the custom element. Note! You need to ensure that onChange event handles invalid values properly.
 
 ### CSS variables
 
 Each variable has default value which is used if CSS variable is not provided. The following css variables can be applied to custom button component. The listing is in the format: variable, default value
 
-- btn-font-size, 1rem
-- btn-border, 1px solid lightgrey
-- btn-border-radius, 0.25rem
-- btn-padding, 0.5rem 1rem
-- btn-min-width, 3rem
-- btn-cursor, pointer
-- btn-focus-color, lightblue
-- btn-icon-height, 1rem
-- btn-icon-width, 1rem
-- btn-icon-margin, 0rem 0.5rem 0rem 0rem
+- select-min-width, 5rem
+- select-margin, 1.25rem 0rem
+- select-label-left, 0.25rem
+- select-label-top, 0.25rem
+- select-main-color, #333
+- select-sub-color, #ccc
+- select-bg-color, #fff
+- select-padding, 2px 2rem 1px 0.25rem
+- select-font-size, 1rem
+- select-icon-top, 1.5rem
+- select-icon-size,1.5rem
+- select-icon-top, 0.825rem
+- select-icon-right, 0.25rem
+- select-message-padding, 0rem 0.25rem
 
 These are the styles applied in shadowDOM. You can look at the htmlButton.js for the most accurate version of styles :-).
 
 ```css
 <style>
 :host{
+  position:relative;
   display: inline-flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  min-width: var(--select-min-width, 5rem);
 }
 :host([disabled]){
   opacity: 0.7;
   cursor: not-allowed;
 }
-button{
-  flex:1;
-  display: inline-flex;
-  align-items: end;
-  justify-content: space-between;
-  font-family: inherit;
-  font-size: var(--btn-font-size, 1rem);
-  border: var(--btn-border, 1px solid lightgrey);
-  border-radius: var(--btn-border-radius, 0.25rem);
-  padding: var(--btn-padding, 0.5rem 1rem);
-  min-width: var(--btn-min-width, 3rem);
-  min-height: var(--btn-min-height, 1rem);
-  cursor: var(--btn-cursor, pointer);
-  background-color: transparent;
+.dv4-select{
+  display: block;
+  width: 100%;
+  margin: var(--select-margin, 1.25rem 0rem);
 }
-button:focus:not([disabled]){
-  outline: none;
-  box-shadow: 0 0 1pt 1pt var(--btn-focus-color, lightblue);
+/* LABEL STYLES */
+label{
+  position: absolute;
+  left: var(--select-label-left, 0.25rem);
+  top: var(--select-label-top, 0.25rem);
+  line-height: normal;
+  font-size: calc(var(--select-label-size, 1rem) * 0.75);
+  color: var(--select-main-color, #333);
+  font-weight: normal;
+  pointer-events: none;
 }
-button:hover:not([disabled]),
-button[primary]:hover:not([disabled]),
-button[danger]:hover:not([disabled]){
-  color: var(--color-accent, lightblue);
-  fill:  var(--color-accent, lightblue);
+/* SELECT BOX */
+select{
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: var(--select-padding, 2px 2rem 1px 0.25rem);
+  font-size: var(--select-font-size, 1rem);
+  color: var(--select-sub-color, #ccc);
+  border: none;
+  border-bottom: 1px solid var(--select-sub-color, #ccc);
+	-moz-appearance: none;
+	-webkit-appearance: none;
+  appearance: none;
+  background-color: var(--select-bg-color, #fff);
 }
-button:hover:not([disabled]) > ::slotted(*),
-button[danger]:hover:not([disabled]) > ::slotted(*),
-button[primary]:hover:not([disabled]) > ::slotted(*){
-  color: var(--color-accent, lightblue);
-  fill: var(--color-accent, lightblue);
+
+select:focus,
+select.touched{
+  color: var(--select-main-color, #333);
 }
-button:active:not([disabled]),
-button[primary]:active:not([disabled]){
-  transform: translate(1px,1px);
+
+select.touched,
+select:focus ~ svg{
+  transform: rotate(0deg);
+  top: var(--select-icon-top, 1.5rem);
 }
-button[primary],
-button[primary] > ::slotted(*){
-  background-color: var(--color-primary, darkblue);
-  color: var(--color-primary-contrast, #fff);
-  fill: var(--color-primary-contrast, #fff);
+
+/* ICON */
+svg{
+  position: absolute;
+  transform: rotate(180deg);
+  width: var(--select-icon-size,1.5rem);
+  height: var(--select-icon-size,1.5rem);
+  top: var(--select-icon-top, 0.825rem);
+  right: var(--select-icon-right,0.25rem);
+  fill: var(--select-main-color, #333);
+  pointer-events: none;
 }
-button[danger],
-button[danger] > ::slotted(*){
-  background-color: var(--color-warning, darkred);
-  color: var(--color-warning-contrast, #fff);
-  fill: var(--color-warning-contrast, #fff);
-}
-button[disabled]{
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-::slotted(*){
-  height: var(--btn-icon-height, 1rem);
-  width: var(--btn-icon-width, 1rem);
-  margin: var(--btn-icon-margin, 0rem 0.5rem 0rem 0rem) !important;
+
+/* MESSAGE */
+.msg{
+  padding: var(--select-message-padding, 0rem 0.25rem);
+  font-size: calc(var(--select-label-size, 1rem) * 0.75);
 }
 </style>
 ```
