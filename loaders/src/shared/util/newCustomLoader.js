@@ -24,7 +24,7 @@ export default ({ bodyHtml='default content', styles, observedAttr=[]})=>{
      * Lifecycle event when component is mounted to DOM
      */
     connectedCallback(){
-      console.log(`${this.localName}...mounted to DOM!`)
+      // console.log(`${this.localName}...mounted to DOM!`)
       if (this.rendered) return
       //render if not already done
       this.render()
@@ -89,7 +89,7 @@ export default ({ bodyHtml='default content', styles, observedAttr=[]})=>{
      * Lifecycle event when attribute is changed
      */
     attributeChangedCallback(name, oldVal, newVal){
-      console.log(`${this.localName}...attribut changed...`, name, newVal)
+      // console.log(`${this.localName}...attribut changed...`, name, newVal)
       //reset render flag
       this.rendered = false
       //render again
@@ -99,7 +99,7 @@ export default ({ bodyHtml='default content', styles, observedAttr=[]})=>{
      * Lifecycle event when element is removed from DOM
      */
     disconnectedCallback(){
-      console.log(`${this.localName}...removed...bye!bye!`)
+      // console.log(`${this.localName}...removed...bye!bye!`)
     }
   }
 }

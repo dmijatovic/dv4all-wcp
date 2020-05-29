@@ -2,7 +2,7 @@ import attachTemplate from './attachTemplate'
 /**
  * Return class containing definitions of new loader custom element.
  * @param {Object} props = {
- *  name: {String} name of customElement, 
+ *  name: {String} name of customElement,
  *  htmlTemplate: {Function} returns html
  * }
  */
@@ -20,7 +20,7 @@ export default ({renderHtml, observedAttr=[]})=>{
      * Lifecycle event when component is mounted to DOM
      */
     connectedCallback(){
-      console.log(`${this.localName}...mounted to DOM!`)
+      // console.log(`${this.localName}...mounted to DOM!`)
       //init with props (attribute values
       this.render()
     }
@@ -73,14 +73,14 @@ export default ({renderHtml, observedAttr=[]})=>{
      * Lifecycle event when attribute is changed
      */
     attributeChangedCallback(name, oldVal, newVal){
-      console.log(`${this.localName}...attribut changed...`, name, newVal)
+      // console.log(`${this.localName}...attribut changed...`, name, newVal)
       this.render()
     }
     /**
      * Lifecycle event when element is removed from DOM
      */
     disconnectedCallback(){
-      console.log(`${this.localName}...removed...bye!bye!`)
+      // console.log(`${this.localName}...removed...bye!bye!`)
     }
   }
 }
