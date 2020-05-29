@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/loaders",
-  "version": "0.4.4",
+  "version": "1.0.0",
   "type": "module",
   "main": "lib/dv4loaders.cjs.js",
   "module": "lib/dv4loaders.js",
