@@ -2,6 +2,7 @@
 const dv4selectCar = document.querySelector('#dv4-select-car')
 const dv4selectModel = document.querySelector('#dv4-select-model')
 const dv4output = document.querySelector('#text-output')
+const dv4List = document.querySelector('#select-list-demo')
 
 const options=['Audi','BMW','Citroen','Daihatsu']
 
@@ -17,7 +18,7 @@ let selectedModel=''
 
 function setModels(){
   const model = models[selectedBrand]
-  dv4selectModel.setAttribute('options', model.toString())
+  dv4selectModel.setAttribute('options', model)
   dv4selectModel.setAttribute('message','Select model from the list')
 }
 
@@ -61,4 +62,12 @@ dv4selectModel.addEventListener('onChange',function({target}){
     selectedModel = ''
   }
   dv4output.innerHTML = `You selected: ${selectedBrand} ${selectedModel}`
+})
+
+// minimal implementation
+
+dv4List.setAttribute('options', options)
+
+dv4List.addEventListener('onChange',function({target}){
+  console.log('dv4List.onChange...value...', target.value)
 })

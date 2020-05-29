@@ -2,7 +2,7 @@
 
 This web components extends generic HTMLElement. It has shadowRoot. In the shadowRoot default button element is styled. There is no slot support, all data is passed using attributes.
 
-Note! The list of options is comma separated string, eg "Option 1, Option 2 ...". Missing option is ONE value used as starting selected value. This value returns -1 value in onChange event.
+Note! The list of options supports comma separated string, eg "Option 1, Option 2 ..." OR an array of values, eg ['Option 1','Option 2', ...]. Missing option prop is the value used as starting/default value. This value returns the value -1 in onChange event.
 
 ## Usage
 

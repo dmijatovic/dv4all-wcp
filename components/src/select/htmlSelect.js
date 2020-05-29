@@ -12,9 +12,16 @@ const htmlSelect = props =>{
     }
   }
 
-  const selectElement=({name, value, options='',
+  const selectElement=({name, value, options,
     'missing-option':missingOption})=>{
-    const items = options.split(',')
+    let items=[]
+    if (!options){
+      items=[]
+    } else if (Array.isArray(options)==true){
+      items = options
+    }else{
+      items = options.split(',')
+    }
     let html='<select '
     if (value && value!=='-1'){
       // debugger
