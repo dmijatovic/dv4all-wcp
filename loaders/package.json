@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/loaders",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "lib/dv4loaders.cjs.js",
   "module": "lib/dv4loaders.js",
@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@dv4all/icons": "^0.6.1",
-    "@dv4all/wcp-utils": "^0.5.0"
+    "@dv4all/wcp-utils": "^0.5.1"
   },
   "bundledDependencies": [],
   "gitHead": "1b7eb9b21d7b61c21c73c4fa3385141b470fe16a"

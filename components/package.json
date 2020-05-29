@@ -1,6 +1,6 @@
 {
   "name": "@dv4all/web-components",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "type": "module",
   "main": "lib/dv4wcp.cjs.js",
   "module": "lib/dv4wcp.js",
@@ -50,7 +50,7 @@
   "dependencies": {
     "@dv4all/icons": "^0.6.1",
     "@dv4all/log-utils": "^0.1.5",
-    "@dv4all/wcp-utils": "^0.5.0"
+    "@dv4all/wcp-utils": "^0.5.1"
   },
   "bundledDependencies": [],
   "publishConfig": {

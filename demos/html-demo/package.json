@@ -1,6 +1,6 @@
 {
   "name": "dv4all-web-components-demo-html",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Basic html demo of @dv4all web components",
   "keywords": [
     "spinner",
@@ -23,7 +23,7 @@
   "dependencies": {
     "@dv4all/icons": "^0.6.1",
     "@dv4all/loaders": "^0.4.4",
-    "@dv4all/web-components": "^0.9.1"
+    "@dv4all/web-components": "^0.9.2"
   },
   "devDependencies": {
     "@storybook/addon-notes": "^5.3.17",

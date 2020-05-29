@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.6.1...dv4all-web-components-demo-html@1.6.2) (2020-05-29)
+
+
+### Bug Fixes
+
+* add select list items support ([2973d91](https://github.com/dmijatovic/dv4all-wcp/commit/2973d91f35ea2c1d9e0ef51bd0e021dcd6aa698e))
+
+
+
+
+
 ## [1.6.1](https://github.com/dmijatovic/dv4all-wcp/compare/dv4all-web-components-demo-html@1.6.0...dv4all-web-components-demo-html@1.6.1) (2020-04-16)
 
 **Note:** Version bump only for package dv4all-web-components-demo-html
