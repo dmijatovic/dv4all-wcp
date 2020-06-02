@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@1.0.1...@dv4all/icons@1.0.2) (2020-06-02)
+
+
+### Bug Fixes
+
+* improved notification icon readme ([f6f6b68](https://github.com/dmijatovic/dv4all-wcp-lerna/commit/f6f6b68234f2e2bfd41e2cc9c083441caae3cd7a))
+
+
+
+
+
 ## [1.0.1](https://github.com/dmijatovic/dv4all-wcp-lerna/compare/@dv4all/icons@0.6.1...@dv4all/icons@1.0.1) (2020-05-29)
 
 **Note:** Version bump only for package @dv4all/icons
