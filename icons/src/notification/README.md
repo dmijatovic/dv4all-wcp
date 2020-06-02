@@ -1,13 +1,16 @@
-# Next Icon
+# Notification Icon
 
-<img src="../../assets/SVG/next.svg" alt="Next icon" style="width:3rem"/>
+<img src="../../assets/SVG/notification.svg" alt="Next icon" style="width:3rem"/>
 
 Custom web component using svg icon as a source. The SVG source is exported from [IconMoon website](https://icomoon.io/app/#/select). The raw svg icon file is in `assets/SVG` folder of this repo.
 
 ## Usage
 
 ```html
-<dv4-icon-next class="dv4-icon" title="Next icon"></dv4-icon-next>
+<dv4-icon-notification
+  class="dv4-icon"
+  title="Notification icon"
+></dv4-icon-notification>
 ```
 
 ### Props
