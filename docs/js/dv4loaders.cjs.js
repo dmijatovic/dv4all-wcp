@@ -22,6 +22,32 @@ var Dv4Loaders = (function (exports) {
     return el
   }
 
+  // import {consoleLog} from '@dv4all/log-utils'
+
+  /**
+   * Define customElement method. Checks if element
+   * is already defined. If element alreadt defined it
+   * logs warning that element is already defined.
+   * @param {String} name
+   * @param {Object} component
+   * @param {Object} options
+   */
+  function defineCustomElement(name, component, options){
+    const defined = customElements.get(name);
+    if (defined){
+      // consoleLog(`defineCustomElement...${name}...ALREADY DEFINED`)
+      console.warn(`defineCustomElement...${name}...ALREADY DEFINED:`, defined);
+      return false
+    } else {
+      if (options){
+        customElements.define(name, component, options);
+      }else{
+        customElements.define(name, component);
+      }
+      return true
+    }
+  }
+
   /**
    * Return class containing definitions of new loader custom element.
    * @param {Object} props = {
@@ -45,7 +71,7 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when component is mounted to DOM
        */
       connectedCallback(){
-        console.log(`${this.localName}...mounted to DOM!`);
+        // console.log(`${this.localName}...mounted to DOM!`)
         if (this.rendered) return
         //render if not already done
         this.render();
@@ -99,7 +125,7 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when attribute is changed
        */
       attributeChangedCallback(name, oldVal, newVal){
-        console.log(`${this.localName}...attribut changed...`, name, newVal);
+        // console.log(`${this.localName}...attribut changed...`, name, newVal)
         //reset render flag
         this.rendered = false;
         //render again
@@ -109,35 +135,14 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when element is removed from DOM
        */
       disconnectedCallback(){
-        console.log(`${this.localName}...removed...bye!bye!`);
+        // console.log(`${this.localName}...removed...bye!bye!`)
       }
     }
   };
 
-  // import {consoleLog} from '@dv4all/log-utils'
-
-  /**
-   * Define customElement method. Checks if element
-   * is already defined. If element alreadt defined it
-   * logs warning that element is already defined.
-   * @param {String} name
-   * @param {Object} component
-   * @param {Object} options
-   */
-  function defineCustomElement(name, component, options){
-    const defined = customElements.get(name);
-    if (defined){
-      // consoleLog(`defineCustomElement...${name}...ALREADY DEFINED`)
-      console.warn(`defineCustomElement...${name}...ALREADY DEFINED:`, defined);
-      return false
-    } else {
-      if (options){
-        customElements.define(name, component, options);
-      }else{
-        customElements.define(name, component);
-      }
-      return true
-    }
+  let Environment = 'development';
+  if (typeof ENV !== 'undefined'){
+    Environment = ENV;
   }
 
   /**
@@ -231,7 +236,7 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when component is mounted to DOM
        */
       connectedCallback(){
-        console.log(`${this.localName}...mounted to DOM!`);
+        // console.log(`${this.localName}...mounted to DOM!`)
         if (this.rendered) return
         //render if not already done
         this.render();
@@ -296,7 +301,7 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when attribute is changed
        */
       attributeChangedCallback(name, oldVal, newVal){
-        console.log(`${this.localName}...attribut changed...`, name, newVal);
+        // console.log(`${this.localName}...attribut changed...`, name, newVal)
         //reset render flag
         this.rendered = false;
         //render again
@@ -306,7 +311,7 @@ var Dv4Loaders = (function (exports) {
        * Lifecycle event when element is removed from DOM
        */
       disconnectedCallback(){
-        console.log(`${this.localName}...removed...bye!bye!`);
+        // console.log(`${this.localName}...removed...bye!bye!`)
       }
     }
   };
