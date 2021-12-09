@@ -20,7 +20,7 @@
     "@dv4all/icons": "^0.5.3",
     "@dv4all/loaders": "^0.4.1",
     "@dv4all/web-components": "^0.6.1",
-    "next": "^9.3.4",
+    "next": "^11.1.3",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
